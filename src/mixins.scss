@@ -1,0 +1,11 @@
+@mixin responsive($query) {
+  @media ( min-width: $query ) {
+    @content;
+  }
+}
+
+@mixin ifLess($query) {
+  @media ( max-width: $query ) {
+    @content;
+  }
+}

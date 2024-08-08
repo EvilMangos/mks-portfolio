@@ -31,7 +31,8 @@
     "noImplicitThis": true,
     "strictBindCallApply": true,
     "noPropertyAccessFromIndexSignature": false,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "typeRoots": ["src", "node_modules/@types"]
   },
   "include": [
     "src"

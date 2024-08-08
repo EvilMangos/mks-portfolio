@@ -1,0 +1,43 @@
+@use "/src/constants" as constants;
+@use "/src/mixins" as mixins;
+
+$header-gradient-color-start: rgba(28, 28, 0, 0.4);
+$header-gradient-color-end: rgba(0, 17, 36, 0.4);
+$header-background-color: rgba(0, 0, 0, 0.11);
+$header-gradient-color-start-open: rgba(28, 28, 0, 1);
+$header-gradient-color-end-open: rgba(0, 17, 36, 1);
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 28px;
+  margin: 26px 26px 42px 26px;
+  max-width: 980px;
+  border-radius: 16px;
+  background: linear-gradient(to right, $header-gradient-color-start, $header-gradient-color-end), $header-background-color;
+
+  &.headerOpen {
+    background: linear-gradient(to right, $header-gradient-color-start-open, $header-gradient-color-end-open), $header-background-color;
+    height: 234px;
+    align-items: normal;
+  }
+
+  @include mixins.responsive(constants.$screen-medium) {
+    padding: 18px 53px;
+    margin: 58px auto 162px;
+  }
+
+  .hamburger {
+    @include mixins.responsive(constants.$screen-medium) {
+      display: none;
+    }
+  }
+
+  .menu {
+    @include mixins.responsive(constants.$screen-medium) {
+      padding-left: 50px;
+    }
+  }
+}
+

@@ -1,0 +1,42 @@
+@use "/src/constants" as constants;
+@use "/src/mixins" as mixins;
+
+.menu {
+  display: flex;
+  @include mixins.responsive(constants.$screen-medium) {
+    max-width: 687px;
+    width: 100%;
+  }
+
+  .currentPage {
+    cursor: pointer;
+    @include mixins.responsive(constants.$screen-medium) {
+      display: none;
+    }
+  }
+
+  .subMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px auto;
+    width: 100%;
+    @include mixins.responsive(constants.$screen-medium) {
+      margin: 0 auto;
+      flex-direction: row;
+    }
+  }
+
+  .hide {
+    @include mixins.ifLess(constants.$screen-medium) {
+      display: none;
+    }
+  }
+}
+
+.menuLinkHover {
+  .menuItem {
+    opacity: 0.4;
+  }
+}

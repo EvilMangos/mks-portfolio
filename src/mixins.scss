@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin ifLess($query) {
+  @media ( max-width: $query ) {
+    @content;
+  }
+}

@@ -21,13 +21,17 @@
     align-items: center;
     justify-content: space-between;
     margin: 8px auto;
+    width: 100%;
     @include mixins.responsive(constants.$screen-medium) {
       margin: 0 auto;
+      flex-direction: row;
     }
   }
 
   .hide {
-    display: none;
+    @include mixins.ifLess(constants.$screen-medium) {
+      display: none;
+    }
   }
 }
 

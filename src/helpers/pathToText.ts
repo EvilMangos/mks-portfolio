@@ -1,4 +1,4 @@
-export default function(path: string) {
+export default function (path: string) {
 	switch (path) {
 		case "/":
 			return "Who I Am";

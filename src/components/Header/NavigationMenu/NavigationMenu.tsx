@@ -19,8 +19,12 @@ const NavigationMenu = ({ outClass, isSubMenuOpen, toggleSubMenu }) => {
 		divRef.current?.classList.remove(classes.menuLinkHover);
 	};
 
-	const currentPageClasses = classNames(outClass, classes.currentPage, { [classes.hide]: isSubMenuOpen });
-	const subMenuClasses = classNames(classes.subMenu, { [classes.hide]: !isSubMenuOpen });
+	const currentPageClasses = classNames(outClass, classes.currentPage, {
+		[classes.hide]: isSubMenuOpen,
+	});
+	const subMenuClasses = classNames(classes.subMenu, {
+		[classes.hide]: !isSubMenuOpen,
+	});
 
 	return (
 		<div className={classes.menu} ref={divRef}>
@@ -28,18 +32,48 @@ const NavigationMenu = ({ outClass, isSubMenuOpen, toggleSubMenu }) => {
 				<CurrentPage text={currentPageText} />
 			</div>
 			<div className={subMenuClasses}>
-				<NavMenuItem link={"/"} text={"Who I Am"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/services"} text={"My Services"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/skills"} text={"My Skills"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/experience"} text={"My Experience"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/projects"} text={"My Projects"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/contacts"} text={"Contacts"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
+				<NavMenuItem
+					link={"/"}
+					text={"Who I Am"}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+					outClass={classes.menuItem}
+				/>
+				<NavMenuItem
+					link={"/services"}
+					text={"My Services"}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+					outClass={classes.menuItem}
+				/>
+				<NavMenuItem
+					link={"/skills"}
+					text={"My Skills"}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+					outClass={classes.menuItem}
+				/>
+				<NavMenuItem
+					link={"/experience"}
+					text={"My Experience"}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+					outClass={classes.menuItem}
+				/>
+				<NavMenuItem
+					link={"/projects"}
+					text={"My Projects"}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+					outClass={classes.menuItem}
+				/>
+				<NavMenuItem
+					link={"/contacts"}
+					text={"Contacts"}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+					outClass={classes.menuItem}
+				/>
 			</div>
 		</div>
 	);

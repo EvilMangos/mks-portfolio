@@ -10,16 +10,20 @@ const Header = () => {
 	const [isSubMenuOpen, setIsSubMenuOpen] = React.useState(false);
 	const toggleSubMenu = () => {
 		setIsSubMenuOpen(!isSubMenuOpen);
-	}
+	};
 
 	const headerClasses = classNames(classes.header, {
 		[classes.headerOpen]: isSubMenuOpen,
-	})
+	});
 
 	return (
 		<header className={headerClasses}>
 			<Logo />
-			<NavigationMenu isSubMenuOpen={isSubMenuOpen} outClass={classes.menu} toggleSubMenu={toggleSubMenu} />
+			<NavigationMenu
+				isSubMenuOpen={isSubMenuOpen}
+				outClass={classes.menu}
+				toggleSubMenu={toggleSubMenu}
+			/>
 			<Hamburger outClass={classes.hamburger} toggleSubMenu={toggleSubMenu} />
 		</header>
 	);

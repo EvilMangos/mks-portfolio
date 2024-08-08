@@ -1,5 +1,9 @@
-@import "fonts";
-@import "constants";
+@use "fonts";
+@use "constants";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -16,17 +20,17 @@ code {
 }
 
 h1 {
-  font: $font-default-h1;
+  font: constants.$font-default-h1;
 }
 
 h1 {
-  font: $font-default-h2;
+  font: constants.$font-default-h2;
 }
 
 h1 {
-  font: $font-default-h3;
+  font: constants.$font-default-h3;
 }
 
 p, span {
-  font: $font-default-p;
+  font: constants.$font-default-p;
 }

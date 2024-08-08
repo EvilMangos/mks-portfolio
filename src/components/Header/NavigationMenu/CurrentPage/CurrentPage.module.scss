@@ -1,0 +1,9 @@
+@use "/src/constants" as constants;
+
+.currentPage {
+  color: constants.$color-light-green;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  font: 500 16px "Gilroy";
+}

@@ -1,8 +1,8 @@
-@import "/src/constants";
-
 .link.prioritier {
   text-decoration: none;
   color: white;
+  height: 16px;
+  font: 500 16px "Gilroy";
 
   &:hover {
     opacity: 1;

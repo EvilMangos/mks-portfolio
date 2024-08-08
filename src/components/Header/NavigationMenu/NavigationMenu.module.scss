@@ -1,0 +1,13 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 687px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menuLinkHover {
+  .menuItem {
+    opacity: 0.4;
+  }
+}

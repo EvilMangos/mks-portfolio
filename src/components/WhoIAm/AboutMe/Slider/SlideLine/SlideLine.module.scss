@@ -1,0 +1,13 @@
+@use "/src/constants" as constants;
+
+.slideLine {
+    line-height: 38px;
+  .label {
+    font-weight: 600;
+  }
+
+  .value {
+    font-family: "Cascadia Code";
+    color: constants.$color-light-green;
+  }
+}

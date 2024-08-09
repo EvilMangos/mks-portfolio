@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 92px;
+
+  .title {
+    margin-top: 36px;
+  }
+
+  .slider {
+    margin-top: 26px  ;
+  }
+}

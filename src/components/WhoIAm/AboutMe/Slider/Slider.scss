@@ -1,0 +1,12 @@
+@use "/src/constants";
+
+.swiper-pagination-bullet {
+  background-color: rgba(256, 256, 256, 0.1);
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+
+  &.swiper-pagination-bullet-active {
+    background-color: constants.$color-light-green;
+  }
+}

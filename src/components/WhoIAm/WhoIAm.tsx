@@ -1,9 +1,11 @@
-import Button from "../common/Button/Button";
+import React from "react";
+import Greeting from "./Greeting/Greeting";
+import classes from "./WhoIAm.module.scss";
 
 const WhoIAm = () => {
-	return <div>
-		<Button text={"Let's Talk"}/>
+	return <div className={classes.whoIAmcContainer}>
+		<Greeting/>
 	</div>;
 };
 
-export default WhoIAm;
+export default React.memo(WhoIAm);

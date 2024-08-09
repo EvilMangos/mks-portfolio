@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -20,16 +21,21 @@ code {
     monospace;
 }
 
+h1, h3, h4, p, span {
+  color: constants.$color-white;
+}
+
 h1 {
   font: constants.$font-default-h1;
 }
 
-h1 {
+h2 {
   font: constants.$font-default-h2;
 }
 
-h1 {
+h3 {
   font: constants.$font-default-h3;
+  margin: 0;
 }
 
 p, span {

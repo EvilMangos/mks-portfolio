@@ -12,7 +12,7 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
   justify-content: space-between;
   align-items: center;
   padding: 11px 28px;
-  margin: 0 26px 42px 26px;
+  margin-bottom: 42px;
   max-width: 980px;
   border-radius: 16px;
   background: linear-gradient(to right, $header-gradient-color-start, $header-gradient-color-end), $header-background-color;

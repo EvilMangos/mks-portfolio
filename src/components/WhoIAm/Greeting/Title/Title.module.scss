@@ -1,0 +1,17 @@
+@use "/src/constants" as constants;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 34px;
+
+  .firstLine {
+    font-size: 26px;
+  }
+
+  .secondLine {
+    font: 600 24px "Cascadia Code";
+    color: constants.$color-light-green;
+  }
+}

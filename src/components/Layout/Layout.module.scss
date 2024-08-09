@@ -13,8 +13,12 @@
   }
 
   .container {
-    max-width: 980px;
-    width: 100%
+    max-width: 338px;
+    width: 100%;
+
+    @include mixins.responsive(constants.$screen-medium) {
+      max-width: 980px;
+    }
   }
 
 }

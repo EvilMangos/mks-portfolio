@@ -15,7 +15,9 @@ const Button = ({ text, outClass = "", type = "button" }: IProps) => {
 	const buttonClasses = classNames(outClass, classes.container);
 	return (
 		<div className={buttonClasses}>
-			<button type={type} className={classes.button}>{text}</button>
+			<button type={type} className={classes.button}>
+				{text}
+			</button>
 		</div>
 	);
 };

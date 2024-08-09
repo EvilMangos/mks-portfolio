@@ -1,7 +1,9 @@
 import classes from "./ContactMe.module.scss";
 import React from "react";
-import {  Field, Form, Formik } from "formik";
+import { Field, Form, Formik } from "formik";
 import Button from "../../common/Button/Button";
+import classNames from "classnames";
+import validate from "./validation";
 
 const ContactMe = () => {
 	return (
@@ -9,33 +11,54 @@ const ContactMe = () => {
 			<h2 className={classes.title}>Want to work on a project together?</h2>
 			<Formik
 				initialValues={{ name: "", phone: "", email: "", comment: "" }}
-				validate={values => {
-					const errors = {
-						name: null,
-						email: null,
-					};
-					if (!values.email) {
-						errors.email = "Required";
-					} else if (
-						!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-					) {
-						errors.email = "Invalid email address";
-					}
-					return errors;
-				}}
+				validateOnChange={false}
+				validateOnBlur={false}
+				validate={validate}
 				onSubmit={(values) => {
-					console.log(values)
+					console.log(values);
 				}}
 			>
-				{() => (
-					<Form className={classes.form}>
-						<Field className={classes.field} placeholder="Prefered Name*" type="name" name="name" />
-						<Field className={classes.field} placeholder="Phone number" type="phone" name="phone" />
-						<Field className={classes.field} placeholder="Email*" type="email" name="email" />
-						<Field className={classes.field} placeholder="Comment" name="comment" />
-						<Button text="Send" outClass={classes.button}/>
-					</Form>
-				)}
+				{({ errors, handleSubmit, handleChange }) => {
+					const onChange = (event) => {
+						errors[event.target.name] = null;
+						handleChange(event);
+					};
+
+					const nameClasses = classNames(classes.field, {[classes.errorField]: errors.name});
+					const phoneClasses = classNames(classes.field, {[classes.errorField]: errors.phone});
+					const emailClasses = classNames(classes.field, {[classes.errorField]: errors.email});
+					const commentClasses = classNames(classes.field, {[classes.errorField]: errors.comment});
+
+					return (
+						<Form className={classes.form} onSubmit={handleSubmit}>
+							<Field
+								className={nameClasses}
+								placeholder="Prefered Name*"
+								name="name"
+								onChange={onChange}
+							/>
+							<Field
+								className={phoneClasses}
+								placeholder="Phone number"
+								type="phone"
+								name="phone"
+							/>
+							<Field
+								className={emailClasses}
+								placeholder="Email*"
+								type="email"
+								name="email"
+								onChange={onChange}
+							/>
+							<Field
+								className={commentClasses}
+								placeholder="Comment"
+								name="comment"
+							/>
+							<Button text="Send" outClass={classes.button} type="submit" />
+						</Form>
+					);
+				}}
 			</Formik>
 		</div>
 	);

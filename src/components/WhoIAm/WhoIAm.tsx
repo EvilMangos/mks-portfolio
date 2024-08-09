@@ -5,11 +5,13 @@ import AboutMe from "./AboutMe/AboutMe";
 import ContactMe from "./ContactMe/ContactMe";
 
 const WhoIAm = () => {
-	return <div className={classes.whoIAmcContainer}>
-		<Greeting />
-		<AboutMe />
-		<ContactMe />
-	</div>;
+	return (
+		<div className={classes.whoIAmcContainer}>
+			<Greeting />
+			<AboutMe />
+			<ContactMe />
+		</div>
+	);
 };
 
 export default React.memo(WhoIAm);

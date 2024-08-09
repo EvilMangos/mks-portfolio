@@ -1,0 +1,48 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.container {
+  margin-top: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    text-align: center;
+  }
+
+  .form {
+    margin-top: 78px;
+    width: 298px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .field {
+      background-color: constants.$color-transparent;
+      border: none;
+      border-bottom: 1px solid constants.$color-white;
+      line-height: 24px;
+      padding: 15px 0 21px;
+      color: constants.$color-white;
+      font-size: 20px;
+      width: 100%;
+
+      @include mixins.responsive(constants.$screen-medium) {
+        font-size: 22px
+      }
+
+      &::placeholder {
+        font: constants.$font-default-desktop-p;
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .button {
+      margin-top: 36px;
+    }
+  }
+}

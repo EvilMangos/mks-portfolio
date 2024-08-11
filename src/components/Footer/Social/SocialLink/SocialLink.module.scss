@@ -1,0 +1,20 @@
+@use "/src/constants";
+
+.socialLink {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .socialIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  &:hover {
+    background-color: constants.$color-light-green;
+  }
+}

@@ -22,7 +22,7 @@ code {
     monospace;
 }
 
-h1, h2, h3, h4, p, span {
+div, xxh1, h2, h3, h4, p, span {
   color: constants.$color-white;
   margin: 0;
 }
@@ -48,7 +48,7 @@ h3 {
   }
 }
 
-p, span, input {
+div, p, span, input {
   font: constants.$font-default-mobile-p;
   @include mixins.responsive(constants.$screen-medium) {
     font: constants.$font-default-desktop-p;

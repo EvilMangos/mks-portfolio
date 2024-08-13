@@ -1,8 +1,12 @@
 @use "/src/constants" as constants;
 @use "/src/mixins" as mixins;
 
+$background-color-top: #2A3136;
+$background-color-bottom: #181D20;
+
 .layout {
-  background-image: url("../../assets/images/backgrounds/who_i_am_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   padding-top: 26px;
   display: flex;
   justify-content: center;
@@ -24,6 +28,7 @@
     & > *:not(:first-child) {
       pointer-events: none;
     }
+
     &::before {
       content: "";
       position: fixed;
@@ -41,4 +46,11 @@
 
 .hideOverflow {
   overflow: hidden;
+}
+
+.whoIAmBG {
+  background-image: url("../../assets/images/backgrounds/mobile/who_i_am_mobile_bg.png"),  linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+  @include mixins.responsive(constants.$screen-medium) {
+    background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"),  linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+  }
 }

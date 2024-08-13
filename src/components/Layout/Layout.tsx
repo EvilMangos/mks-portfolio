@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import classNames from "classnames";
 import Header from "../Header/Header";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import classes from "./Layout.module.scss";
 import Footer from "../Footer/Footer";
 
@@ -10,6 +10,8 @@ const Layout = () => {
 	const toggleSubMenu = useCallback(() => {
 		setIsSubMenuOpen(!isSubMenuOpen);
 	}, [isSubMenuOpen, setIsSubMenuOpen]);
+
+	const location = useLocation();
 
 	useEffect(() => {
 		if (isSubMenuOpen) {
@@ -24,7 +26,8 @@ const Layout = () => {
 	}, [isSubMenuOpen])
 
 	const layoutClasses = classNames(classes.layout, {
-		[classes.blur]: isSubMenuOpen
+		[classes.blur]: isSubMenuOpen,
+		[classes.whoIAmBG]: location.pathname === "/"
 	});
 
 	return (

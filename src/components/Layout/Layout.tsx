@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 import classNames from "classnames";
 import Header from "../Header/Header";
 import { Outlet, useLocation } from "react-router-dom";
@@ -7,9 +7,6 @@ import Footer from "../Footer/Footer";
 
 const Layout = () => {
 	const [isSubMenuOpen, setIsSubMenuOpen] = React.useState(false);
-	const toggleSubMenu = useCallback(() => {
-		setIsSubMenuOpen(!isSubMenuOpen);
-	}, [isSubMenuOpen, setIsSubMenuOpen]);
 
 	const location = useLocation();
 
@@ -33,7 +30,7 @@ const Layout = () => {
 	return (
 		<div className={layoutClasses}>
 			<div className={classes.container}>
-				<Header isSubMenuOpen={isSubMenuOpen} toggleSubMenu={toggleSubMenu}/>
+				<Header isSubMenuOpen={isSubMenuOpen} setIsSubMenuOpen={setIsSubMenuOpen}/>
 				<Outlet />
 				<Footer />
 			</div>

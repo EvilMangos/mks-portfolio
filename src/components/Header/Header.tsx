@@ -1,13 +1,13 @@
-import React, { useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import classNames from "classnames";
 
 import classes from "./Header.module.scss";
 import Logo from "./Logo/Logo";
 import NavigationMenu from "./NavigationMenu/NavigationMenu";
 import Hamburger from "./Hamburger/Hamburger";
-import useOustideClick from "../../helpers/useOustideClick";
+import useOutsideClick from "../../helpers/useOutsideClick";
 
-const Header = ({ isSubMenuOpen, toggleSubMenu }) => {
+const Header = ({ isSubMenuOpen, setIsSubMenuOpen }) => {
 	const ref = useRef(null);
 
 	const containerClasses = classNames(classes.container, {
@@ -19,12 +19,14 @@ const Header = ({ isSubMenuOpen, toggleSubMenu }) => {
 	});
 
 	const onOutsideClick = () => {
-		if (isSubMenuOpen) {
-			toggleSubMenu();
-		}
+			setIsSubMenuOpen(false);
 	};
 
-	useOustideClick(ref, onOutsideClick);
+	useOutsideClick(ref, onOutsideClick);
+
+	const toggleSubMenu = useCallback(() => {
+		setIsSubMenuOpen(!isSubMenuOpen);
+	},  [isSubMenuOpen, setIsSubMenuOpen]);
 
 	return (
 		<header className={containerClasses}>
@@ -33,7 +35,7 @@ const Header = ({ isSubMenuOpen, toggleSubMenu }) => {
 				<NavigationMenu
 					isSubMenuOpen={isSubMenuOpen}
 					outClass={classes.menu}
-					toggleSubMenu={toggleSubMenu}
+					setIsSubMenuOpen={setIsSubMenuOpen}
 				/>
 				<Hamburger outClass={classes.hamburger} toggleSubMenu={toggleSubMenu} />
 			</div>

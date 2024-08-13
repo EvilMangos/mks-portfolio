@@ -33,6 +33,19 @@
       display: none;
     }
   }
+
+  .selected {
+    color: constants.$color-light-green;
+    
+    @include mixins.responsive(constants.$screen-medium) {
+      &:before {
+        position: absolute;
+        content: url("../../../assets/icons/selected_menu_item.svg");
+        bottom: 0;
+        transform: translate(50%, 6px);
+      }
+    }
+  }
 }
 
 .menuLinkHover {

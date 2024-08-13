@@ -7,16 +7,26 @@
   flex-direction: column;
   align-items: center;
 
+  @include mixins.responsive(constants.$screen-medium) {
+    margin-top: 162px;
+  }
+
   .title {
     text-align: center;
   }
 
   .form {
-    margin-top: 78px;
+    margin-top: 36px;
     width: 298px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include mixins.responsive(constants.$screen-medium) {
+      margin-top: 78px;
+      width: 442px;
+    }
+
     .field {
       width: 100%;
       margin-top: 8px;
@@ -30,7 +40,12 @@
       font-size: 20px;
 
       @include mixins.responsive(constants.$screen-medium) {
-        font-size: 22px
+        font-size: 22px;
+        margin-top: 48px;
+      }
+
+      &:first-child {
+        margin-top: 0;
       }
 
       &::placeholder {
@@ -54,6 +69,10 @@
 
     .button {
       margin-top: 36px;
+
+      @include mixins.responsive(constants.$screen-medium) {
+        margin-top: 48px;
+      }
     }
   }
 }

@@ -1,6 +1,15 @@
+@use "/src/constants";
+@use "/src/mixins";
+
 .arrow {
+  display: none;
   width: 32px;
   height: 32px;
+  cursor: pointer;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    display: block;
+  }
 }
 
 .isPrev {

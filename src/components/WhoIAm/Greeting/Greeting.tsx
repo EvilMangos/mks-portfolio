@@ -7,7 +7,7 @@ import classes from "./Greeting.module.scss";
 const Greeting = () => {
 	return (
 		<div className={classes.container}>
-			<Image />
+			<Image outClass={classes.image} />
 			<Title outClass={classes.title} />
 			<Text outClass={classes.text} />
 			<Button text="Let's talk" outClass={classes.button} />

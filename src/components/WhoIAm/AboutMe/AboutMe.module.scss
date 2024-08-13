@@ -1,3 +1,7 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,11 +9,35 @@
 
   margin-top: 92px;
 
+  @include mixins.responsive(constants.$screen-medium) {
+    display: grid;
+    margin-top: 162px;
+    grid-template-areas:
+      "title title"
+      "image slider";
+    grid-column-gap: 111px;
+    grid-row-gap: 78px;
+  }
+
+  .image {
+    grid-area: image;
+  }
+
   .title {
     margin-top: 36px;
+    grid-area: title;
+
+    @include mixins.responsive(constants.$screen-medium) {
+      margin-top: 0;
+    }
   }
 
   .slider {
-    margin-top: 26px  ;
+    margin-top: 26px;
+    grid-area: slider;
+
+    @include mixins.responsive(constants.$screen-medium) {
+      margin-top: 0;
+    }
   }
 }

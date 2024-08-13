@@ -10,9 +10,13 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
 .container {
   position: relative;
   width: 100%;
-  height: 122px;
+  height: 96px;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    height: 175px;
+  }
   .header {
-    position: absolute;
+    position: fixed;
     width: 338px;
     display: flex;
     justify-content: space-between;
@@ -33,6 +37,8 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
     }
 
     @include mixins.responsive(1000px) {
+      position: absolute;
+
       width: 980px;
     }
 

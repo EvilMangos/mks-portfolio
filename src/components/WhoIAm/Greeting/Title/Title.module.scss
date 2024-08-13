@@ -1,4 +1,5 @@
-@use "/src/constants" as constants;
+@use "/src/constants";
+@use "/src/mixins";
 
 .container {
   display: flex;
@@ -6,12 +7,15 @@
   align-items: center;
   line-height: 34px;
 
+  @include mixins.responsive(constants.$screen-medium) {
+    align-items: flex-start;
+  }
+
   .firstLine {
-    font-size: 26px;
   }
 
   .secondLine {
-    font: 600 24px "Cascadia Code";
+    font-family: "Cascadia Code";
     color: constants.$color-light-green;
   }
 }

@@ -19,8 +19,10 @@ const Header = ({ isSubMenuOpen, toggleSubMenu }) => {
 	});
 
 	const onOutsideClick = () => {
-		toggleSubMenu();
-	}
+		if (isSubMenuOpen) {
+			toggleSubMenu();
+		}
+	};
 
 	useOustideClick(ref, onOutsideClick);
 

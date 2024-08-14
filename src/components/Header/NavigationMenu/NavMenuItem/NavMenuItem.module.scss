@@ -1,13 +1,10 @@
+@use "./NavigationMenuItemAnimations";
+
 .link.prioritier {
   text-decoration: none;
   color: white;
   height: 16px;
   font-weight: 500;
-
-  @keyframes navMenuMouseOut {
-    0%   {opacity: 0.4;}
-    100% {opacity: 1;}
-  }
 
   animation: navMenuMouseOut 0.5s;
 

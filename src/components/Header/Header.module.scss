@@ -1,5 +1,6 @@
 @use "/src/constants" as constants;
 @use "/src/mixins" as mixins;
+@use "./HeaderAnimations";
 
 $header-gradient-color-start: rgba(28, 28, 0, 0.4);
 $header-gradient-color-end: rgba(0, 17, 36, 0.4);
@@ -41,24 +42,6 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
     @include mixins.responsive(1000px) {
       position: absolute;
       width: 980px;
-    }
-
-    @keyframes headerOpen {
-      0% {
-        height: 54px;
-      }
-      100% {
-        height: 234px;
-      }
-    }
-
-    @keyframes headerClose {
-      0% {
-        height: 234px;
-      }
-      100% {
-        height: 54px;
-      }
     }
 
     &.headerOpen {

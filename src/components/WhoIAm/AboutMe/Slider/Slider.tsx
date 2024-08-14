@@ -10,8 +10,9 @@ import "./Slider.scss";
 import classNames from "classnames";
 import Arrow from "./Arrow/Arrow";
 import { useRef, useState } from "react";
+import { sliderDataArray } from "../../../../datasets/slider";
 
-const Slider = ({ outClass }) => {
+const Slider = ({ setLastElementHovered, outClass }) => {
 	const [isNextActive, setIsNextActive] = useState(true);
 	const [isPrevActive, setIsPrevActive] = useState(false);
 
@@ -32,9 +33,9 @@ const Slider = ({ outClass }) => {
 	const prevRef = useRef(null);
 	const nextRef = useRef(null);
 
-	const conatinerClasses = classNames(outClass, classes.container);
+	const containerClasses = classNames(outClass, classes.container);
 	return (
-		<div className={conatinerClasses}>
+		<div className={containerClasses}>
 			<Arrow isActive={isPrevActive} isPrev={true} ref={prevRef} />
 			<Swiper
 				spaceBetween={50}
@@ -60,16 +61,34 @@ const Slider = ({ outClass }) => {
 				className={classes.slider}
 			>
 				<SwiperSlide>
-					<SlideLine label="Name" value="Maksym Khamets" />
-					<SlideLine label="Age" value="23 y.o." />
-					<SlideLine label="Residence" value="Brooklyn, NY, US" />
-					<SlideLine label="Education" value="Computer Engineering" />
+					{sliderDataArray
+						.filter((element) => element.slide === 1)
+						.map((element) => (
+							<SlideLine
+								key={element.id}
+								id={element.id}
+								label={element.text}
+								value={element.value}
+								image={element.image}
+								link={element.link}
+								setLastElementHovered={setLastElementHovered}
+							/>
+						))}
 				</SwiperSlide>
 				<SwiperSlide>
-					<SlideLine label="Phone" value="347 477 3525" />
-					<SlideLine label="Email" value="jchamets@gmail.com" />
-					<SlideLine label="Experience" value="4 years" />
-					<SlideLine label="Education" value="Computer Engineering" />
+					{sliderDataArray
+						.filter((element) => element.slide === 2)
+						.map((element) => (
+							<SlideLine
+								key={element.id}
+								id={element.id}
+								label={element.text}
+								value={element.value}
+								image={element.image}
+								link={element.link}
+								setLastElementHovered={setLastElementHovered}
+							/>
+						))}
 				</SwiperSlide>
 			</Swiper>
 			<Arrow isActive={isNextActive} isPrev={false} ref={nextRef} />

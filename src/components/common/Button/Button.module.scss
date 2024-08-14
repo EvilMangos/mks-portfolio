@@ -1,13 +1,5 @@
 @use "/src/constants" as constants;
-
-@keyframes shrink-expand {
-  0%, 100% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(0.95, 0.9);
-  }
-}
+@use "./ButtonAnimations";
 
 .container {
   border: 2px solid constants.$color-light-green;

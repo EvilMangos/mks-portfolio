@@ -1,6 +1,5 @@
 @use "/src/constants";
-
-$animation-duration: 1s;
+@use "./SocialLinkAnimations";
 
 .socialLink {
   width: 46px;
@@ -11,34 +10,15 @@ $animation-duration: 1s;
   justify-content: center;
   align-items: center;
 
-  animation-name: socialMouseOut;
-  animation-duration: $animation-duration;
+  animation: socialMouseOut 1s;
 
   .socialIcon {
     width: 46px;
     height: 46px;
   }
 
-  @keyframes socialMouseIn {
-    0% {
-      background-color: constants.$color-transparent;
-    }
-    100% {
-      background-color: constants.$color-light-green;
-    }
-  }
-
-  @keyframes socialMouseOut {
-    0% {
-      background-color: constants.$color-light-green;
-    }
-    100% {
-      background-color: constants.$color-transparent;
-    }
-  }
-
   &:hover {
-    animation-name: socialMouseIn;
+    animation: socialMouseIn 1s;
     background-color: constants.$color-light-green;
   }
 

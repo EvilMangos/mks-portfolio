@@ -1,5 +1,6 @@
 @use "/src/constants" as constants;
 @use "/src/mixins" as mixins;
+@use "./NavigationMenuAnimations";
 
 .menu {
   display: flex;
@@ -49,11 +50,6 @@
 }
 
 .menuLinkHover {
-  @keyframes navMenuHoverOther {
-    0%   {opacity: 1;}
-    100% {opacity: 0.4;}
-  }
-
   .menuItem {
     animation: navMenuHoverOther 0.5s;
     opacity: 0.4;

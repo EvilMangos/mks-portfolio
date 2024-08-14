@@ -1,7 +1,9 @@
 @use "/src/constants" as constants;
+@use "SlideLineAnimations";
 
 .slideLine {
-    line-height: 38px;
+  line-height: 38px;
+
   .label {
     font-weight: 600;
   }
@@ -9,5 +11,17 @@
   .value {
     font-family: "Cascadia Code";
     color: constants.$color-light-green;
+    cursor: pointer;
+
+    animation: onMouseOut 0.3s;
+
+    &:hover {
+      animation: onMouseIn 0.3s;
+      opacity: 0.7;
+    }
+
+    &.link:active {
+      opacity: 0.3;
+    }
   }
 }

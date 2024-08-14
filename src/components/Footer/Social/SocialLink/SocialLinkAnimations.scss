@@ -1,0 +1,19 @@
+@use "/src/constants";
+
+@keyframes socialMouseIn {
+  0% {
+    background-color: constants.$color-transparent;
+  }
+  100% {
+    background-color: constants.$color-light-green;
+  }
+}
+
+@keyframes socialMouseOut {
+  0% {
+    background-color: constants.$color-light-green;
+  }
+  100% {
+    background-color: constants.$color-transparent;
+  }
+}

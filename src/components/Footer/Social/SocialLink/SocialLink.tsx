@@ -4,11 +4,11 @@ import { useState } from "react";
 const SocialLink = ({link, image, image_hover, alt}) => {
 	const [isHovered, setHovered] = useState(false);
 	const onMouseOver = () => {
-		setHovered(true);
+		setTimeout(() => setHovered(true), 100);
 	}
 
 	const onMouseOut = () => {
-		setHovered(false);
+		setTimeout(() => setHovered(false), 100);
 	}
 
 	return (

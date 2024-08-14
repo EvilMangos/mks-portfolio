@@ -9,13 +9,19 @@ interface IProps {
 	text: string;
 	outClass: string;
 	type?: ButtonType;
+	disabled?: boolean;
 }
 
-const Button = ({ text, outClass = "", type = "button" }: IProps) => {
+const Button = ({
+	text,
+	outClass = "",
+	type = "button",
+	disabled = false,
+}: IProps) => {
 	const buttonClasses = classNames(outClass, classes.container);
 	return (
 		<div className={buttonClasses}>
-			<button type={type} className={classes.button}>
+			<button type={type} className={classes.button} disabled={disabled}>
 				{text}
 			</button>
 		</div>

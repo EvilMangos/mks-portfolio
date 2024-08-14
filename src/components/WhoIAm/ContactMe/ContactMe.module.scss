@@ -2,6 +2,7 @@
 @use "/src/mixins";
 
 .container {
+  position: relative;
   margin-top: 88px;
   display: flex;
   flex-direction: column;
@@ -25,6 +26,10 @@
     @include mixins.responsive(constants.$screen-medium) {
       margin-top: 78px;
       width: 442px;
+    }
+
+    &.transparent {
+      opacity: 0.5;
     }
 
     .field {

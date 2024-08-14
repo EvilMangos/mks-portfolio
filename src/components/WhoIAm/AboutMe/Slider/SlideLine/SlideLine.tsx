@@ -19,7 +19,6 @@ const SlideLine = ({
 	const valueClasses = classNames(classes.value, {
 		[classes.link]: link,
 	});
-	console.log(valueClasses);
 	return (
 		<div className={classes.slideLine}>
 			<span className={classes.label}>{label}: </span>

@@ -1,0 +1,22 @@
+@use "/src/constants";
+@use "/src/mixins";
+@use "./MessageSentAnimations";
+
+.messageSent {
+  position: absolute;
+  width: 181px;
+  height: 181px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 38%;
+  opacity: 0.9;
+
+  animation: appearsMobile 1s;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    width: 232px;
+    height: 232px;
+
+    animation: appearsDesktop 1s;
+  }
+}

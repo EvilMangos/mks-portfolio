@@ -1,0 +1,21 @@
+@keyframes appearsMobile {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 181px;
+    height: 181px;
+  }
+}
+
+@keyframes appearsDesktop {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 232px;
+    height: 232px;
+  }
+}

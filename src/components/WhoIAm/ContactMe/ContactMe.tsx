@@ -1,11 +1,16 @@
 import classes from "./ContactMe.module.scss";
-import React from "react";
+import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import Button from "../../common/Button/Button";
 import classNames from "classnames";
 import validate from "./validation";
+import MessageSent from "./MessageSent/MessageSent";
 
 const ContactMe = () => {
+	const [isMessageSent, setIsMessageSent] = useState(false);
+	const formClasses = classNames(classes.form, {
+		[classes.transparent]: isMessageSent,
+	});
 	return (
 		<div className={classes.container}>
 			<h2 className={classes.title}>Want to work on a project together?</h2>
@@ -15,7 +20,8 @@ const ContactMe = () => {
 				validateOnBlur={false}
 				validate={validate}
 				onSubmit={(values) => {
-					console.log(values);
+					setIsMessageSent(true);
+					console.log("values: ", values);
 				}}
 			>
 				{({ errors, handleSubmit, handleChange }) => {
@@ -38,18 +44,20 @@ const ContactMe = () => {
 					});
 
 					return (
-						<Form className={classes.form} onSubmit={handleSubmit}>
+						<Form className={formClasses} onSubmit={handleSubmit}>
 							<Field
 								className={nameClasses}
 								placeholder="Prefered Name*"
 								name="name"
 								onChange={onChange}
+								disabled={isMessageSent}
 							/>
 							<Field
 								className={phoneClasses}
 								placeholder="Phone number"
 								type="phone"
 								name="phone"
+								disabled={isMessageSent}
 							/>
 							<Field
 								className={emailClasses}
@@ -57,17 +65,25 @@ const ContactMe = () => {
 								type="email"
 								name="email"
 								onChange={onChange}
+								disabled={isMessageSent}
 							/>
 							<Field
 								className={commentClasses}
 								placeholder="Comment"
 								name="comment"
+								disabled={isMessageSent}
 							/>
-							<Button text="Send" outClass={classes.button} type="submit" />
+							<Button
+								text="Send"
+								outClass={classes.button}
+								type="submit"
+								disabled={isMessageSent}
+							/>
 						</Form>
 					);
 				}}
 			</Formik>
+			{isMessageSent && <MessageSent />}
 		</div>
 	);
 };

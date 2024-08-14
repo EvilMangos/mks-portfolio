@@ -13,10 +13,30 @@ import SocialLink from "./SocialLink/SocialLink";
 const Social = () => {
 	return (
 		<div className={classes.container}>
-			<SocialLink link="https://github.com/EvilMangos" image={github} image_hover={githubHover} alt="GitHub"/>
-			<SocialLink link="https://www.linkedin.com/in/maksym-khamets-9570871b8" image={linkedin} image_hover={linkedinHover} alt="LinkedIn"/>
-			<SocialLink link="https://t.me/eeoat" image={telegram} image_hover={telegramHover} alt="Telegram"/>
-			<SocialLink link="#" image={whatsapp} image_hover={whatsappHover} alt="WhatsApp"/>
+			<SocialLink
+				link="https://github.com/EvilMangos"
+				image={github}
+				image_hover={githubHover}
+				alt="GitHub"
+			/>
+			<SocialLink
+				link="https://www.linkedin.com/in/maksym-khamets-9570871b8"
+				image={linkedin}
+				image_hover={linkedinHover}
+				alt="LinkedIn"
+			/>
+			<SocialLink
+				link="https://t.me/eeoat"
+				image={telegram}
+				image_hover={telegramHover}
+				alt="Telegram"
+			/>
+			<SocialLink
+				link="#"
+				image={whatsapp}
+				image_hover={whatsappHover}
+				alt="WhatsApp"
+			/>
 		</div>
 	);
 };

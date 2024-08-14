@@ -33,7 +33,4 @@ const pagesObject = {
 
 const pagesArray = Object.values(pagesObject);
 
-export {
-	pagesObject,
-	pagesArray,
-};
+export { pagesObject, pagesArray };

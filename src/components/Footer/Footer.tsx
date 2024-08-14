@@ -5,8 +5,8 @@ import classes from "./Footer.module.scss";
 const Footer = () => {
 	return (
 		<footer className={classes.footer}>
-			<Social/>
-			<Copyright outClass={classes.copyright}/>
+			<Social />
+			<Copyright outClass={classes.copyright} />
 		</footer>
 	);
 };

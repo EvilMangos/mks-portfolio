@@ -19,18 +19,21 @@ const Layout = () => {
 
 		return () => {
 			document.body.classList.remove(classes.hideOverflow);
-		}
-	}, [isSubMenuOpen])
+		};
+	}, [isSubMenuOpen]);
 
 	const layoutClasses = classNames(classes.layout, {
 		[classes.blur]: isSubMenuOpen,
-		[classes.whoIAmBG]: location.pathname === "/"
+		[classes.whoIAmBG]: location.pathname === "/",
 	});
 
 	return (
 		<div className={layoutClasses}>
 			<div className={classes.container}>
-				<Header isSubMenuOpen={isSubMenuOpen} setIsSubMenuOpen={setIsSubMenuOpen}/>
+				<Header
+					isSubMenuOpen={isSubMenuOpen}
+					setIsSubMenuOpen={setIsSubMenuOpen}
+				/>
 				<Outlet />
 				<Footer />
 			</div>

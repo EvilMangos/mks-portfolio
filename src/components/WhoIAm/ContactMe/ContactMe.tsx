@@ -24,10 +24,18 @@ const ContactMe = () => {
 						handleChange(event);
 					};
 
-					const nameClasses = classNames(classes.field, {[classes.errorField]: errors.name});
-					const phoneClasses = classNames(classes.field, {[classes.errorField]: errors.phone});
-					const emailClasses = classNames(classes.field, {[classes.errorField]: errors.email});
-					const commentClasses = classNames(classes.field, {[classes.errorField]: errors.comment});
+					const nameClasses = classNames(classes.field, {
+						[classes.errorField]: errors.name,
+					});
+					const phoneClasses = classNames(classes.field, {
+						[classes.errorField]: errors.phone,
+					});
+					const emailClasses = classNames(classes.field, {
+						[classes.errorField]: errors.email,
+					});
+					const commentClasses = classNames(classes.field, {
+						[classes.errorField]: errors.comment,
+					});
 
 					return (
 						<Form className={classes.form} onSubmit={handleSubmit}>

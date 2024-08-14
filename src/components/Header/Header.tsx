@@ -19,14 +19,14 @@ const Header = ({ isSubMenuOpen, setIsSubMenuOpen }) => {
 	});
 
 	const onOutsideClick = () => {
-			setIsSubMenuOpen(false);
+		setIsSubMenuOpen(false);
 	};
 
 	useOutsideClick(ref, onOutsideClick);
 
 	const toggleSubMenu = useCallback(() => {
 		setIsSubMenuOpen(!isSubMenuOpen);
-	},  [isSubMenuOpen, setIsSubMenuOpen]);
+	}, [isSubMenuOpen, setIsSubMenuOpen]);
 
 	return (
 		<header className={containerClasses}>

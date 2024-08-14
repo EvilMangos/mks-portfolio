@@ -6,7 +6,7 @@ import Slider from "./Slider/Slider";
 const AboutMe = () => {
 	return (
 		<div className={classes.container}>
-			<Image outClass={classes.image}/>
+			<Image outClass={classes.image} />
 			<Title outCLass={classes.title} />
 			<Slider outClass={classes.slider} />
 		</div>

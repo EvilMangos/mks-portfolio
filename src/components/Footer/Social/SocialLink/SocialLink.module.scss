@@ -1,0 +1,28 @@
+@use "/src/constants";
+@use "./SocialLinkAnimations";
+
+.socialLink {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: socialMouseOut 1s;
+
+  .socialIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  &:hover {
+    animation: socialMouseIn 1s;
+    background-color: constants.$color-light-green;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

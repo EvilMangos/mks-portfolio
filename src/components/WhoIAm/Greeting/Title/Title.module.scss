@@ -1,0 +1,21 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 34px;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    align-items: flex-start;
+  }
+
+  .firstLine {
+  }
+
+  .secondLine {
+    font-family: "Cascadia Code";
+    color: constants.$color-light-green;
+  }
+}

@@ -5,11 +5,12 @@ import { useLocation } from "react-router-dom";
 import NavMenuItem from "./NavMenuItem/NavMenuItem";
 import classes from "./NavigationMenu.module.scss";
 import CurrentPage from "./CurrentPage/CurrentPage";
-import pathToText from "../../../helpers/pathToText";
+import { pagesArray } from "../../../datasets/pages";
 
-const NavigationMenu = ({ outClass, isSubMenuOpen, toggleSubMenu }) => {
+const NavigationMenu = ({ outClass, isSubMenuOpen, setIsSubMenuOpen }) => {
 	const location = useLocation();
-	const currentPageText = pathToText(location.pathname);
+	const currentPageText =
+		pagesArray.find((page) => page.path === location.pathname)?.name || null;
 	const divRef = useRef<HTMLDivElement>(null);
 
 	const onMouseEnter = () => {
@@ -19,28 +20,40 @@ const NavigationMenu = ({ outClass, isSubMenuOpen, toggleSubMenu }) => {
 		divRef.current?.classList.remove(classes.menuLinkHover);
 	};
 
-	const currentPageClasses = classNames(outClass, classes.currentPage, { [classes.hide]: isSubMenuOpen });
-	const subMenuClasses = classNames(classes.subMenu, { [classes.hide]: !isSubMenuOpen });
+	const currentPageClasses = classNames(outClass, classes.currentPage, {
+		[classes.hide]: isSubMenuOpen,
+	});
+	const subMenuClasses = classNames(classes.subMenu, {
+		[classes.hide]: !isSubMenuOpen,
+	});
+
+	const renderedNavigationMenu = pagesArray.map((page) => {
+		const itemClasses = classNames(classes.menuItem, {
+			[classes.selected]: page.path === location.pathname,
+		});
+		return (
+			<NavMenuItem
+				key={page.id}
+				link={page.path}
+				text={page.name}
+				onMouseEnter={onMouseEnter}
+				onMouseLeave={onMouseLeave}
+				outClass={itemClasses}
+			/>
+		);
+	});
 
 	return (
 		<div className={classes.menu} ref={divRef}>
-			<div className={currentPageClasses} onClick={toggleSubMenu}>
+			<div
+				className={currentPageClasses}
+				onClick={() => {
+					setIsSubMenuOpen(true);
+				}}
+			>
 				<CurrentPage text={currentPageText} />
 			</div>
-			<div className={subMenuClasses}>
-				<NavMenuItem link={"/"} text={"Who I Am"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/services"} text={"My Services"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/skills"} text={"My Skills"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/experience"} text={"My Experience"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/projects"} text={"My Projects"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-				<NavMenuItem link={"/contacts"} text={"Contacts"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-										 outClass={classes.menuItem} />
-			</div>
+			<div className={subMenuClasses}>{renderedNavigationMenu}</div>
 		</div>
 	);
 };

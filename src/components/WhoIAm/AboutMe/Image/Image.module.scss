@@ -1,0 +1,14 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.image {
+  width: 304px;
+  height: 258px;
+  object-fit: cover;
+  border-radius: 23px;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    width: 425px;
+    height: 360px;
+  }
+}

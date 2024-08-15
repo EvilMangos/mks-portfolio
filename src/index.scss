@@ -1,8 +1,10 @@
 @use "fonts";
 @use "constants";
+@use "mixins";
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -12,6 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
 }
 
 code {
@@ -19,18 +22,35 @@ code {
     monospace;
 }
 
-h1 {
-  font: constants.$font-default-h1;
+div, h1, h2, h3, h4, p, span {
+  color: constants.$color-white;
+  margin: 0;
 }
 
 h1 {
-  font: constants.$font-default-h2;
+  font: constants.$font-default-mobile-h1;
+  @include mixins.responsive(constants.$screen-medium) {
+    font: constants.$font-default-desktop-h1;
+  }
 }
 
-h1 {
-  font: constants.$font-default-h3;
+h2 {
+  font: constants.$font-default-mobile-h2;
+  @include mixins.responsive(constants.$screen-medium) {
+    font: constants.$font-default-desktop-h2;
+  }
 }
 
-p, span {
-  font: constants.$font-default-p;
+h3 {
+  font: constants.$font-default-mobile-h3;
+  @include mixins.responsive(constants.$screen-medium) {
+    font: constants.$font-default-desktop-h3;
+  }
+}
+
+div, p, span, input {
+  font: constants.$font-default-mobile-p;
+  @include mixins.responsive(constants.$screen-medium) {
+    font: constants.$font-default-desktop-p;
+  }
 }

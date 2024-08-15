@@ -1,0 +1,24 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 92px auto 58px;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 162px;
+  }
+
+  .copyright {
+    margin-top: 22px;
+
+    @include mixins.responsive(constants.$screen-medium) {
+      margin-top: 0;
+    }
+  }
+}

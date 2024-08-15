@@ -1,0 +1,31 @@
+@use "/src/constants";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 36px;
+
+    & > * {
+      text-align: center;
+    }
+
+    .info {
+      margin-top: 18px;
+
+      .line {
+        line-height: 26px;
+      }
+
+      .valueElement {
+        color: constants.$color-light-green;
+        font-family: "Cascadia Code";
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import { Outlet, useLocation } from "react-router-dom";
 import classes from "./Layout.module.scss";
 import Footer from "../Footer/Footer";
+import { pagesObject } from "../../datasets/pages";
 
 const Layout = () => {
 	const [isSubMenuOpen, setIsSubMenuOpen] = React.useState(false);
@@ -24,7 +25,8 @@ const Layout = () => {
 
 	const layoutClasses = classNames(classes.layout, {
 		[classes.blur]: isSubMenuOpen,
-		[classes.whoIAmBG]: location.pathname === "/",
+		[classes.whoIAmBG]: location.pathname === pagesObject.whoIAm.path,
+		[classes.contacts]: location.pathname === pagesObject.contacts.path,
 	});
 
 	return (

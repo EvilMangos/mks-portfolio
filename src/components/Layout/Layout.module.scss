@@ -54,3 +54,10 @@ $background-color-bottom: #181D20;
     background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"),  linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
   }
 }
+
+.contacts {
+  background-image: url("../../assets/images/backgrounds/mobile/contacts_bg_mobile.png"),  linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+  @include mixins.responsive(constants.$screen-medium) {
+    background-image: url("../../assets/images/backgrounds/contacts_bg.png"),  linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+  }
+}

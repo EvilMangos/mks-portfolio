@@ -28,6 +28,12 @@
     &:disabled {
       animation-duration: 0s;
     }
+
+    &:active {
+      opacity: 0.8;
+      animation-duration: 0s;
+      transform: scale(0.95, 0.9);
+    }
   }
 }
 

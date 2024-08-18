@@ -1,9 +1,17 @@
 @use "/src/constants";
+@use "/src/mixins";
 
 .container {
   display: flex;
   flex-direction: column;
   align-content: center;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    flex-direction: row;
+    margin-top: 78px;
+    width: 654px;
+    justify-content: space-between;
+  }
 
   .subContainer {
     display: flex;
@@ -11,15 +19,45 @@
     align-content: center;
     margin-top: 36px;
 
+    @include mixins.responsive(constants.$screen-medium) {
+      margin-top: 0;
+    }
+
+    & > h4 {
+      @include mixins.responsive(constants.$screen-medium) {
+        line-height: 50px;
+      }
+    }
+
+    &.contact {
+      font-size: 18px;
+    }
+
     & > * {
       text-align: center;
+
+      @include mixins.responsive(constants.$screen-medium) {
+        text-align: start;
+      }
     }
 
     .info {
       margin-top: 18px;
 
+      @include mixins.responsive(constants.$screen-medium) {
+        margin-top: 14px;
+      }
+
       .line {
         line-height: 26px;
+
+        @include mixins.responsive(constants.$screen-medium) {
+          line-height: 46px;
+        }
+      }
+
+      .labelElement {
+        font-weight: 600;
       }
 
       .valueElement {

@@ -48,6 +48,13 @@ h3 {
   }
 }
 
+h4 {
+  font: constants.$font-default-mobile-h4;
+  @include mixins.responsive(constants.$screen-medium) {
+    font: constants.$font-default-desktop-h4;
+  }
+}
+
 div, p, span, input {
   font: constants.$font-default-mobile-p;
   @include mixins.responsive(constants.$screen-medium) {

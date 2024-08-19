@@ -61,3 +61,14 @@ $background-color-bottom: #181D20;
     background-image: url("../../assets/images/backgrounds/contacts_bg.png"),  linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
   }
 }
+
+.myServices {
+  background-image: url("../../assets/images/backgrounds/mobile/my_services_mobile_bg.png"),  linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+  @include mixins.responsive(constants.$screen-medium) {
+    background-image: url("../../assets/images/backgrounds/my_services_bg.png"),  linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}

@@ -27,6 +27,7 @@ const Layout = () => {
 		[classes.blur]: isSubMenuOpen,
 		[classes.whoIAmBG]: location.pathname === pagesObject.whoIAm.path,
 		[classes.contacts]: location.pathname === pagesObject.contacts.path,
+		[classes.myServices]: location.pathname === pagesObject.myServices.path,
 	});
 
 	return (

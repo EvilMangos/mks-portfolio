@@ -1,0 +1,18 @@
+  .swiper-wrapper {
+    box-sizing: border-box;
+    width: 375px;
+    padding-left: 50px; /* Adjust padding to ensure the previous slide is partially visible */
+    padding-right: 50px; /* Adjust padding to ensure the next slide is partially visible */
+  }
+
+  .swiper-slide {
+    //width: 198px !important;
+    height: 205px;
+    opacity: 1; /* Default opacity */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    opacity: 0.8; /* Reduced opacity for previous and next slides */
+  }

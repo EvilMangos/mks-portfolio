@@ -1,6 +1,6 @@
 import classes from "./Image.module.scss";
 import classNames from "classnames";
-import { sliderWhoIAmArray } from "../../../../datasets/slider";
+import { sliderWhoIAmArray } from "../../../../datasets/sliderWhoIAm";
 import React from "react";
 
 const Image = ({ lastElementHovered, outClass }) => {

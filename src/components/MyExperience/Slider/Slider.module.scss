@@ -1,8 +1,16 @@
-.slider {
-  padding-bottom: 40px;
+@use "/src/constants";
+@use "/src/mixins";
 
-}
+.container {
+  @include mixins.responsive(constants.$screen-medium) {
+    display: none;
+  }
 
-.description {
-  margin-top: 36px;
+  .slider {
+    padding-bottom: 40px;
+  }
+
+  .description {
+    margin-top: 36px;
+  }
 }

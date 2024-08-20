@@ -1,0 +1,179 @@
+@use "/src/constants";
+@use "./ExperienceItem.animation";
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "logo mainInfo open"
+    "stack stack stack"
+    "description description description";
+
+  grid-template-columns: 172px auto 89px;
+  grid-column-gap: 28px;
+  grid-row-gap: 16px;
+
+  background-color: constants.$color-dark-blue;
+  border-radius: 28px;
+  padding: 28px 28px 22px;
+  margin-bottom: 22px;
+
+  &:hover {
+    background-color: constants.$color-light-blue;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    .logo {
+      background-color: constants.$color-dark-blue;
+      transition-duration: 0.5s;
+    }
+  }
+
+  &.item_0 {
+    height: 307px;
+    @include ExperienceItem.animationItemShrink(307px, 1187px, 0);
+
+    &.active {
+      height: 1187px;
+      @include ExperienceItem.animationItemExpand(307px, 1187px, 0);
+    }
+  }
+
+  &.item_1 {
+    height: 307px;
+    @include ExperienceItem.animationItemShrink(307px, 1109px, 1);
+
+    &.active {
+      height: 1109px;
+      @include ExperienceItem.animationItemExpand(307px, 1109px, 1);
+    }
+  }
+
+  &.item_2 {
+    height: 307px;
+    @include ExperienceItem.animationItemShrink(307px, 1213px, 2);
+
+    &.active {
+      height: 1213px;
+      @include ExperienceItem.animationItemExpand(307px, 1213px, 2);
+    }
+  }
+
+  &.item_3 {
+    height: 281px;
+    @include ExperienceItem.animationItemShrink(281px, 797px, 3);
+
+    &.active {
+      height: 797px;
+      @include ExperienceItem.animationItemExpand(281px, 797px, 3);
+    }
+  }
+
+  &.active {
+    background-color: constants.$color-light-green;
+
+    .logo {
+      background-color: constants.$color-light-blue;
+    }
+
+    .mainInfo {
+      .name {
+        color: constants.$color-black;
+      }
+
+      .role {
+        color: constants.$color-dark-blue;
+      }
+
+      .workingPeriod,
+      .workingPeriod span {
+        color: constants.$color-black;
+      }
+    }
+
+    .stack {
+      color: constants.$color-dark-blue;
+
+      .stackLabel {
+        color: constants.$color-black;
+      }
+    }
+  }
+
+  .logo {
+    grid-area: logo;
+    width: 172px;
+    height: 172px;
+    border-radius: 18px;
+    background-color: constants.$color-light-blue;
+  }
+
+  .mainInfo {
+    grid-area: mainInfo;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    .name {
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: 700;
+    }
+
+    .role {
+      font-family: "Cascadia Code";
+      color: constants.$color-light-green;
+      margin-top: 16px;
+    }
+
+    .workingPeriod {
+      display: flex;
+      align-items: center;
+
+      margin-top: 22px;
+
+      .calendar {
+        width: 18px;
+        height: 21px;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .open {
+    grid-area: open;
+    display: flex;
+    align-items: center;
+
+    .openIcon {
+      width: 69px;
+      height: 58px;
+    }
+  }
+
+  .stack {
+    grid-area: stack;
+    color: constants.$color-light-green;
+    font-family: "Cascadia Code";
+    font-weight: 600;
+
+    .stackLabel {
+      font-weight: 600;
+    }
+  }
+
+  .description {
+    grid-area: description;
+    margin-top: 4px;
+
+    .descriptionTitle {
+      color: constants.$color-black;
+    }
+
+    .descriptionText {
+      color: constants.$color-black;
+      text-align: justify;
+      margin-top: 16px;
+    }
+  }
+}

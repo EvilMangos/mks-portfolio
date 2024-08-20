@@ -10,7 +10,7 @@ import "./Slider.scss";
 import classNames from "classnames";
 import Arrow from "./Arrow/Arrow";
 import { useRef, useState } from "react";
-import { sliderWhoIAmArray } from "../../../../datasets/slider";
+import { sliderWhoIAmArray } from "../../../../datasets/sliderWhoIAm";
 
 const Slider = ({ setLastElementHovered, outClass }) => {
 	const [isNextActive, setIsNextActive] = useState(true);

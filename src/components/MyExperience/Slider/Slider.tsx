@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { experienceArray } from "../../../datasets/experience";
+import { experienceArray, experienceObject } from "../../../datasets/experience";
 import Slide from "./Slide/Slide";
 import "./Slider.scss";
 import classes from "./Slider.module.scss";
@@ -10,13 +10,13 @@ import { Navigation, Pagination } from "swiper/modules";
 import Description from "./Description/Description";
 
 const Slider = ({ outClass }) => {
-	const [activeIndex, setActiveIndex] = useState(0);
+	const [activeIndex, setActiveIndex] = useState(experienceObject.epam.id);
 
 	const handleSlideChange = (swiper) => {
 		setActiveIndex(swiper.activeIndex);
 	};
 
-	const renderedSlides = experienceArray.map((experience, index) => (
+	const renderedSlides = experienceArray.map(experience => (
 		<SwiperSlide key={experience.id}>
 			<Slide
 				name={experience.name}
@@ -25,18 +25,18 @@ const Slider = ({ outClass }) => {
 				startDate={experience.startDate}
 				finishDate={experience.finishDate}
 				stack={experience.stack}
-				isActive={index === activeIndex}
+				isActive={experience.id === activeIndex}
 			/>
 		</SwiperSlide>
 	));
 
-	const sliderClasses = classNames(classes.slider, outClass);
+	const containerClasses = classNames(classes.container, outClass);
 	return (
-		<div>
+		<div className={containerClasses}>
 			<Swiper
 				spaceBetween={10}
 				slidesPerView={1}
-				className={sliderClasses}
+				className={classes.slider}
 				onSlideChange={handleSlideChange}
 				centeredSlides={true}
 				modules={[Pagination, Navigation]}
@@ -46,7 +46,7 @@ const Slider = ({ outClass }) => {
 					{renderedSlides}
 				</div>
 			</Swiper>
-			<Description text={experienceArray.find((experience, index) => index === activeIndex).description}
+			<Description text={experienceArray.find(experience => experience.id === activeIndex).description}
 									 outClass={classes.description} />
 		</div>
 	);

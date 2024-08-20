@@ -41,9 +41,10 @@
     @include mixins.responsive(constants.$screen-medium) {
       &:before {
         position: absolute;
-        content: url("../../../assets/icons/selected_menu_item.svg");
+        content: url("../../../assets/icons/active/selected_menu_item.svg");
         bottom: 0;
-        transform: translate(50%, 6px);
+        left: calc(50% - 19px);
+        top: 148%;
       }
     }
   }

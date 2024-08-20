@@ -1,36 +1,36 @@
 const pagesObject = {
 	whoIAm: {
-		id: 1,
+		id: 0,
 		path: "/",
 		name: "Who I Am",
 		isVisible: true,
 	},
 	myServices: {
-		id: 2,
+		id: 1,
 		path: "/services",
 		name: "My Services",
 		isVisible: false,
 	},
 	mySkills: {
-		id: 3,
+		id: 2,
 		path: "/skills",
 		name: "My Skills",
 		isVisible: false,
 	},
 	myExperience: {
-		id: 4,
+		id: 3,
 		path: "/experience",
 		name: "My Experience",
 		isVisible: true
 	},
 	myProjects: {
-		id: 5,
+		id: 4,
 		path: "/projects",
 		name: "My Projects",
 		isVisible: false,
 	},
 	contacts: {
-		id: 6,
+		id: 5,
 		path: "/contacts",
 		name: "Contacts",
 		isVisible: true,

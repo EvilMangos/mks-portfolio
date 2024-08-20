@@ -2,7 +2,7 @@ import { skillsObject } from "./skills";
 
 const skillsSectionsObject = {
 	backend: {
-		id: 1,
+		id: 0,
 		name: "Backend",
 		skills: [
 			skillsObject.JavaScript,
@@ -21,7 +21,7 @@ const skillsSectionsObject = {
 		],
 	},
 	frontend: {
-		id: 2,
+		id: 1,
 		name: "Frontend",
 		skills: [
 			skillsObject.JavaScript,
@@ -36,7 +36,7 @@ const skillsSectionsObject = {
 		],
 	},
 	devops: {
-		id: 3,
+		id: 2,
 		name: "DevOps",
 		skills: [
 			skillsObject.AWS,
@@ -46,7 +46,7 @@ const skillsSectionsObject = {
 		],
 	},
 	databases: {
-		id: 4,
+		id: 3,
 		name: "Databases",
 		skills: [
 			skillsObject.Postgresql,
@@ -55,7 +55,7 @@ const skillsSectionsObject = {
 		],
 	},
 	websitePlatforms: {
-		id: 5,
+		id: 4,
 		name: "Website Platforms",
 		skills: [
 			skillsObject.Wix,

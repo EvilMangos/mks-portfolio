@@ -30,45 +30,45 @@ div, h1, h2, h3, h4, p, span {
 
 h1 {
   font: constants.$font-default-mobile-h1;
-  line-height: constants.$font-line-height-desktop-h1;
+  line-height: constants.$font-line-height-mobile-h1;
   @include mixins.responsive(constants.$screen-medium) {
     font: constants.$font-default-desktop-h1;
-    line-height: constants.$font-line-height-mobile-h1;
+    line-height: constants.$font-line-height-desktop-h1;
   }
 }
 
 h2 {
   font: constants.$font-default-mobile-h2;
-  line-height: constants.$font-line-height-desktop-h2;
+  line-height: constants.$font-line-height-mobile-h2;
   @include mixins.responsive(constants.$screen-medium) {
     font: constants.$font-default-desktop-h2;
-    line-height: constants.$font-line-height-mobile-h2;
+    line-height: constants.$font-line-height-desktop-h2;
   }
 }
 
 h3 {
   font: constants.$font-default-mobile-h3;
-  line-height: constants.$font-line-height-desktop-h3;
+  line-height: constants.$font-line-height-mobile-h3;
   @include mixins.responsive(constants.$screen-medium) {
     font: constants.$font-default-desktop-h3;
-    line-height: constants.$font-line-height-mobile-h3;
+    line-height: constants.$font-line-height-desktop-h3;
   }
 }
 
 h4 {
   font: constants.$font-default-mobile-h4;
-  line-height: constants.$font-line-height-desktop-h4;
+  line-height: constants.$font-line-height-mobile-h4;
   @include mixins.responsive(constants.$screen-medium) {
     font: constants.$font-default-desktop-h4;
-    line-height: constants.$font-line-height-mobile-h4;
+    line-height: constants.$font-line-height-desktop-h4;
   }
 }
 
 div, p, span, input {
   font: constants.$font-default-mobile-p;
-  line-height: constants.$font-line-height-desktop-p;
+  line-height: constants.$font-line-height-mobile-p;
   @include mixins.responsive(constants.$screen-medium) {
     font: constants.$font-default-desktop-p;
-    line-height: constants.$font-line-height-mobile-p;
+    line-height: constants.$font-line-height-desktop-p;
   }
 }

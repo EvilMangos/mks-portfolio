@@ -1,6 +1,6 @@
 @use "/src/constants" as constants;
 @use "/src/mixins" as mixins;
-@use "./NavigationMenuAnimations";
+@use "NavigationMenu.animations";
 
 .menu {
   display: flex;

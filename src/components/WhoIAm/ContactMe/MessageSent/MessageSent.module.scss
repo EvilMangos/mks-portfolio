@@ -1,6 +1,6 @@
 @use "/src/constants";
 @use "/src/mixins";
-@use "./MessageSentAnimations";
+@use "MessageSent.animations";
 
 .messageSent {
   position: absolute;

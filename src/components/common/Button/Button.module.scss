@@ -1,5 +1,5 @@
 @use "/src/constants" as constants;
-@use "./ButtonAnimations";
+@use "Button.animations";
 
 .container {
   border: 2px solid constants.$color-light-green;

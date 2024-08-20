@@ -1,6 +1,6 @@
 @use "/src/constants";
 @use "/src/mixins";
-@use "./Slide.animation";
+@use "Slide.animations";
 
 .card {
   transform: scale(0.8);

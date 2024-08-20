@@ -33,6 +33,7 @@ const Layout = () => {
 		[classes.whoIAmBG]: location.pathname === pagesObject.whoIAm.path,
 		[classes.contacts]: location.pathname === pagesObject.contacts.path,
 		[classes.myExperience]: location.pathname === pagesObject.myExperience.path,
+		[classes.mySkills]: location.pathname === pagesObject.mySkills.path,
 	});
 
 	return (

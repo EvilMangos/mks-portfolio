@@ -1,6 +1,6 @@
 @use "/src/constants" as constants;
 @use "/src/mixins" as mixins;
-@use "./HeaderAnimations";
+@use "Header.animations";
 
 $header-gradient-color-start: rgba(28, 28, 0, 0.4);
 $header-gradient-color-end: rgba(0, 17, 36, 0.4);

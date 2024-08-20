@@ -1,4 +1,5 @@
 @use "/src/constants";
+@use "./Description.animations";
 
 .container {
   display: flex;
@@ -15,6 +16,8 @@
     margin-top: 12px;
     width: 314px;
     text-align: justify;
+
+    animation: fadeIn 1s ease-in-out;
     .textTransparency {
     }
   }

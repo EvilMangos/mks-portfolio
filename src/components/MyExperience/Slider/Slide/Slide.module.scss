@@ -1,5 +1,6 @@
 @use "/src/constants";
 @use "/src/mixins";
+@use "./Slide.animation";
 
 .card {
   transform: scale(0.8);
@@ -13,7 +14,11 @@
   border-radius: 16px;
   height: 415px;
 
+  animation: slideUnselectedChange 0.1s;
+
   &.activeSlide {
+    animation: slideSelectedChange 0.2s;
+
     transform: scale(1);
     background-color: constants.$color-light-green;
   }
@@ -23,7 +28,7 @@
     height: 142px;
 
     border-radius: 10px;
-    background-color: constants.$color-light-blue;
+    background-color: constants.$color-white;
   }
 
   .title {

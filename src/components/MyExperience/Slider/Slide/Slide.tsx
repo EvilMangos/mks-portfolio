@@ -1,12 +1,24 @@
-import Card from "./Card/Card";
-import Description from "./Description/Description";
 import classes from "./Slide.module.scss";
+import classNames from "classnames";
+import calendar from "../../../../assets/icons/calendar_active.png";
 
-const Slide = ({name, logo, role, startDate, finishDate, stack, description, isActive}) => {
+const Slide = ({name, logo, role, startDate, finishDate, stack, isActive}) => {
+	const cardClasses = classNames(classes.card, {
+		[classes.activeSlide]: isActive,
+	})
 	return (
-		<div className={classes.container}>
-			<Card name={name} logo={logo} role={role} startDate={startDate} finishDate={finishDate} stack={stack} isActive={isActive} />
-			<Description text={description} outClass={classes.description}/>
+		<div className={cardClasses}>
+			<img className={classes.image} src={logo} alt="logo" />
+			<h2 className={classes.title}>{name}</h2>
+			<div className={classes.role}>{role}</div>
+			<div className={classes.dates}>
+				<img className={classes.calendar} src={calendar} alt="calendar" />
+				<div className={classes.datesLine}>
+					<span className={classes.startDate}>{startDate}</span>&nbsp;-&nbsp;<span
+					className={classes.finishDate}>{finishDate || "Present"}</span>
+				</div>
+			</div>
+			<div className={classes.stack}><span className={classes.stackLabel}>Stack: </span>{stack.join(", ")}.</div>
 		</div>
 	);
 };

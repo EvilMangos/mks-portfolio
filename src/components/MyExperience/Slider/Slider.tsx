@@ -7,6 +7,7 @@ import classes from "./Slider.module.scss";
 import classNames from "classnames";
 import { useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
+import Description from "./Description/Description";
 
 const Slider = ({ outClass }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -24,7 +25,6 @@ const Slider = ({ outClass }) => {
 				startDate={experience.startDate}
 				finishDate={experience.finishDate}
 				stack={experience.stack}
-				description={experience.description}
 				isActive={index === activeIndex}
 			/>
 		</SwiperSlide>
@@ -45,8 +45,9 @@ const Slider = ({ outClass }) => {
 				<div className={classes.sliderContent}>
 					{renderedSlides}
 				</div>
-
 			</Swiper>
+			<Description text={experienceArray.find((experience, index) => index === activeIndex).description}
+									 outClass={classes.description} />
 		</div>
 	);
 };

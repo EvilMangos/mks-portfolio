@@ -1,0 +1,18 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  transform: translateY(15px);
+
+  @include mixins.responsive(constants.$screen-medium) {
+    display: none;
+  }
+
+  &.swiper-pagination-bullet-active {
+    background-color: constants.$color-white;
+  }
+}

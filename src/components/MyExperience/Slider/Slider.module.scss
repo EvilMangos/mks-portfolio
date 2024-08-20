@@ -1,0 +1,16 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.container {
+  @include mixins.responsive(constants.$screen-medium) {
+    display: none;
+  }
+
+  .slider {
+    padding-bottom: 40px;
+  }
+
+  .description {
+    margin-top: 36px;
+  }
+}

@@ -1,6 +1,7 @@
 @use "./NavigationMenuItemAnimations";
 
 .link.prioritier {
+  position: relative;
   text-decoration: none;
   color: white;
   height: 16px;

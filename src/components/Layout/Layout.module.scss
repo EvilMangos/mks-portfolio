@@ -49,15 +49,22 @@ $background-color-bottom: #181D20;
 }
 
 .whoIAmBG {
-  background-image: url("../../assets/images/backgrounds/mobile/who_i_am_mobile_bg.png"),  linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+  background-image: url("../../assets/images/backgrounds/mobile/who_i_am_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
   @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"),  linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
   }
 }
 
 .contacts {
-  background-image: url("../../assets/images/backgrounds/mobile/contacts_bg_mobile.png"),  linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+  background-image: url("../../assets/images/backgrounds/mobile/contacts_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
   @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/contacts_bg.png"),  linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    background-image: url("../../assets/images/backgrounds/contacts_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+  }
+}
+
+.myExperience {
+  background-image: url("../../assets/images/backgrounds/mobile/my_experience_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+  @include mixins.responsive(constants.$screen-medium) {
+    background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
   }
 }

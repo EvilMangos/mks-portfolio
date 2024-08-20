@@ -10,7 +10,7 @@ import "./Slider.scss";
 import classNames from "classnames";
 import Arrow from "./Arrow/Arrow";
 import { useRef, useState } from "react";
-import { sliderDataArray } from "../../../../datasets/slider";
+import { sliderWhoIAmArray } from "../../../../datasets/sliderWhoIAm";
 
 const Slider = ({ setLastElementHovered, outClass }) => {
 	const [isNextActive, setIsNextActive] = useState(true);
@@ -61,7 +61,7 @@ const Slider = ({ setLastElementHovered, outClass }) => {
 				className={classes.slider}
 			>
 				<SwiperSlide>
-					{sliderDataArray
+					{sliderWhoIAmArray
 						.filter((element) => element.slide === 1)
 						.map((element) => (
 							<SlideLine
@@ -76,7 +76,7 @@ const Slider = ({ setLastElementHovered, outClass }) => {
 						))}
 				</SwiperSlide>
 				<SwiperSlide>
-					{sliderDataArray
+					{sliderWhoIAmArray
 						.filter((element) => element.slide === 2)
 						.map((element) => (
 							<SlideLine

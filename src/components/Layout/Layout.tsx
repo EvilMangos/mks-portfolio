@@ -23,10 +23,16 @@ const Layout = () => {
 		};
 	}, [isSubMenuOpen]);
 
+
+	useEffect(() => {
+		setIsSubMenuOpen(false);
+	}, [location]);
+
 	const layoutClasses = classNames(classes.layout, {
 		[classes.blur]: isSubMenuOpen,
 		[classes.whoIAmBG]: location.pathname === pagesObject.whoIAm.path,
 		[classes.contacts]: location.pathname === pagesObject.contacts.path,
+		[classes.myExperience]: location.pathname === pagesObject.myExperience.path,
 	});
 
 	return (

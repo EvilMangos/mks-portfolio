@@ -3,9 +3,10 @@ import Image from "./Image/Image";
 import Title from "./Title/Title";
 import Slider from "./Slider/Slider";
 import { useState } from "react";
+import { sliderWhoIAmObject } from "../../../datasets/sliderWhoIAm";
 
 const AboutMe = () => {
-	const [lastElementHovered, setLastElementHovered] = useState(1);
+	const [lastElementHovered, setLastElementHovered] = useState(sliderWhoIAmObject.name.id);
 	return (
 		<div className={classes.container}>
 			<Image lastElementHovered={lastElementHovered} outClass={classes.image} />

@@ -98,7 +98,7 @@ const experienceObject = {
 <li><b>DevOps Expertise:</b> Actively engaged in DevOps development, continually expanding my expertise in this field.</li>
 <li><b>Proven Decision-Maker:</b> Without prior management experience, I demonstrated my ability to make critical decisions and overcome challenges, ensuring the success of our project.</li>
 </ul>
-<br/><br/>	<b>Why Choose Me?</b>
+<br/><b>Why Choose Me?</b>
 <br/>I bring a comprehensive skill set to the table, not only developing your product with technical excellence but also ensuring it meets all legal standards. My experience in establishing and managing effective processes guarantees a smooth and efficient workflow, tailored to your needs.
 <br/><br/>Invest in a professional who can deliver top-tier development and operational excellence. Let's take your project to new heights together.`,
 	},

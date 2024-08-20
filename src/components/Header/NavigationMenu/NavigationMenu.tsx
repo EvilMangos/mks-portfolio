@@ -27,7 +27,7 @@ const NavigationMenu = ({ outClass, isSubMenuOpen, setIsSubMenuOpen }) => {
 		[classes.hide]: !isSubMenuOpen,
 	});
 
-	const renderedNavigationMenu = pagesArray.map((page) => {
+	const renderedNavigationMenu = pagesArray.filter(page => page.isVisible).map((page) => {
 		const itemClasses = classNames(classes.menuItem, {
 			[classes.selected]: page.path === location.pathname,
 		});

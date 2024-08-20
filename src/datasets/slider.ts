@@ -1,6 +1,6 @@
 import laptop from "../assets/images/laptop.png";
 
-const sliderDataObject = {
+const sliderWhoIAmObject = {
 	name: {
 		id: 1,
 		text: "Name",
@@ -59,6 +59,6 @@ const sliderDataObject = {
 	},
 };
 
-const sliderDataArray = Object.values(sliderDataObject);
+const sliderWhoIAmArray = Object.values(sliderWhoIAmObject);
 
-export { sliderDataObject, sliderDataArray };
+export { sliderWhoIAmObject, sliderWhoIAmArray };

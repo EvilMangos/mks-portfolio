@@ -1,10 +1,10 @@
 import classes from "./Image.module.scss";
 import classNames from "classnames";
-import { sliderDataArray } from "../../../../datasets/slider";
+import { sliderWhoIAmArray } from "../../../../datasets/slider";
 import React from "react";
 
 const Image = ({ lastElementHovered, outClass }) => {
-	const image = sliderDataArray.find(
+	const image = sliderWhoIAmArray.find(
 		(element) => element.id === lastElementHovered
 	).image;
 	const imageClasses = classNames(outClass, classes.image);

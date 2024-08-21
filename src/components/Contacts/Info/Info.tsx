@@ -8,8 +8,8 @@ const Info = () => {
 				<div className={classes.info}>
 					<div className={classes.line}>
 						<span className={classes.valueElement}>
-						501 11th St, Brooklyn, NY 11215
-					</span>
+							501 11th St, Brooklyn, NY 11215
+						</span>
 					</div>
 				</div>
 			</div>

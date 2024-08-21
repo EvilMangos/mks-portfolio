@@ -1,16 +1,18 @@
-@use "/src/constants" as constants;
-@use "/src/mixins" as mixins;
+@use "/src/constants";
+@use "/src/mixins";
+@use "./Layout.animations";
 
 $background-color-top: #2A3136;
 $background-color-bottom: #181D20;
 
 .layout {
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
   padding-top: 26px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
   @include mixins.responsive(constants.$screen-medium) {
     padding: 58px 0;
   }
@@ -21,6 +23,14 @@ $background-color-bottom: #181D20;
 
     @include mixins.responsive(constants.$screen-medium) {
       max-width: 980px;
+    }
+
+    .content {
+      opacity: 0;
+      &.visible {
+        opacity: 1;
+        animation: fadeOut 0.5s;
+      }
     }
   }
 
@@ -48,23 +58,49 @@ $background-color-bottom: #181D20;
   overflow: hidden;
 }
 
-.whoIAmBG {
-  background-image: url("../../assets/images/backgrounds/mobile/who_i_am_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
-  @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
-}
+.whoIAmBG,
+.contacts,
+.myExperience,
+.mySkills {
+  background-size: 100% auto; // This ensures that the height of the image fits the container's height
+  background-position: center top; // Center the image both horizontally and vertically
+  background-repeat: no-repeat;
 
-.contacts {
-  background-image: url("../../assets/images/backgrounds/mobile/contacts_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
-  @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/contacts_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
-}
+  &.whoIAmBG {
+    background-image: url("../../assets/images/backgrounds/mobile/who_i_am_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+    @include mixins.responsive(constants.$screen-medium) {
+      background-size: 100% 100%;
+      background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    }
 
-.myExperience {
-  background-image: url("../../assets/images/backgrounds/mobile/my_experience_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
-  @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    @include mixins.responsive(2281px) {
+      background-size: 100% 100%
+    }
+  }
+
+  &.contacts {
+    background-image: url("../../assets/images/backgrounds/mobile/contacts_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+    @include mixins.responsive(constants.$screen-medium) {
+      background-size: 100% 100%;
+      background-image: url("../../assets/images/backgrounds/contacts_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    }
+
+    @include mixins.responsive(2281px) {
+      background-size: 100% 100%
+    }
+  }
+
+  &.myExperience {
+    background-image: url("../../assets/images/backgrounds/mobile/my_experience_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+    @include mixins.responsive(constants.$screen-medium) {
+      background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    }
+  }
+
+  &.mySkills {
+    background-image: url("../../assets/images/backgrounds/mobile/my_skills_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+    @include mixins.responsive(constants.$screen-medium) {
+      background-image: url("../../assets/images/backgrounds/my_skills_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    }
   }
 }

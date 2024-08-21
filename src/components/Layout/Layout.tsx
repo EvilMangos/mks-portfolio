@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import classNames from "classnames";
 import Header from "../Header/Header";
 import { Outlet, useLocation } from "react-router-dom";
@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import { pagesObject } from "../../datasets/pages";
 
 const Layout = () => {
+	const contentRef = useRef(null);
 	const [isSubMenuOpen, setIsSubMenuOpen] = React.useState(false);
 
 	const location = useLocation();
@@ -23,16 +24,30 @@ const Layout = () => {
 		};
 	}, [isSubMenuOpen]);
 
-
 	useEffect(() => {
 		setIsSubMenuOpen(false);
-	}, [location]);
+		if (contentRef && contentRef.current) {
+			contentRef.current.classList.remove(classes.visible);
+			void contentRef.current.offsetWidth;
+			setTimeout(() => {
+				if (contentRef.current) {
+					contentRef.current.classList.add(classes.visible);
+				}
+			}, 50);
+		}
+		return () => {
+			if (contentRef && contentRef.current) {
+				contentRef.current.classList.remove(classes.visible);
+			}
+		}
+	}, [location.pathname]);
 
 	const layoutClasses = classNames(classes.layout, {
 		[classes.blur]: isSubMenuOpen,
 		[classes.whoIAmBG]: location.pathname === pagesObject.whoIAm.path,
 		[classes.contacts]: location.pathname === pagesObject.contacts.path,
 		[classes.myExperience]: location.pathname === pagesObject.myExperience.path,
+		[classes.mySkills]: location.pathname === pagesObject.mySkills.path,
 	});
 
 	return (
@@ -42,7 +57,10 @@ const Layout = () => {
 					isSubMenuOpen={isSubMenuOpen}
 					setIsSubMenuOpen={setIsSubMenuOpen}
 				/>
-				<Outlet />
+				<main className={classes.content} ref={contentRef}>
+					<Outlet />
+				</main>
+
 				<Footer />
 			</div>
 		</div>

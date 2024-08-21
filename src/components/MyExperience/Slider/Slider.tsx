@@ -1,6 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { experienceArray, experienceObject } from "../../../datasets/experience";
+import {
+	experienceArray,
+	experienceObject,
+} from "../../../datasets/experience";
 import Slide from "./Slide/Slide";
 import "./Slider.scss";
 import classes from "./Slider.module.scss";
@@ -16,7 +19,7 @@ const Slider = ({ outClass }) => {
 		setActiveIndex(swiper.activeIndex);
 	};
 
-	const renderedSlides = experienceArray.map(experience => (
+	const renderedSlides = experienceArray.map((experience) => (
 		<SwiperSlide key={experience.id}>
 			<Slide
 				name={experience.name}
@@ -42,12 +45,15 @@ const Slider = ({ outClass }) => {
 				modules={[Pagination, Navigation]}
 				pagination={{ clickable: true }}
 			>
-				<div className={classes.sliderContent}>
-					{renderedSlides}
-				</div>
+				<div className={classes.sliderContent}>{renderedSlides}</div>
 			</Swiper>
-			<Description text={experienceArray.find(experience => experience.id === activeIndex).description}
-									 outClass={classes.description} />
+			<Description
+				text={
+					experienceArray.find((experience) => experience.id === activeIndex)
+						.description
+				}
+				outClass={classes.description}
+			/>
 		</div>
 	);
 };

@@ -15,13 +15,13 @@ const pagesObject = {
 		id: 2,
 		path: "/skills",
 		name: "My Skills",
-		isVisible: false,
+		isVisible: true,
 	},
 	myExperience: {
 		id: 3,
 		path: "/experience",
 		name: "My Experience",
-		isVisible: true
+		isVisible: true,
 	},
 	myProjects: {
 		id: 4,

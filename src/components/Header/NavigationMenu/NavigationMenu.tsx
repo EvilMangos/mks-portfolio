@@ -27,21 +27,23 @@ const NavigationMenu = ({ outClass, isSubMenuOpen, setIsSubMenuOpen }) => {
 		[classes.hide]: !isSubMenuOpen,
 	});
 
-	const renderedNavigationMenu = pagesArray.filter(page => page.isVisible).map((page) => {
-		const itemClasses = classNames(classes.menuItem, {
-			[classes.selected]: page.path === location.pathname,
+	const renderedNavigationMenu = pagesArray
+		.filter((page) => page.isVisible)
+		.map((page) => {
+			const itemClasses = classNames(classes.menuItem, {
+				[classes.selected]: page.path === location.pathname,
+			});
+			return (
+				<NavMenuItem
+					key={page.id}
+					link={page.path}
+					text={page.name}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+					outClass={itemClasses}
+				/>
+			);
 		});
-		return (
-			<NavMenuItem
-				key={page.id}
-				link={page.path}
-				text={page.name}
-				onMouseEnter={onMouseEnter}
-				onMouseLeave={onMouseLeave}
-				outClass={itemClasses}
-			/>
-		);
-	});
 
 	return (
 		<div className={classes.menu} ref={divRef}>

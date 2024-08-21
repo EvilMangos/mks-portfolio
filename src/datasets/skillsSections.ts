@@ -48,18 +48,12 @@ const skillsSectionsObject = {
 	databases: {
 		id: 3,
 		name: "Databases",
-		skills: [
-			skillsObject.Postgresql,
-			skillsObject.MongoDb,
-			skillsObject.Redis,
-		],
+		skills: [skillsObject.Postgresql, skillsObject.MongoDb, skillsObject.Redis],
 	},
 	websitePlatforms: {
 		id: 4,
 		name: "Website Platforms",
-		skills: [
-			skillsObject.Wix,
-		],
+		skills: [skillsObject.Wix],
 	},
 };
 

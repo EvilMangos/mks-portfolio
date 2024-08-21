@@ -1,16 +1,12 @@
-@use "/src/constants";
-
 @mixin animationItemExpand($collapsed, $expended, $id) {
   animation: itemExpand-#{$id} 1s;
 
   @keyframes itemExpand-#{$id}{
     0% {
       height: $collapsed;
-      background-color: constants.$color-dark-blue;
     }
     100% {
       height: $expended;
-      background-color: constants.$color-light-green;
     }
   }
 }
@@ -21,11 +17,9 @@
   @keyframes itemShrink-#{$id} {
     0% {
       height: $expended;
-      background-color: constants.$color-light-green;
     }
     100% {
       height: $collapsed;
-      background-color: constants.$color-dark-blue;
     }
   }
 }

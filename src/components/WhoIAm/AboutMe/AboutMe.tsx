@@ -6,7 +6,9 @@ import { useState } from "react";
 import { sliderWhoIAmObject } from "../../../datasets/sliderWhoIAm";
 
 const AboutMe = () => {
-	const [lastElementHovered, setLastElementHovered] = useState(sliderWhoIAmObject.name.id);
+	const [lastElementHovered, setLastElementHovered] = useState(
+		sliderWhoIAmObject.name.id
+	);
 	return (
 		<div className={classes.container}>
 			<Image lastElementHovered={lastElementHovered} outClass={classes.image} />

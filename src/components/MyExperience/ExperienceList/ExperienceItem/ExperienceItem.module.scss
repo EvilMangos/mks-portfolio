@@ -1,5 +1,5 @@
 @use "/src/constants";
-@use "./ExperienceItem.animation";
+@use "ExperienceItem.animations";
 
 .container {
   display: grid;
@@ -16,6 +16,8 @@
   border-radius: 28px;
   padding: 28px 28px 22px;
   margin-bottom: 22px;
+  transition-duration: 1s;
+  overflow: hidden;
 
   &:hover {
     background-color: constants.$color-light-blue;

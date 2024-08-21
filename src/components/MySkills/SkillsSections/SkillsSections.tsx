@@ -12,12 +12,14 @@ const SkillsSections = ({ outClass }) => {
 	};
 
 	const closeSection = (section) => {
-		setOpenSections(openSections.filter(openSection => section !== openSection));
+		setOpenSections(
+			openSections.filter((openSection) => section !== openSection)
+		);
 	};
 
 	const containerSections = classNames(classes.container, outClass);
 
-	const renderedSections = skillsSectionsArray.map(section =>
+	const renderedSections = skillsSectionsArray.map((section) => (
 		<SkillsSection
 			key={section.id}
 			id={section.id}
@@ -26,14 +28,10 @@ const SkillsSections = ({ outClass }) => {
 			isOpen={openSections.includes(section.id)}
 			open={openSection}
 			close={closeSection}
-		/>,
-	);
+		/>
+	));
 
-	return (
-		<div className={containerSections}>
-			{renderedSections}
-		</div>
-	);
+	return <div className={containerSections}>{renderedSections}</div>;
 };
 
 export default SkillsSections;

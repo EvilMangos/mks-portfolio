@@ -5,7 +5,7 @@ import classes from "./ExperienceList.module.scss";
 
 const ExperienceList = () => {
 	const [activeIndex, setActiveIndex] = useState(null);
-	const renderedList = experienceArray.map(experience =>
+	const renderedList = experienceArray.map((experience) => (
 		<ExperienceItem
 			key={experience.id}
 			id={experience.id}
@@ -18,12 +18,11 @@ const ExperienceList = () => {
 			isActive={experience.id === activeIndex}
 			description={experience.description}
 			setActiveIndex={setActiveIndex}
-		/>)
+		/>
+	));
 	return (
 		<div className={classes.container}>
-			<div className={classes.content}>
-				{renderedList}
-			</div>
+			<div className={classes.content}>{renderedList}</div>
 		</div>
 	);
 };

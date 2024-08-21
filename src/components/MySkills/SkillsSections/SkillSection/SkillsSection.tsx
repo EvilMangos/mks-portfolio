@@ -10,16 +10,22 @@ const SkillsSection = ({ id, name, subList, isOpen, open, close }) => {
 			open(id);
 		}
 	};
-	const containerClasses = classNames(classes.container, classes[`item_${id}`], {
-		[classes.containerOpen]: isOpen,
-	});
+	const containerClasses = classNames(
+		classes.container,
+		classes[`item_${id}`],
+		{
+			[classes.containerOpen]: isOpen,
+		}
+	);
 	const titleClasses = classNames(classes.title, {
 		[classes.open]: isOpen,
 	});
 	return (
 		<div className={containerClasses}>
-			<div className={titleClasses} onClick={onClick}>{name}</div>
-				<SkillsSubList subList={subList} />
+			<div className={titleClasses} onClick={onClick}>
+				{name}
+			</div>
+			<SkillsSubList subList={subList} />
 		</div>
 	);
 };

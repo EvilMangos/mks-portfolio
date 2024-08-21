@@ -7,9 +7,9 @@ const MyExperience = () => {
 		<div className={classes.container}>
 			<h1 className={classes.title}>My Experience</h1>
 			<Slider outClass={classes.slider} />
-			<ExperienceList/>
+			<ExperienceList />
 		</div>
-	)
-}
+	);
+};
 
 export default MyExperience;

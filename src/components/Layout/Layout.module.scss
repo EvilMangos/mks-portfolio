@@ -1,5 +1,6 @@
-@use "/src/constants" as constants;
-@use "/src/mixins" as mixins;
+@use "/src/constants";
+@use "/src/mixins";
+@use "./Layout.animations";
 
 $background-color-top: #2A3136;
 $background-color-bottom: #181D20;
@@ -22,6 +23,14 @@ $background-color-bottom: #181D20;
 
     @include mixins.responsive(constants.$screen-medium) {
       max-width: 980px;
+    }
+
+    .content {
+      opacity: 0;
+      &.visible {
+        opacity: 1;
+        animation: fadeOut 0.5s;
+      }
     }
   }
 
@@ -60,14 +69,24 @@ $background-color-bottom: #181D20;
   &.whoIAmBG {
     background-image: url("../../assets/images/backgrounds/mobile/who_i_am_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
     @include mixins.responsive(constants.$screen-medium) {
+      background-size: 100% 100%;
       background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    }
+
+    @include mixins.responsive(2281px) {
+      background-size: 100% 100%
     }
   }
 
   &.contacts {
     background-image: url("../../assets/images/backgrounds/mobile/contacts_mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
     @include mixins.responsive(constants.$screen-medium) {
+      background-size: 100% 100%;
       background-image: url("../../assets/images/backgrounds/contacts_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+    }
+
+    @include mixins.responsive(2281px) {
+      background-size: 100% 100%
     }
   }
 

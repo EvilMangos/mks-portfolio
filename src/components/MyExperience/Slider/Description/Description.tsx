@@ -7,7 +7,7 @@ const Description = ({ text, outClass }) => {
 	const containerClasses = classNames(classes.container, outClass);
 	useEffect(() => {
 		if (textRef && textRef.current) {
-			const clone = textRef.current.cloneNode(true)
+			const clone = textRef.current.cloneNode(true);
 			clone.innerHTML = text;
 			textRef.current.parentNode.replaceChild(clone, textRef.current);
 			textRef.current = clone;
@@ -17,9 +17,7 @@ const Description = ({ text, outClass }) => {
 		<div className={containerClasses}>
 			<h3 className={classes.title}>Description</h3>
 			<div className={classes.text} ref={textRef}>
-				<div className={classes.textTransparency}>
-					{text}
-				</div>
+				<div className={classes.textTransparency}>{text}</div>
 			</div>
 		</div>
 	);

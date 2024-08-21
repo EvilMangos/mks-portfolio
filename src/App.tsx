@@ -14,7 +14,10 @@ function App() {
 				<Route index element={<WhoIAm />} />
 
 				<Route path={pagesObject.contacts.path} element={<Contacts />} />
-				<Route path={pagesObject.myExperience.path} element={<MyExperience />} />
+				<Route
+					path={pagesObject.myExperience.path}
+					element={<MyExperience />}
+				/>
 				<Route path={pagesObject.mySkills.path} element={<MySkills />} />
 			</Route>
 		</Routes>

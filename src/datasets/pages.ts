@@ -21,7 +21,7 @@ const pagesObject = {
 		id: 3,
 		path: "/experience",
 		name: "My Experience",
-		isVisible: true
+		isVisible: true,
 	},
 	myProjects: {
 		id: 4,

@@ -2,7 +2,15 @@ import classes from "./Slide.module.scss";
 import classNames from "classnames";
 import calendar from "../../../../assets/icons/active/calendar_active.png";
 
-const Slide = ({ name, logo, role, startDate, finishDate, stack, isActive }) => {
+const Slide = ({
+	name,
+	logo,
+	role,
+	startDate,
+	finishDate,
+	stack,
+	isActive,
+}) => {
 	const cardClasses = classNames(classes.card, {
 		[classes.activeSlide]: isActive,
 	});
@@ -19,7 +27,10 @@ const Slide = ({ name, logo, role, startDate, finishDate, stack, isActive }) => 
 					<span className={classes.finishDate}>{finishDate || "Present"}</span>
 				</div>
 			</div>
-			<div className={classes.stack}><span className={classes.stackLabel}>Stack: </span>{stack.join(", ")}.</div>
+			<div className={classes.stack}>
+				<span className={classes.stackLabel}>Stack: </span>
+				{stack.join(", ")}.
+			</div>
 		</div>
 	);
 };

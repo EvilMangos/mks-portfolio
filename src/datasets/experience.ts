@@ -1,7 +1,6 @@
 import epam from "../assets/images/logos/epam.png";
 import zazmic from "../assets/images/logos/zazmic.png";
-import
-	dictary from "../assets/images/logos/dictary.png";
+import dictary from "../assets/images/logos/dictary.png";
 import dataannotation from "../assets/images/logos/dataannotation.png";
 import { skillsObject } from "./skills";
 

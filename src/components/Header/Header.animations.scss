@@ -1,17 +1,25 @@
-@keyframes headerOpen {
-  0% {
-    height: 54px;
-  }
-  100% {
-    height: 234px;
+@mixin headerOpenAnimation($collapsedHeight) {
+  animation: headerOpen 0.5s;
+  @keyframes headerOpen {
+    0% {
+      height: $collapsedHeight;
+    }
+    100% {
+      height: 234px;
+    }
   }
 }
 
-@keyframes headerClose {
-  0% {
-    height: 234px;
-  }
-  100% {
-    height: 54px;
+
+@mixin headerCloseAnimation($collapsedHeight) {
+  animation: headerClose 0.5s;
+  @keyframes headerClose {
+    0% {
+      height: 234px;
+    }
+    100% {
+      height: $collapsedHeight;
+    }
   }
 }
+

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 import classes from "./Button.module.scss";
 
@@ -10,6 +10,7 @@ interface IProps {
 	outClass: string;
 	type?: ButtonType;
 	disabled?: boolean;
+	onClick?: MouseEventHandler;
 }
 
 const Button = ({
@@ -17,11 +18,17 @@ const Button = ({
 	outClass = "",
 	type = "button",
 	disabled = false,
+	onClick = null,
 }: IProps) => {
 	const buttonClasses = classNames(outClass, classes.container);
 	return (
 		<div className={buttonClasses}>
-			<button type={type} className={classes.button} disabled={disabled}>
+			<button
+				type={type}
+				className={classes.button}
+				disabled={disabled}
+				onClick={onClick}
+			>
 				{text}
 			</button>
 		</div>

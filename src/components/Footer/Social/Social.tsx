@@ -32,7 +32,7 @@ const Social = () => {
 				alt="Telegram"
 			/>
 			<SocialLink
-				link="#"
+				link="https://wa.me/+380989707515"
 				image={whatsapp}
 				image_hover={whatsappHover}
 				alt="WhatsApp"

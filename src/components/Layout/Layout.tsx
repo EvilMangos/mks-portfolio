@@ -39,7 +39,7 @@ const Layout = () => {
 			if (contentRef && contentRef.current) {
 				contentRef.current.classList.remove(classes.visible);
 			}
-		}
+		};
 	}, [location.pathname]);
 
 	const layoutClasses = classNames(classes.layout, {

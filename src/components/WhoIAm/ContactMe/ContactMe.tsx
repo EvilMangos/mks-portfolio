@@ -1,16 +1,29 @@
 import classes from "./ContactMe.module.scss";
 import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
+import emailjs from "@emailjs/browser";
 import Button from "../../common/Button/Button";
 import classNames from "classnames";
 import validate from "./validation";
 import MessageSent from "./MessageSent/MessageSent";
 
-const ContactMe = () => {
+const ContactMe = ({ formRef }) => {
 	const [isMessageSent, setIsMessageSent] = useState(false);
 	const formClasses = classNames(classes.form, {
 		[classes.transparent]: isMessageSent,
 	});
+
+	const sendEmail = async () => {
+		await emailjs.sendForm(
+			process.env.REACT_APP_EMAILJS_SERVICE_ID,
+			process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+			formRef?.current,
+			{
+				publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+			}
+		);
+	};
+
 	return (
 		<div className={classes.container}>
 			<h2 className={classes.title}>Want to work on a project together?</h2>
@@ -19,9 +32,9 @@ const ContactMe = () => {
 				validateOnChange={false}
 				validateOnBlur={false}
 				validate={validate}
-				onSubmit={(values) => {
+				onSubmit={async () => {
 					setIsMessageSent(true);
-					console.log("values: ", values);
+					await sendEmail();
 				}}
 			>
 				{({ errors, handleSubmit, handleChange }) => {
@@ -44,7 +57,7 @@ const ContactMe = () => {
 					});
 
 					return (
-						<Form className={formClasses} onSubmit={handleSubmit}>
+						<Form className={formClasses} onSubmit={handleSubmit} ref={formRef}>
 							<Field
 								className={nameClasses}
 								placeholder="Prefered Name*"

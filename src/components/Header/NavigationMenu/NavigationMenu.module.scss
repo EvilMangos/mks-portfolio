@@ -37,7 +37,7 @@
 
   .selected {
     color: constants.$color-light-green;
-    
+
     @include mixins.responsive(constants.$screen-medium) {
       &:before {
         position: absolute;

@@ -7,6 +7,7 @@
   @include mixins.responsive(constants.$screen-medium) {
     text-align: justify;
   }
+
   .highlighted {
     font-family: "Cascadia Code";
     color: constants.$color-light-green;

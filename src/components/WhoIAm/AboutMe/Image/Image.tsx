@@ -8,7 +8,7 @@ const Image = ({ lastElementHovered, outClass }) => {
 		(element) => element.id === lastElementHovered
 	).image;
 	const imageClasses = classNames(outClass, classes.image);
-	return <img className={imageClasses} src={image} alt="Laptop" />;
+	return <img className={imageClasses} src={image} alt="slide image" />;
 };
 
 export default React.memo(Image);

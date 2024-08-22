@@ -1,6 +1,51 @@
+@use "/src/constants";
+@use "/src/mixins";
+
 .mapContainer {
+  position: relative;
   width: 310px;
   height: 310px;
-  display: flex;
-  justify-content: center;
+  margin-top: 46px;
+  overflow: hidden;
+  border-radius: 16px;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    width: 734px;
+    height: 317px;
+  }
+
+  .cover {
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    z-index: 2;
+
+    transition-duration: 0.5s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+
+    }
+
+    .tapIcon {
+    }
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+
+    &.blurred {
+      filter: blur(8px) brightness(60%);
+      pointer-events: none;
+    }
+  }
 }

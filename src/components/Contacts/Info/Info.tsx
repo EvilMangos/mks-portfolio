@@ -18,11 +18,18 @@ const Info = () => {
 				<div className={classes.info}>
 					<div className={classes.line}>
 						<span className={classes.labelElement}>Phone:</span>{" "}
-						<span className={classes.valueElement}>347-477-3525</span>
+						<a href={"tel:13474773525"} className={classes.valueElement}>
+							347-477-3525
+						</a>
 					</div>
 					<div className={classes.line}>
 						<span className={classes.labelElement}>Email:</span>{" "}
-						<span className={classes.valueElement}>jchamets@gmail.com</span>
+						<a
+							href={"mailto:maksymkhamets.career@gmail.com"}
+							className={classes.valueElement}
+						>
+							maksymkhamets.career@gmail.com
+						</a>
 					</div>
 				</div>
 			</div>

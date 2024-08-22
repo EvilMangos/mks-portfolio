@@ -1,5 +1,6 @@
 @use "/src/constants";
 @use "/src/mixins";
+@use "./Info.animations";
 
 .container {
   display: flex;
@@ -9,7 +10,6 @@
   @include mixins.responsive(constants.$screen-medium) {
     flex-direction: row;
     margin-top: 78px;
-    width: 654px;
     justify-content: space-between;
   }
 
@@ -51,8 +51,19 @@
       .line {
         line-height: 26px;
 
+
         @include mixins.responsive(constants.$screen-medium) {
           line-height: 46px;
+        }
+
+        & > a {
+          opacity: 1;
+          animation: onMouseOut 0.5s;
+
+          &:hover {
+            opacity: 0.7;
+            animation: onMouseIn 0.5s;
+          }
         }
       }
 

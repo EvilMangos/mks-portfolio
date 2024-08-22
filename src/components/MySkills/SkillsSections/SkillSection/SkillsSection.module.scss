@@ -8,6 +8,7 @@
 
   &.item_0 {
     @include SkillsSection.animationItemShrink(962px, 0);
+
     &.containerOpen {
       height: 962px;
       @include SkillsSection.animationItemExpand(962px, 0);
@@ -16,6 +17,7 @@
 
   &.item_1 {
     @include SkillsSection.animationItemShrink(682px, 1);
+
     &.containerOpen {
       height: 682px;
       @include SkillsSection.animationItemExpand(682px, 1);
@@ -24,6 +26,7 @@
 
   &.item_2 {
     @include SkillsSection.animationItemShrink(332px, 2);
+
     &.containerOpen {
       height: 332px;
       @include SkillsSection.animationItemExpand(332px, 2);
@@ -32,6 +35,7 @@
 
   &.item_3 {
     @include SkillsSection.animationItemShrink(262px, 3);
+
     &.containerOpen {
       height: 262px;
       @include SkillsSection.animationItemExpand(262px, 3);
@@ -40,6 +44,7 @@
 
   &.item_4 {
     @include SkillsSection.animationItemShrink(122px, 4);
+
     &.containerOpen {
       height: 122px;
       @include SkillsSection.animationItemExpand(122px, 4);

@@ -1,4 +1,4 @@
-import image from "../../../../assets/images/laptop.png";
+import image from "../../../../assets/images/laptop.jpg";
 import classes from "./Image.module.scss";
 import classNames from "classnames";
 

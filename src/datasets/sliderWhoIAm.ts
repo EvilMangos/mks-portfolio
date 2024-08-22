@@ -1,4 +1,6 @@
-import laptop from "../assets/images/laptop.png";
+import myPhoto from "../assets/images/my_photo.jpg";
+import age from "../assets/images/youth.webp";
+import diploma from "../assets/images/diploma.jpg";
 
 const sliderWhoIAmObject = {
 	name: {
@@ -6,7 +8,7 @@ const sliderWhoIAmObject = {
 		text: "Name",
 		value: "Maksym Khamets",
 		link: null,
-		image: laptop,
+		image: myPhoto,
 		slide: 1,
 	},
 	age: {
@@ -14,7 +16,7 @@ const sliderWhoIAmObject = {
 		text: "Age",
 		value: "23 y.o.",
 		link: null,
-		image: "",
+		image: age,
 		slide: 1,
 	},
 	residence: {
@@ -30,7 +32,7 @@ const sliderWhoIAmObject = {
 		text: "Education",
 		value: "Computer Engineering",
 		link: null,
-		image: "",
+		image: diploma,
 		slide: 1,
 	},
 	phone: {
@@ -44,7 +46,7 @@ const sliderWhoIAmObject = {
 	email: {
 		id: 5,
 		text: "Email",
-		value: "jchamets@gmail.com",
+		value: "maksymkhamets.career",
 		link: "/contacts",
 		image: null,
 		slide: 2,

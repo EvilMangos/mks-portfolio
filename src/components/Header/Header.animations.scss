@@ -1,8 +1,8 @@
-@mixin headerOpenAnimation($collapsedHeight) {
-  animation: headerOpen 0.5s;
+@mixin headerOpenAnimation($duration) {
+  animation: headerOpen $duration;
   @keyframes headerOpen {
     0% {
-      height: $collapsedHeight;
+      height: 54px;
     }
     100% {
       height: 234px;
@@ -11,14 +11,14 @@
 }
 
 
-@mixin headerCloseAnimation($collapsedHeight) {
-  animation: headerClose 0.5s;
+@mixin headerCloseAnimation($duration) {
+  animation: headerClose $duration;
   @keyframes headerClose {
     0% {
       height: 234px;
     }
     100% {
-      height: $collapsedHeight;
+      height: 54px;
     }
   }
 }

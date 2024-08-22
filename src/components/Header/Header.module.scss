@@ -33,11 +33,11 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
 
     z-index: 3;
 
-    @include Header.headerCloseAnimation(54px);
+    @include Header.headerCloseAnimation(0.5s);
 
     @include mixins.responsive(constants.$screen-medium) {
       width: 90%;
-      @include Header.headerCloseAnimation(68px);
+      @include Header.headerCloseAnimation(0s);
     }
 
     @include mixins.responsive(1000px) {
@@ -50,10 +50,10 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
       height: 234px;
       align-items: normal;
 
-      @include Header.headerOpenAnimation(54px);
+      @include Header.headerOpenAnimation(0.5s);
 
       @include mixins.responsive(constants.$screen-medium) {
-        @include Header.headerOpenAnimation(68px);
+        @include Header.headerOpenAnimation(0s);
       }
     }
 

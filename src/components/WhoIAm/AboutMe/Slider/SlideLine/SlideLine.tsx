@@ -27,7 +27,11 @@ const SlideLine = ({
 					{value}
 				</NavLink>
 			) : (
-				<span className={valueClasses} onMouseOver={onMouseOver}>
+				<span
+					className={valueClasses}
+					onMouseOver={onMouseOver}
+					onClick={onMouseOver}
+				>
 					{value}
 				</span>
 			)}

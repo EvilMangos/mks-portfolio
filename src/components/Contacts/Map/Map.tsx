@@ -3,7 +3,7 @@ import {
 	GoogleMap,
 	Libraries,
 	MarkerF,
-	useLoadScript,
+	useJsApiLoader,
 } from "@react-google-maps/api";
 import classNames from "classnames";
 import { useState } from "react";
@@ -17,7 +17,7 @@ const center = {
 };
 
 const Map = () => {
-	const { isLoaded, loadError } = useLoadScript({
+	const { isLoaded, loadError } = useJsApiLoader({
 		googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
 		libraries,
 	});

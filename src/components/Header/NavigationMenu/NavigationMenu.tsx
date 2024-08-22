@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 import classNames from "classnames";
 import { useLocation } from "react-router-dom";
 
@@ -27,6 +27,10 @@ const NavigationMenu = ({ outClass, isSubMenuOpen, setIsSubMenuOpen }) => {
 		[classes.hide]: !isSubMenuOpen,
 	});
 
+	const onLinkClick = useCallback(() => {
+		setIsSubMenuOpen(false);
+	}, [isSubMenuOpen]);
+
 	const renderedNavigationMenu = pagesArray
 		.filter((page) => page.isVisible)
 		.map((page) => {
@@ -41,6 +45,7 @@ const NavigationMenu = ({ outClass, isSubMenuOpen, setIsSubMenuOpen }) => {
 					onMouseEnter={onMouseEnter}
 					onMouseLeave={onMouseLeave}
 					outClass={itemClasses}
+					onClick={onLinkClick}
 				/>
 			);
 		});

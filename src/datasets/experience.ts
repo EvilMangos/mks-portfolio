@@ -8,7 +8,7 @@ const experienceObject = {
 	epam: {
 		id: 0,
 		name: "Epam Systems",
-		position: "Full-Stack Development",
+		position: "Full-Stack Developer",
 		logo: epam,
 		startDate: "May 2020",
 		finishDate: "Jun 2021",

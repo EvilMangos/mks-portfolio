@@ -25,7 +25,7 @@ const skillsObject = {
 	Express: "Express.js",
 	Nest: "Nest.js",
 	Node: "Node.js",
-	Python: "Python.js",
+	Python: "Python",
 	GCP: "GCP",
 };
 

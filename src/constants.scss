@@ -1,36 +1,36 @@
 // colors
-
-$color-white: #FFF;
-$color-black: #000;
-$color-transparent: transparent;
-
 $color-light-green: #AFE571;
 $color-dark-blue: #233F4C;
 $color-light-blue: #3C687D;
 $color-error: #FF4949;
 
+// desktop default fonts
 $font-default-desktop-h1: 700 44px "Gilroy";
 $font-default-desktop-h2: 600 38px "Gilroy";
 $font-default-desktop-h3: 600 28px "Gilroy";
 $font-default-desktop-h4: 600 28px "Gilroy";
 $font-default-desktop-p: 400 18px "Gilroy";
 
+// desktop default line heights
 $font-line-height-desktop-h1: 50px;
 $font-line-height-desktop-h2: 50px;
 $font-line-height-desktop-h3: 28px;
 $font-line-height-desktop-h4: 50px;
 $font-line-height-desktop-p: 26px;
 
+// mobile default fonts
 $font-default-mobile-h1: 600 26px "Gilroy";
 $font-default-mobile-h2: 600 26px "Gilroy";
 $font-default-mobile-h3: 600 26px "Gilroy";
 $font-default-mobile-h4: 600 20px "Gilroy";
 $font-default-mobile-p: 400 16px "Gilroy";
 
+// mobile default line heights
 $font-line-height-mobile-h1: 34px;
 $font-line-height-mobile-h2: 34px;
 $font-line-height-mobile-h3: 26px;
 $font-line-height-mobile-h4: 20px;
 $font-line-height-mobile-p: 26px;
 
+// breakpoints
 $screen-medium: 768px

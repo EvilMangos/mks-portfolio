@@ -79,7 +79,7 @@
 
     .mainInfo {
       .name {
-        color: constants.$color-black;
+        color: black;
       }
 
       .role {
@@ -88,7 +88,7 @@
 
       .workingPeriod,
       .workingPeriod span {
-        color: constants.$color-black;
+        color: black;
       }
     }
 
@@ -96,7 +96,7 @@
       color: constants.$color-dark-blue;
 
       .stackLabel {
-        color: constants.$color-black;
+        color: black;
       }
     }
   }
@@ -169,11 +169,11 @@
     margin-top: 4px;
 
     .descriptionTitle {
-      color: constants.$color-black;
+      color: black;
     }
 
     .descriptionText {
-      color: constants.$color-black;
+      color: black;
       text-align: justify;
       margin-top: 16px;
     }

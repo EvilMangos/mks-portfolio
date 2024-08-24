@@ -37,11 +37,11 @@
       margin-top: 8px;
       padding: 15px 0 21px;
 
-      background-color: constants.$color-transparent;
+      background-color: transparent;
       border: none;
-      border-bottom: 1px solid constants.$color-white;
+      border-bottom: 1px solid white;
       line-height: 24px;
-      color: constants.$color-white;
+      color: white;
       font-size: 20px;
 
       @include mixins.responsive(constants.$screen-medium) {

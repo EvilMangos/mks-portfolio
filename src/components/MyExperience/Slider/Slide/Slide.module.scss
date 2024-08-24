@@ -32,7 +32,7 @@
   }
 
   .title {
-    color: constants.$color-black;
+    color: black;
 
     margin-top: 16px;
   }
@@ -61,10 +61,10 @@
     .datesLine {
       display: flex;
       align-items: center;
-      color: constants.$color-black;
+      color: black;
 
       & > span {
-        color: constants.$color-black;
+        color: black;
       }
     }
   }
@@ -76,7 +76,7 @@
     font-weight: 600;
 
     .stackLabel {
-      color: constants.$color-black;
+      color: black;
       font-weight: 600;
     }
   }

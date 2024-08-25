@@ -1,54 +1,47 @@
 @use "/src/constants";
 @use "./SkillsSection.animations";
 
+@mixin itemBody($number) {
+  $size: 52px + $number * 70px;
+  @include SkillsSection.animationItemShrink($size, $number);
+
+  &.containerOpen {
+    height: $size;
+    @include SkillsSection.animationItemExpand($size, $number);
+  }
+}
+
 .container {
   overflow: hidden;
   height: 52px;
   margin-bottom: 18px;
 
-  &.item_0 {
-    @include SkillsSection.animationItemShrink(962px, 0);
-
-    &.containerOpen {
-      height: 962px;
-      @include SkillsSection.animationItemExpand(962px, 0);
-    }
+  &.items_1 {
+    @include itemBody(1);
   }
 
-  &.item_1 {
-    @include SkillsSection.animationItemShrink(682px, 1);
-
-    &.containerOpen {
-      height: 682px;
-      @include SkillsSection.animationItemExpand(682px, 1);
-    }
+  &.items_2 {
+    @include itemBody(2);
   }
 
-  &.item_2 {
-    @include SkillsSection.animationItemShrink(332px, 2);
-
-    &.containerOpen {
-      height: 332px;
-      @include SkillsSection.animationItemExpand(332px, 2);
-    }
+  &.items_3 {
+    @include itemBody(3);
   }
 
-  &.item_3 {
-    @include SkillsSection.animationItemShrink(262px, 3);
-
-    &.containerOpen {
-      height: 262px;
-      @include SkillsSection.animationItemExpand(262px, 3);
-    }
+  &.items_4 {
+    @include itemBody(4);
   }
 
-  &.item_4 {
-    @include SkillsSection.animationItemShrink(122px, 4);
+  &.items_5 {
+    @include itemBody(5);
+  }
 
-    &.containerOpen {
-      height: 122px;
-      @include SkillsSection.animationItemExpand(122px, 4);
-    }
+  &.items_6 {
+    @include itemBody(6);
+  }
+
+  &.items_7 {
+    @include itemBody(7);
   }
 
   .title {

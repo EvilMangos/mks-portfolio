@@ -12,7 +12,7 @@ const SkillsSection = ({ id, name, subList, isOpen, open, close }) => {
 	};
 	const containerClasses = classNames(
 		classes.container,
-		classes[`item_${id}`],
+		classes[`items_${subList.length}`],
 		{
 			[classes.containerOpen]: isOpen,
 		}

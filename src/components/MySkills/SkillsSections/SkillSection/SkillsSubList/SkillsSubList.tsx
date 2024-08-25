@@ -3,7 +3,7 @@ import classes from "./SkillsSubList.module.scss";
 
 const SkillsSubList = ({ subList }) => {
 	const renderedSkills = subList.map((skill, index) => (
-		<SkillsItem key={index} name={skill} />
+		<SkillsItem key={index} name={skill} outClass={classes.item} />
 	));
 	return <div className={classes.container}>{renderedSkills}</div>;
 };

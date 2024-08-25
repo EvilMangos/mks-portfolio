@@ -13,8 +13,7 @@ const skillsObject = {
 	Redux: "Redux",
 	React: "React",
 	SASS: "SASS/SCSS",
-	CSS: "CSS",
-	HTML: "HTML",
+	HTMLCSS: "HTML/CSS",
 	Jest: "Jest",
 	Mongoose: "Mongoose.js",
 	Prisma: "Prisma.js",
@@ -27,6 +26,8 @@ const skillsObject = {
 	Node: "Node.js",
 	Python: "Python",
 	GCP: "GCP",
+	Mocha: "Mocha",
+	SuperTest: "Supertest.js",
 };
 
 const skillsArray = Object.values(skillsObject);

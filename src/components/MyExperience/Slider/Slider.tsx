@@ -13,7 +13,9 @@ import { Navigation, Pagination } from "swiper/modules";
 import Description from "./Description/Description";
 
 const Slider = ({ outClass }) => {
-	const [activeIndex, setActiveIndex] = useState(experienceObject.epam.id);
+	const [activeIndex, setActiveIndex] = useState(
+		experienceObject.dataannotation.id
+	);
 
 	const handleSlideChange = (swiper) => {
 		setActiveIndex(swiper.activeIndex);

@@ -2,10 +2,11 @@
 @use "/src/mixins";
 
 .container {
-  .title {
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  .sections {
+  .content {
     margin-top: 36px;
 
     @include mixins.responsive(constants.$screen-medium) {

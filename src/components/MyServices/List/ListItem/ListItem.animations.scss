@@ -1,0 +1,20 @@
+@use "/src/constants";
+
+@keyframes itemSelected {
+  0% {
+    background-color: constants.$color-dark-blue;
+  }
+  100% {
+    background-color: constants.$color-light-green;
+  }
+}
+
+@keyframes itemUnselected {
+  0% {
+    background-color: constants.$color-light-green;
+  }
+  100% {
+    background-color: constants.$color-dark-blue;
+  }
+}
+

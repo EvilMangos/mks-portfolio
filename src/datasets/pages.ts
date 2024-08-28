@@ -9,7 +9,7 @@ const pagesObject = {
 		id: 1,
 		path: "/services",
 		name: "My Services",
-		isVisible: false,
+		isVisible: true,
 	},
 	mySkills: {
 		id: 2,

@@ -1,0 +1,17 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.container {
+  display: none;
+  width: 858px;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .line {
+    display: flex;
+    justify-content: space-between;
+  }
+}

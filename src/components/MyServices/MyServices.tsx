@@ -1,11 +1,13 @@
 import Slider from "./Slider/Slider";
 import classes from "./MyServices.module.scss";
+import List from "./List/List";
 
 const MyServices = () => {
 	return (
 		<div>
 			<h1>My Services</h1>
-			<Slider outClass={classes.slider} />
+			<Slider outClass={classes.content} />
+			<List outClass={classes.content} />
 		</div>
 	);
 };

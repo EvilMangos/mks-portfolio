@@ -1,6 +1,16 @@
 @use "/src/constants";
 @use "ExperienceItem.animations";
 
+@mixin itemBody($collapsed, $expanded) {
+  height: $collapsed;
+  @include ExperienceItem.animationItemShrink($collapsed, $expanded, $collapsed + $expanded);
+
+  &.active {
+    height: $expanded;
+    @include ExperienceItem.animationItemExpand($collapsed, $expanded, $collapsed + $expanded);
+  }
+}
+
 .container {
   display: grid;
   grid-template-areas:
@@ -31,43 +41,19 @@
   }
 
   &.item_0 {
-    height: 307px;
-    @include ExperienceItem.animationItemShrink(307px, 1187px, 0);
-
-    &.active {
-      height: 1187px;
-      @include ExperienceItem.animationItemExpand(307px, 1187px, 0);
-    }
+    @include itemBody(281px, 797px);
   }
 
   &.item_1 {
-    height: 307px;
-    @include ExperienceItem.animationItemShrink(307px, 1109px, 1);
-
-    &.active {
-      height: 1109px;
-      @include ExperienceItem.animationItemExpand(307px, 1109px, 1);
-    }
+    @include itemBody(307px, 1213px);
   }
 
   &.item_2 {
-    height: 307px;
-    @include ExperienceItem.animationItemShrink(307px, 1213px, 2);
-
-    &.active {
-      height: 1213px;
-      @include ExperienceItem.animationItemExpand(307px, 1213px, 2);
-    }
+    @include itemBody(307px, 1109px);
   }
 
   &.item_3 {
-    height: 281px;
-    @include ExperienceItem.animationItemShrink(281px, 797px, 3);
-
-    &.active {
-      height: 797px;
-      @include ExperienceItem.animationItemExpand(281px, 797px, 3);
-    }
+    @include itemBody(307px, 1187px);
   }
 
   &.active {

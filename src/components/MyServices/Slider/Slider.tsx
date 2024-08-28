@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Slide from "./Slide/Slide";
-import "./Slider.scss";
 import classes from "./Slider.module.scss";
 import classNames from "classnames";
 import { useState } from "react";
@@ -17,7 +16,7 @@ const Slider = ({ outClass }) => {
 	};
 
 	const renderedSlides = servicesArray.map((service) => (
-		<SwiperSlide key={service.id}>
+		<SwiperSlide key={service.id} className={classes.swiperSlide}>
 			<Slide
 				title={service.title}
 				icon={service.image}

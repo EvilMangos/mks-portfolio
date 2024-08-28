@@ -1,0 +1,7 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}

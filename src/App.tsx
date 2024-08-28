@@ -6,6 +6,7 @@ import { pagesObject } from "./datasets/pages";
 import Contacts from "./components/Contacts/Contacts";
 import MyExperience from "./components/MyExperience/MyExperience";
 import MySkills from "./components/MySkills/MySkills";
+import MyServices from "./components/MyServices/MyServices";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					path={pagesObject.myExperience.path}
 					element={<MyExperience />}
 				/>
+				<Route path={pagesObject.myServices.path} element={<MyServices />} />
 				<Route path={pagesObject.mySkills.path} element={<MySkills />} />
 			</Route>
 		</Routes>

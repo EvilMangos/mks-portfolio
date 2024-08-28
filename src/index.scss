@@ -31,6 +31,7 @@ div, h1, h2, h3, h4, p, span {
 h1 {
   font: constants.$font-default-mobile-h1;
   line-height: constants.$font-line-height-mobile-h1;
+  text-align: center;
   @include mixins.responsive(constants.$screen-medium) {
     font: constants.$font-default-desktop-h1;
     line-height: constants.$font-line-height-desktop-h1;

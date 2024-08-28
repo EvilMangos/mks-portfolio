@@ -1,9 +1,15 @@
+@use "/src/constants";
+@use "/src/mixins";
+
 .container {
   .title {
-    text-align: center;
   }
 
   .slider {
     margin-top: 36px;
+
+    @include mixins.responsive(constants.$screen-medium) {
+      margin-top: 78px;
+    }
   }
 }

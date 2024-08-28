@@ -1,0 +1,22 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.container {
+  @include mixins.responsive(constants.$screen-medium) {
+    display: none;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .numbers {
+      margin-top: 10px;
+    }
+  }
+
+  .description {
+    margin-top: 36px;
+  }
+}

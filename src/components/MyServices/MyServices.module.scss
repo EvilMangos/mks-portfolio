@@ -1,0 +1,10 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.slider {
+  margin-top: 36px;
+
+  @include mixins.responsive(constants.$screen-medium) {
+    margin-top: 78px;
+  }
+}

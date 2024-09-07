@@ -21,6 +21,11 @@
 
     transform: scale(1);
     background-color: constants.$color-light-green;
+
+    .role,
+    .stack {
+      color: constants.$color-dark-blue;
+    }
   }
 
   .image {
@@ -38,7 +43,7 @@
   }
 
   .role {
-    color: constants.$color-dark-blue;
+    color: white;
     font-family: "Cascadia Code";
     font-size: 20px;
     font-weight: 600;
@@ -70,7 +75,7 @@
   }
 
   .stack {
-    color: constants.$color-dark-blue;
+    color: white;
     text-align: center;
     font-family: "Cascadia Code";
     font-weight: 600;

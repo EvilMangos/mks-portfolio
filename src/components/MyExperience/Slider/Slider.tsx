@@ -46,7 +46,6 @@ const Slider = ({ outClass }) => {
 					centeredSlides={true}
 					modules={[Pagination, Navigation]}
 					pagination={{ clickable: true }}
-					// lazyPreloadPrevNext={1}
 				>
 					<div className={classes.sliderContent}>{renderedSlides}</div>
 				</Swiper>

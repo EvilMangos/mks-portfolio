@@ -30,20 +30,22 @@ const Slider = ({ outClass }) => {
 	const containerClasses = classNames(classes.container, outClass);
 	return (
 		<div className={containerClasses}>
-			<Swiper
-				spaceBetween={10}
-				slidesPerView={1}
-				className={classes.slider}
-				onSlideChange={handleSlideChange}
-				centeredSlides={true}
-				modules={[Navigation]}
-				pagination={{ clickable: true }}
-			>
-				<div className={classes.sliderContent}>{renderedSlides}</div>
-				<span className={classes.numbers}>
-					{activeIndex + 1} / {servicesArray.length}
-				</span>
-			</Swiper>
+			<div className={classes.sliderContainer}>
+				<Swiper
+					spaceBetween={10}
+					slidesPerView={1}
+					className={classes.slider}
+					onSlideChange={handleSlideChange}
+					centeredSlides={true}
+					modules={[Navigation]}
+					pagination={{ clickable: true }}
+				>
+					<div className={classes.sliderContent}>{renderedSlides}</div>
+					<span className={classes.numbers}>
+						{activeIndex + 1} / {servicesArray.length}
+					</span>
+				</Swiper>
+			</div>
 			<Description
 				text={servicesArray.find((service) => service.id === activeIndex).text}
 				outClass={classes.description}

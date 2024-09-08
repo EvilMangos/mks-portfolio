@@ -9,7 +9,6 @@ const skillsObject = {
 	Heroku: "Heroku",
 	AWS: "AWS",
 	Next: "Next.js",
-	ReduxToolkit: "Redux Toolkit",
 	Redux: "Redux",
 	React: "React",
 	SASS: "SASS/SCSS",

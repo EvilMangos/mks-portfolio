@@ -38,17 +38,18 @@ const Slider = ({ outClass }) => {
 	const containerClasses = classNames(classes.container, outClass);
 	return (
 		<div className={containerClasses}>
-			<Swiper
-				spaceBetween={10}
-				slidesPerView={1}
-				className={classes.slider}
-				onSlideChange={handleSlideChange}
-				centeredSlides={true}
-				modules={[Pagination, Navigation]}
-				pagination={{ clickable: true }}
-			>
-				<div className={classes.sliderContent}>{renderedSlides}</div>
-			</Swiper>
+			<div className={classes.sliderContainer}>
+				<Swiper
+					slidesPerView={1}
+					className={classes.slider}
+					onSlideChange={handleSlideChange}
+					centeredSlides={true}
+					modules={[Pagination, Navigation]}
+					pagination={{ clickable: true }}
+				>
+					<div className={classes.sliderContent}>{renderedSlides}</div>
+				</Swiper>
+			</div>
 			<Description
 				text={
 					experienceArray.find((experience) => experience.id === activeIndex)

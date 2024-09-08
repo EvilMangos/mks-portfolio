@@ -16,12 +16,18 @@
   width: 192px;
 
   animation: slideUnselectedChange 0.1s;
+  opacity: 0.3;
 
   &.activeSlide {
     animation: slideSelectedChange 0.2s;
 
     transform: scale(1);
     background-color: constants.$color-light-green;
+    opacity: 1;
+
+    .title {
+      color: black;
+    }
   }
 
   .image {
@@ -29,7 +35,7 @@
   }
 
   .title {
-    color: black;
+    color: white;
 
     font-family: "Cascadia Code";
     font-weight: 600;

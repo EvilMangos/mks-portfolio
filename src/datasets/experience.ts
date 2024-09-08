@@ -31,11 +31,10 @@ If you're looking for someone with hands-on experience in evaluating AI performa
 		finishDate: "Mar 2024",
 		stack: [
 			skillsObject.TypeScript,
-			skillsObject.JavaScript,
 			skillsObject.MongoDb,
 			skillsObject.CICD,
 			skillsObject.AWS,
-			skillsObject.ReduxToolkit,
+			skillsObject.Redux,
 			skillsObject.React,
 			skillsObject.SASS,
 			skillsObject.Jest,

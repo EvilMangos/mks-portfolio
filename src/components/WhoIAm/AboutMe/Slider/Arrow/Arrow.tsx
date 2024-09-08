@@ -4,6 +4,7 @@ import arrow_next_active from "../../../../../assets/icons/active/arrow_next_act
 import arrow_back_active from "../../../../../assets/icons/active/arrow_back_active_icon.svg";
 import classes from "./Arrow.module.scss";
 import { forwardRef } from "react";
+import classNames from "classnames";
 
 const Arrow = forwardRef<
 	HTMLImageElement,
@@ -17,7 +18,10 @@ const Arrow = forwardRef<
 			? arrow_next_active
 			: arrow_next_inactive;
 
-	return <img className={classes.arrow} src={image} alt="arrow" ref={ref} />;
+	const arrowClasses = classNames(classes.arrow, {
+		[classes.active]: props.isActive,
+	});
+	return <img className={arrowClasses} src={image} alt="arrow" ref={ref} />;
 });
 
 export default Arrow;

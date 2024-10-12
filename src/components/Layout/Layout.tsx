@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import { Outlet, useLocation } from "react-router-dom";
 import classes from "./Layout.module.scss";
 import Footer from "../Footer/Footer";
-import { pagesObject } from "../../datasets/pages";
+import { pagesArray, pagesObject } from "../../datasets/pages";
 
 const Layout = () => {
 	const contentRef = useRef(null);
@@ -49,6 +49,9 @@ const Layout = () => {
 		[classes.myExperience]: location.pathname === pagesObject.myExperience.path,
 		[classes.mySkills]: location.pathname === pagesObject.mySkills.path,
 		[classes.myServices]: location.pathname === pagesObject.myServices.path,
+		[classes.error]: !pagesArray.find(
+			(page) => page.path === location.pathname
+		),
 	});
 
 	return (

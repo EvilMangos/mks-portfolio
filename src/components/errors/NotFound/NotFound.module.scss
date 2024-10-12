@@ -1,0 +1,29 @@
+@use "/src/constants.scss";
+@use "/src/mixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+
+    .errorCode {
+        font-size: 140px;
+        line-height: 140px;
+        font-family: "Gilroy";
+        color: constants.$color-light-green;
+
+        @include mixins.responsive(constants.$screen-medium) {
+            font-size: 200px;
+            line-height: 200px; 
+            margin-bottom: 20px;
+        }
+    }
+
+    .errorMessage {
+        font-size: 32px;
+        font-family: "Lufga";
+        color: constants.$color-light-green;
+    }
+}

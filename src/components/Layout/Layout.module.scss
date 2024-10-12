@@ -63,7 +63,8 @@ $background-color-bottom: #181D20;
 .contacts,
 .myExperience,
 .mySkills,
-.myServices {
+.myServices,
+.error {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -108,5 +109,11 @@ $background-color-bottom: #181D20;
 .myServices {
   @include mixins.responsive(constants.$screen-medium) {
     background-image: url("../../assets/images/backgrounds/my_services_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+  }
+}
+
+.error {
+  @include mixins.responsive(constants.$screen-medium) {
+    background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
   }
 }

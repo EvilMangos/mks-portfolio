@@ -37,13 +37,20 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
 
     @include mixins.responsive(constants.$screen-medium) {
       width: 90%;
-      border-radius: 16px 16px 16px 0;
+      
       @include Header.headerCloseAnimation(0s);
     }
 
     @include mixins.responsive(constants.$screen-big) {
       position: absolute;
       width: 980px;
+      border-radius: 16px 16px 16px 0;
+    }
+
+    &.contactMeBelow {
+      @include mixins.forMiddleScreen {
+        border-radius: 16px 16px 16px 0;
+      }
     }
 
     &.headerOpen {

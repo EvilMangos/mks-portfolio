@@ -33,7 +33,9 @@
         }
 
         &.hide {
-            transform: translateY(-100%);
+            @include mixins.ifLess(constants.$screen-big) {
+                transform: translateY(-100%);
+            }
         }
     }
 }

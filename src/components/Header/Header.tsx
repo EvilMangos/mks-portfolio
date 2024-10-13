@@ -7,6 +7,7 @@ import NavigationMenu from "./NavigationMenu/NavigationMenu";
 import Hamburger from "./Hamburger/Hamburger";
 import useOutsideClick from "../../helpers/useOutsideClick";
 import ContactMe from "./ContactMe/ContactMe";
+import useScrollDirectionChange from "../../helpers/useScrollDirectionChange";
 
 const Header = ({ isSubMenuOpen, setIsSubMenuOpen }) => {
 	const ref = useRef(null);
@@ -23,7 +24,16 @@ const Header = ({ isSubMenuOpen, setIsSubMenuOpen }) => {
 		setIsSubMenuOpen(false);
 	};
 
+	const onScrollChange = (isUp, isDown) => {
+		if (isUp) {
+			ref.current.classList.add(classes.contactMeBelow);
+		} else if (isDown) {
+			ref.current.classList.remove(classes.contactMeBelow);
+		}
+	};
+
 	useOutsideClick(ref, onOutsideClick);
+	useScrollDirectionChange(onScrollChange);
 
 	const toggleSubMenu = useCallback(() => {
 		setIsSubMenuOpen(!isSubMenuOpen);

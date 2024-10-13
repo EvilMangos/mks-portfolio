@@ -6,6 +6,7 @@ import Logo from "./Logo/Logo";
 import NavigationMenu from "./NavigationMenu/NavigationMenu";
 import Hamburger from "./Hamburger/Hamburger";
 import useOutsideClick from "../../helpers/useOutsideClick";
+import ContactMe from "./ContactMe/ContactMe";
 
 const Header = ({ isSubMenuOpen, setIsSubMenuOpen }) => {
 	const ref = useRef(null);
@@ -38,6 +39,7 @@ const Header = ({ isSubMenuOpen, setIsSubMenuOpen }) => {
 					setIsSubMenuOpen={setIsSubMenuOpen}
 				/>
 				<Hamburger outClass={classes.hamburger} toggleSubMenu={toggleSubMenu} />
+				<ContactMe outClass={classes.contactMe} />
 			</div>
 		</header>
 	);

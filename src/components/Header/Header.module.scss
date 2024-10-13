@@ -37,10 +37,11 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
 
     @include mixins.responsive(constants.$screen-medium) {
       width: 90%;
+      border-radius: 16px 16px 16px 0;
       @include Header.headerCloseAnimation(0s);
     }
 
-    @include mixins.responsive(1000px) {
+    @include mixins.responsive(constants.$screen-big) {
       position: absolute;
       width: 980px;
     }
@@ -72,6 +73,17 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
       @include mixins.responsive(constants.$screen-medium) {
         padding-left: 50px;
       }
+    }
+  }
+
+  .contactMe {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+
+    @include mixins.responsive(constants.$screen-medium) {
+      display: block;
     }
   }
 }

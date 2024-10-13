@@ -1,0 +1,39 @@
+@use "/src/constants.scss";
+@use "/src/mixins.scss";
+@use "./ContactMe.animations.scss" as animations;
+
+.container {
+    overflow: hidden;
+    .button {
+        position: relative;
+        width: 160px;
+        height: 57px;
+        padding: 18px;
+        border: 0;
+        border-radius: 0 0 10px 10px;
+        
+        background: constants.$color-light-green;
+        font-size: 18px;
+        font-family: "Cascadia Code";
+        font-weight: 600;
+        cursor: pointer;
+        overflow: hidden;
+        transition-duration: 0.5s;
+
+        @include animations.applyButtonAnimations;
+
+        &:hover {
+            opacity: 0.8;
+            color: constants.$color-dark-blue;
+        }
+
+        &:active {
+            opacity: 1;
+            background-color: white;
+        }
+
+        &.hide {
+            transform: translateY(-100%);
+        }
+    }
+}

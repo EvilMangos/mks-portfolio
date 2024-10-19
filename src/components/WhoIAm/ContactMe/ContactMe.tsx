@@ -57,7 +57,12 @@ const ContactMe = ({ formRef }) => {
 					});
 
 					return (
-						<Form className={formClasses} onSubmit={handleSubmit} ref={formRef}>
+						<Form
+							className={formClasses}
+							onSubmit={handleSubmit}
+							ref={formRef}
+							id="contactMeForm"
+						>
 							<Field
 								className={nameClasses}
 								placeholder="Prefered Name*"

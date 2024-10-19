@@ -125,3 +125,14 @@ $background-color-bottom: #181D20;
     background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
   }
 }
+
+.contactMeMobile {
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  
+  @include mixins.responsive(constants.$screen-medium) {
+    display: none;
+  }
+}

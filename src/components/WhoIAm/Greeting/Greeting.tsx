@@ -3,12 +3,11 @@ import Title from "./Title/Title";
 import Text from "./Text/Text";
 import Button from "../../common/Button/Button";
 import classes from "./Greeting.module.scss";
+import scrollToElement from "../../../helpers/scrollToElement";
 
 const Greeting = ({ formRef }) => {
 	const handleButtonClick = () => {
-		if (formRef && formRef.current) {
-			formRef.current.scrollIntoView({ behavior: "smooth" });
-		}
+		scrollToElement(formRef?.current);
 	};
 	return (
 		<div className={classes.container}>

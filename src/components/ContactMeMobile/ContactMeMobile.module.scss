@@ -1,0 +1,27 @@
+@use "/src/constants.scss";
+@use "/src/mixins.scss";
+
+.container {
+    width: 80px;
+    height: 80px;
+
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    background-color: constants.$color-light-green;
+    opacity: 0.7;
+    transition-duration: 1s;
+
+    cursor: pointer;
+
+    &.hide {
+        transform: translateY(120px);
+    }
+
+    .image {
+        width: 50px;
+        height: 50px
+    }
+}

@@ -5,6 +5,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import classes from "./Layout.module.scss";
 import Footer from "../Footer/Footer";
 import { pagesArray, pagesObject } from "../../datasets/pages";
+import ContactMeMobile from "../ContactMeMobile/ContactMeMobile";
 
 const Layout = () => {
 	const contentRef = useRef(null);
@@ -64,7 +65,7 @@ const Layout = () => {
 				<main className={classes.content} ref={contentRef}>
 					<Outlet />
 				</main>
-
+				<ContactMeMobile outClass={classes.contactMeMobile} />
 				<Footer />
 			</div>
 		</div>

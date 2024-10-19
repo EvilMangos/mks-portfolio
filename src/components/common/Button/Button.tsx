@@ -7,7 +7,7 @@ type ButtonType = "button" | "submit" | "reset";
 
 interface IProps {
 	text: string;
-	outClass: string;
+	outClass?: string;
 	type?: ButtonType;
 	disabled?: boolean;
 	onClick?: MouseEventHandler;

@@ -21,8 +21,16 @@ $background-color-bottom: #181D20;
     max-width: 338px;
     width: 100%;
 
+    
     @include mixins.responsive(constants.$screen-medium) {
       max-width: 980px;
+      padding-left: 49px;
+      padding-right: 49px;
+    }
+
+    @include mixins.responsive(constants.$screen-big) {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .content {
@@ -115,5 +123,16 @@ $background-color-bottom: #181D20;
 .error {
   @include mixins.responsive(constants.$screen-medium) {
     background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
+  }
+}
+
+.contactMeMobile {
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  
+  @include mixins.responsive(constants.$screen-medium) {
+    display: none;
   }
 }

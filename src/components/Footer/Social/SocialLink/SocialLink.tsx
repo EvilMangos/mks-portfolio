@@ -18,6 +18,7 @@ const SocialLink = ({ link, image, image_hover, alt }) => {
 			onMouseOut={onMouseOut}
 			href={link}
 			target="_blank"
+			rel="noreferrer"
 		>
 			<img
 				className={classes.socialIcon}

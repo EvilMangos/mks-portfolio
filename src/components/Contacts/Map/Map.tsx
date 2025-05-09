@@ -18,7 +18,7 @@ const center = {
 
 const Map = () => {
 	const { isLoaded, loadError } = useJsApiLoader({
-		googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+		googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
 		libraries,
 	});
 	const [isBlurred, setIsBlurred] = useState(true);

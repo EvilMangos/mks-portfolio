@@ -1,4 +1,3 @@
-import epam from "../assets/images/logos/epam.png";
 import zazmic from "../assets/images/logos/zazmic.png";
 import dictary from "../assets/images/logos/dictary.png";
 import dataannotation from "../assets/images/logos/dataannotation.png";
@@ -18,7 +17,7 @@ const experienceObject = {
 			skillsObject.Node,
 			skillsObject.Python,
 		],
-		description: `Over the past three months, I have gained extensive experience working at DataAnnotation.tech, a platform where I engage in various programming-related tasks. My primary responsibility is to evaluate AI responses to complex coding prompts. This involves not only assessing the correctness of code snippets but also restoring much of the context to ensure precise functionality. I critically evaluate the AI's adherence to instructions and performance across various quality metrics, such as correctness and compliance with guidelines. Additionally, I provide detailed written explanations for my choices, articulating why one response is superior to the other.
+		description: `Over the past year, I have gained extensive experience working at DataAnnotation.tech, a platform where I engage in various programming-related tasks. My primary responsibility is to evaluate AI responses to complex coding prompts. This involves not only assessing the correctness of code snippets but also restoring much of the context to ensure precise functionality. I critically evaluate the AI's adherence to instructions and performance across various quality metrics, such as correctness and compliance with guidelines. Additionally, I provide detailed written explanations for my choices, articulating why one response is superior to the other.
 This process has sharpened my analytical skills and deepened my understanding of JavaScript and Python. Thanks to this experience, I have become a proficient prompt engineer, which has given me a strong foundation to implement AI solutions for clients' websites. The variety and complexity of tasks at DataAnnotation.tech have allowed me to refine my problem-solving abilities and maintain a high standard of work quality.
 If you're looking for someone with hands-on experience in evaluating AI performance and a proven track record at DataAnnotation.tech, my background makes me a strong candidate for your needs. My work has consistently demonstrated my technical expertise, attention to detail, and ability to deliver insightful, high-quality evaluations.`,
 	},
@@ -28,7 +27,7 @@ If you're looking for someone with hands-on experience in evaluating AI performa
 		position: "Full-Stack Developer",
 		logo: dictary,
 		startDate: "Jun 2023",
-		finishDate: "Mar 2024",
+		finishDate: null,
 		stack: [
 			skillsObject.TypeScript,
 			skillsObject.MongoDb,
@@ -89,32 +88,6 @@ If you're looking for someone with hands-on experience in evaluating AI performa
 <br/><br/>Working on a healthcare project across the US and Canada required us to adhere to the strictest security protocols and best practices. My passion for cybersecurity and penetration testing enabled me to make significant contributions to our security processes. I was actively involved in implementing robust systems to protect our servers and user data, allowing me to learn from cybersecurity veterans and enhance my expertise.
 <br/><br/>The team was exceptional, filled with talented professionals and wonderful individuals. The culture of experience sharing and process discussions was deeply ingrained in our workflow, which helped me develop strong problem-assessment and debating skills.
 <br/><br/>Overall, this experience taught me how to manage large-scale enterprise projects. I am committed to applying this knowledge to even the smallest projects, ensuring they grow without compromising on performance and security.`,
-	},
-	epam: {
-		id: 3,
-		name: "Epam Systems",
-		position: "Full-Stack Developer",
-		logo: epam,
-		startDate: "May 2020",
-		finishDate: "Jun 2021",
-		stack: [
-			skillsObject.TypeScript,
-			skillsObject.JavaScript,
-			skillsObject.Node,
-			skillsObject.Python,
-			skillsObject.Redis,
-			skillsObject.Redux,
-			skillsObject.React,
-			skillsObject.SASS,
-			skillsObject.HTMLCSS,
-			skillsObject.Jest,
-			skillsObject.Express,
-		],
-		description: `In my role as a full-stack developer at Epam Systems, I leveraged my expertise in TypeScript, Node.js, Express.js, React.js, Redux, and SASS to deliver a high-impact project over the course of a year. This was my first commercial experience, and I was committed to making a significant contribution to the team and the company.
-<br/><br/>During this project, I played a pivotal role in developing a scalable web application that streamlined business processes for our client. My proficiency in TypeScript ensured that our codebase was robust and maintainable, reducing bugs and enhancing overall performance. I took the lead in designing and implementing RESTful APIs using Node.js and Express.js, which allowed for efficient communication between the front-end and back-end systems.
-<br/><br/>One of the most challenging yet rewarding experiences was optimizing the state management of the application using React.js and Redux. By introducing best practices and leveraging Redux's powerful capabilities, I was able to improve the application's performance and user experience significantly. This optimization resulted in a 30% reduction in load times and a smoother, more responsive interface, which was highly praised by the client.
-<br/><br/>In addition, my expertise in SASS allowed us to create a visually appealing and responsive UI, enhancing the user experience across various devices. I collaborated closely with senior developers, absorbing best practices and applying them to ensure the project's success. This experience fostered a collaborative and productive team environment, helping me grow quickly as a developer.
-<br/><br/>Through this project, I demonstrated my ability to deliver high-quality code, solve complex problems, and drive project success. My contributions not only met but exceeded client expectations, leading to a strong, ongoing relationship with Epam Systems. This experience solidified my skills as a full-stack developer and underscored my capacity to bring significant value to any team I join. If you're seeking a dedicated and skilled developer who can make an immediate impact, my background makes me an ideal candidate.`,
 	},
 };
 

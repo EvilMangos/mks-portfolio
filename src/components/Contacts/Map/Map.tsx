@@ -2,7 +2,7 @@ import classes from "./Map.module.scss";
 import {
 	GoogleMap,
 	Libraries,
-	MarkerF,
+	CircleF,
 	useJsApiLoader,
 } from "@react-google-maps/api";
 import classNames from "classnames";
@@ -12,8 +12,8 @@ import tapIcon from "../../../assets/icons/tap_icon.png";
 const libraries: Libraries = ["places"];
 
 const center = {
-	lat: 40.665743952134164,
-	lng: -73.98208537412832,
+	lat: 40.59986967331117,
+	lng: -73.9720136809053,
 };
 
 const Map = () => {
@@ -48,7 +48,7 @@ const Map = () => {
 			)}
 			<GoogleMap
 				mapContainerClassName={mapClasses}
-				zoom={14}
+				zoom={13}
 				center={center}
 				options={{
 					fullscreenControl: false,
@@ -59,7 +59,17 @@ const Map = () => {
 					zoomControl: false,
 				}}
 			>
-				<MarkerF position={center} />
+				<CircleF
+					center={center}
+					radius={1000}
+					options={{
+						fillColor: "#33B006",
+						fillOpacity: 0.2,
+						strokeColor: "#33B006",
+						strokeOpacity: 0.8,
+						strokeWeight: 2,
+					}}
+				/>
 			</GoogleMap>
 		</div>
 	);

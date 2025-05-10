@@ -10,10 +10,11 @@ const Text = ({ outClass }: TextProps) => {
 	return (
 		<p className={textClasses}>
 			<span className={classes.highlighted}>I am a Full Stack Developer</span>{" "}
-			skilled in front-end and back-end development. Proficient in JavaScript,
-			TypeScript, React, Node.js as well as in many other technologies. I excel
-			in managing SQL and NoSQL databases and aim to leverage modern
-			technologies to build efficient and innovative applications.
+			specializing in Node.js, React, and AWS. I can manage the full product
+			lifecycle—designing scalable architectures, building features, and
+			maintaining the cloud infrastructure. Also, thanks to my AI-focused
+			background, I’m highly skilled in AI tools and excel at integrating
+			intelligent solutions to drive innovation.”
 		</p>
 	);
 };

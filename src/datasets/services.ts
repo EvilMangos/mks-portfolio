@@ -50,7 +50,7 @@ const servicesArray = [
 	},
 	{
 		id: 4,
-		title: "Integrating AI into your project",
+		title: "AI integration",
 		image: ai,
 		imageSelected: ai_selected,
 		alt: "ai",

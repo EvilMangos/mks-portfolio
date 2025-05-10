@@ -2,166 +2,170 @@
 @use "ExperienceItem.animations";
 
 @mixin itemBody($collapsed, $expanded) {
-  height: $collapsed;
-  @include ExperienceItem.animationItemShrink($collapsed, $expanded, $collapsed + $expanded);
+	height: $collapsed;
+	@include ExperienceItem.animationItemShrink(
+		$collapsed,
+		$expanded,
+		$collapsed + $expanded
+	);
 
-  &.active {
-    height: $expanded;
-    @include ExperienceItem.animationItemExpand($collapsed, $expanded, $collapsed + $expanded);
-  }
+	&.active {
+		height: $expanded;
+		@include ExperienceItem.animationItemExpand(
+			$collapsed,
+			$expanded,
+			$collapsed + $expanded
+		);
+	}
 }
 
 .container {
-  display: grid;
-  grid-template-areas:
-    "logo mainInfo open"
-    "stack stack stack"
-    "description description description";
+	display: grid;
+	grid-template-areas:
+		"logo mainInfo open"
+		"stack stack stack"
+		"description description description";
 
-  grid-template-columns: 172px auto 89px;
-  grid-column-gap: 28px;
-  grid-row-gap: 16px;
+	grid-template-columns: 172px auto 89px;
+	grid-column-gap: 28px;
+	grid-row-gap: 16px;
 
-  background-color: constants.$color-dark-blue;
-  border-radius: 28px;
-  padding: 28px 28px 22px;
-  margin-bottom: 22px;
-  transition-duration: 1s;
-  overflow: hidden;
+	background-color: constants.$color-dark-blue;
+	border-radius: 28px;
+	padding: 28px 28px 22px;
+	margin-bottom: 22px;
+	transition-duration: 1s;
+	overflow: hidden;
 
-  &:hover {
-    background-color: constants.$color-light-blue;
-    cursor: pointer;
-    transition-duration: 0.5s;
+	&:hover {
+		background-color: constants.$color-light-blue;
+		cursor: pointer;
+		transition-duration: 0.5s;
 
-    .logo {
-      background-color: constants.$color-dark-blue;
-      transition-duration: 0.5s;
-    }
-  }
+		.logo {
+			background-color: constants.$color-dark-blue;
+			transition-duration: 0.5s;
+		}
+	}
 
-  &.item_0 {
-    @include itemBody(281px, 797px);
-  }
+	&.item_0 {
+		@include itemBody(281px, 979px);
+	}
 
-  &.item_1 {
-    @include itemBody(307px, 1187px);
-  }
+	&.item_1 {
+		@include itemBody(307px, 1057px);
+	}
 
-  &.item_2 {
-    @include itemBody(307px, 1109px);
-  }
+	&.item_2 {
+		@include itemBody(307px, 1109px);
+	}
 
-  &.item_3 {
-    @include itemBody(307px, 1187px);
-  }
+	&.active {
+		background-color: constants.$color-light-green;
 
-  &.active {
-    background-color: constants.$color-light-green;
+		.logo {
+			background-color: constants.$color-light-blue;
+		}
 
-    .logo {
-      background-color: constants.$color-light-blue;
-    }
+		.mainInfo {
+			.name {
+				color: black;
+			}
 
-    .mainInfo {
-      .name {
-        color: black;
-      }
+			.role {
+				color: constants.$color-dark-blue;
+			}
 
-      .role {
-        color: constants.$color-dark-blue;
-      }
+			.workingPeriod,
+			.workingPeriod span {
+				color: black;
+			}
+		}
 
-      .workingPeriod,
-      .workingPeriod span {
-        color: black;
-      }
-    }
+		.stack {
+			color: constants.$color-dark-blue;
 
-    .stack {
-      color: constants.$color-dark-blue;
+			.stackLabel {
+				color: black;
+			}
+		}
+	}
 
-      .stackLabel {
-        color: black;
-      }
-    }
-  }
+	.logo {
+		grid-area: logo;
+		width: 172px;
+		height: 172px;
+		border-radius: 18px;
+		background-color: constants.$color-light-blue;
+	}
 
-  .logo {
-    grid-area: logo;
-    width: 172px;
-    height: 172px;
-    border-radius: 18px;
-    background-color: constants.$color-light-blue;
-  }
+	.mainInfo {
+		grid-area: mainInfo;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
 
-  .mainInfo {
-    grid-area: mainInfo;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+		.name {
+			font-size: 36px;
+			line-height: 36px;
+			font-weight: 700;
+		}
 
-    .name {
-      font-size: 36px;
-      line-height: 36px;
-      font-weight: 700;
-    }
+		.role {
+			font-family: "Cascadia Code";
+			color: constants.$color-light-green;
+			margin-top: 16px;
+		}
 
-    .role {
-      font-family: "Cascadia Code";
-      color: constants.$color-light-green;
-      margin-top: 16px;
-    }
+		.workingPeriod {
+			display: flex;
+			align-items: center;
 
-    .workingPeriod {
-      display: flex;
-      align-items: center;
+			margin-top: 22px;
 
-      margin-top: 22px;
+			.calendar {
+				width: 18px;
+				height: 21px;
+				transform: translateY(-2px);
+			}
+		}
+	}
 
-      .calendar {
-        width: 18px;
-        height: 21px;
-        transform: translateY(-2px);
-      }
-    }
-  }
+	.open {
+		grid-area: open;
+		display: flex;
+		align-items: center;
 
-  .open {
-    grid-area: open;
-    display: flex;
-    align-items: center;
+		.openIcon {
+			width: 69px;
+			height: 58px;
+		}
+	}
 
-    .openIcon {
-      width: 69px;
-      height: 58px;
-    }
-  }
+	.stack {
+		grid-area: stack;
+		color: constants.$color-light-green;
+		font-family: "Cascadia Code";
+		font-weight: 600;
 
-  .stack {
-    grid-area: stack;
-    color: constants.$color-light-green;
-    font-family: "Cascadia Code";
-    font-weight: 600;
+		.stackLabel {
+			font-weight: 600;
+		}
+	}
 
-    .stackLabel {
-      font-weight: 600;
-    }
-  }
+	.description {
+		grid-area: description;
+		margin-top: 4px;
 
-  .description {
-    grid-area: description;
-    margin-top: 4px;
+		.descriptionTitle {
+			color: black;
+		}
 
-    .descriptionTitle {
-      color: black;
-    }
-
-    .descriptionText {
-      color: black;
-      text-align: justify;
-      margin-top: 16px;
-    }
-  }
+		.descriptionText {
+			color: black;
+			text-align: justify;
+			margin-top: 16px;
+		}
+	}
 }

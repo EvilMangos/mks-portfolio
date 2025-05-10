@@ -17,8 +17,17 @@ const experienceObject = {
 			skillsObject.Node,
 			skillsObject.Python,
 		],
-		description: `Over the past year, I have gained extensive experience working at DataAnnotation.tech, a platform where I engage in various programming-related tasks. My primary responsibility is to evaluate AI responses to complex coding prompts. This involves not only assessing the correctness of code snippets but also restoring much of the context to ensure precise functionality. I critically evaluate the AI's adherence to instructions and performance across various quality metrics, such as correctness and compliance with guidelines. Additionally, I provide detailed written explanations for my choices, articulating why one response is superior to the other.
-This process has sharpened my analytical skills and deepened my understanding of JavaScript and Python. Thanks to this experience, I have become a proficient prompt engineer, which has given me a strong foundation to implement AI solutions for clients' websites. The variety and complexity of tasks at DataAnnotation.tech have allowed me to refine my problem-solving abilities and maintain a high standard of work quality.
+		description: `Over the past year, I've worked intensively with AI-generated code and responses through my role at DataAnnotation.tech. This experience has given me a deep, hands-on understanding of modern AI tools and how to apply them effectively in real-world development workflows.
+
+I've developed strong prompt engineering skills and an instinct for identifying weaknesses in AI outputs, including subtle logic errors, guideline deviations, or misuse of libraries. As a result, I know how to get high-quality results from AI tools and where human oversight is critical.
+<br/>
+<br/>
+Beyond evaluation, I've become adept at integrating AI into daily development tasks. Whether it's automating repetitive work, speeding up analysis, or improving decision-making, I know how and where to apply AI to boost productivity. I often spot integration opportunities others overlook-adding meaningful automation or insight where it actually matters.
+<br/>
+Working with a wide variety of unfamiliar code has also sharpened my ability to quickly understand complex logic and architectures. This allows me to navigate new codebases fast, identify issues, and make improvements with confidence.
+<br/>
+<br/>
+My exposure to a broad range of coding scenarios and AI behaviors has equipped me with the judgment to choose the right tools and approaches for different tasks. I stay up to date with AI trends, capabilities, and limitations, and I bring that insight to every project I work on..
 If you're looking for someone with hands-on experience in evaluating AI performance and a proven track record at DataAnnotation.tech, my background makes me a strong candidate for your needs. My work has consistently demonstrated my technical expertise, attention to detail, and ability to deliver insightful, high-quality evaluations.`,
 	},
 	dictary: {
@@ -41,20 +50,25 @@ If you're looking for someone with hands-on experience in evaluating AI performa
 			skillsObject.Nest,
 			skillsObject.Node,
 		],
-		description: `For half a year, I successfully led a dynamic team of five professionals as the CEO, developing an innovative online dictionary. Our team included two talented software engineers, a DevOps specialist, a designer, and a marketing expert. Despite facing financial constraints that led to the company's suspension, my time there was invaluable in honing my skills in establishing company processes and building strong team relationships.
-<br/><br/><b>Key Achievements:</b>
-<br/>
-<br/>
+		description: `Dictary is a vocabulary-learning tool for foreign language learners that I built entirely from scratch. From backend and frontend to infrastructure, I designed and implemented every part of the system to create a fast, secure, and reliable product ready for production use.
+		<br/>
+		<br/>
+		<strong>Key Technical Achievements:</strong>
+		<br/>
+		<br/>
 <ul>
-<li><b>Leadership and Management:</b> Effectively managed team meetings, product releases, and tracked individual progress. Played a pivotal role in hiring and, when necessary, terminating team members.</li>
-<li><b>Full-Stack Development:</b> Spearheaded the development of both the backend and frontend of our product. This was my first major project, taking it from ideation to a successful production release.</li>
-<li><b>Legal and Compliance:</b> Authored the Terms of Service, Customer Agreement, and various policies to ensure legal compliance. Successfully negotiated with payment service providers like Stripe and Fondy.</li>
-<li><b>DevOps Expertise:</b> Actively engaged in DevOps development, continually expanding my expertise in this field.</li>
-<li><b>Proven Decision-Maker:</b> Without prior management experience, I demonstrated my ability to make critical decisions and overcome challenges, ensuring the success of our project.</li>
+  <li><b>End-to-End Development:</b> Architected and developed the entire stack, ensuring seamless integration, performance consistency, and full ownership of the development lifecycle.</li>
+  <li><b>Real-Time Optimization:</b> Refined the real-time translation pipeline across frontend and backend, resulting in instant response times while minimizing external API usage and keeping infrastructure costs under control.</li>
+  <li><b>Automation and Efficiency:</b> Automated routine workflows such as CI/CD, monitoring, and user compliance tracking through serverless functions, drastically reducing the need for manual intervention.</li>
+  <li><b>Security Best Practices:</b> Applied modern security standards to prevent common attack vectors, hardening the platform against penetration attempts and ensuring user data protection.</li>
+  <li><b>Reliable Infrastructure:</b> Built a scalable and cost-efficient AWS-based architecture, enabling consistent performance and ease of maintenance as the platform evolved.</li>
 </ul>
-<br/><b>Why Choose Me?</b>
-<br/>I bring a comprehensive skill set to the table, not only developing your product with technical excellence but also ensuring it meets all legal standards. My experience in establishing and managing effective processes guarantees a smooth and efficient workflow, tailored to your needs.
-<br/><br/>Invest in a professional who can deliver top-tier development and operational excellence. Let's take your project to new heights together.`,
+<br/>
+
+Why It Matters:
+
+Dictary reflects my ability to deliver real-world SaaS products with technical precision and long-term maintainability. I don't just write code—I build resilient, production-grade systems that perform, scale, and solve real problems efficiently.
+`,
 	},
 	zazmic: {
 		id: 2,

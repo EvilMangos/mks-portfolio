@@ -12,7 +12,12 @@ import Arrow from "./Arrow/Arrow";
 import { useRef, useState } from "react";
 import { sliderWhoIAmArray } from "../../../../datasets/sliderWhoIAm";
 
-const Slider = ({ setLastElementHovered, outClass }) => {
+interface SliderProps {
+	setLastElementHovered: (element: number) => void;
+	outClass: string;
+}
+
+const Slider = ({ setLastElementHovered, outClass }: SliderProps) => {
 	const [isNextActive, setIsNextActive] = useState(true);
 	const [isPrevActive, setIsPrevActive] = useState(false);
 
@@ -49,7 +54,11 @@ const Slider = ({ setLastElementHovered, outClass }) => {
 				}}
 				onInit={(swiper) => {
 					setTimeout(() => {
-						if (swiper.params) {
+						if (
+							swiper.params &&
+							typeof swiper.params.navigation === "object" &&
+							swiper.params.navigation !== null
+						) {
 							swiper.params.navigation.prevEl = prevRef.current;
 							swiper.params.navigation.nextEl = nextRef.current;
 							swiper.navigation.init();

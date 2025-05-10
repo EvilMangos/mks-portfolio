@@ -8,7 +8,12 @@ enum TestPositionViewsEnum {
 	end,
 }
 
-const Description = ({ text, outClass }) => {
+interface DescriptionProps {
+	text: string;
+	outClass?: string;
+}
+
+const Description = ({ text, outClass }: DescriptionProps) => {
 	const [currentTextPositionView, setCurrentTextPositionView] = useState(
 		TestPositionViewsEnum.start
 	);

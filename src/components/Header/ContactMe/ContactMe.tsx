@@ -6,7 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { pagesObject } from "../../../datasets/pages";
 import scrollToElement from "../../../helpers/scrollToElement";
 
-const ContactMe = ({ outClass }) => {
+interface HeaderContactMeProps {
+	outClass?: string;
+}
+
+const ContactMe = ({ outClass }: HeaderContactMeProps) => {
 	const ref = useRef(null);
 	const navigate = useNavigate();
 

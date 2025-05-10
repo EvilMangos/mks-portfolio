@@ -4,7 +4,11 @@ import classes from "./SkillsSections.module.scss";
 import classNames from "classnames";
 import { useState } from "react";
 
-const SkillsSections = ({ outClass }) => {
+interface SkillsSectionsProps {
+	outClass: string;
+}
+
+const SkillsSections = ({ outClass }: SkillsSectionsProps) => {
 	const [openSections, setOpenSections] = useState([]);
 
 	const openSection = (section) => {

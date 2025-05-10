@@ -7,7 +7,11 @@ import classNames from "classnames";
 import validate from "./validation";
 import MessageSent from "./MessageSent/MessageSent";
 
-const ContactMe = ({ formRef }) => {
+interface ContactMeProps {
+	formRef: React.RefObject<HTMLFormElement>;
+}
+
+const ContactMe = ({ formRef }: ContactMeProps) => {
 	const [isMessageSent, setIsMessageSent] = useState(false);
 	const formClasses = classNames(classes.form, {
 		[classes.transparent]: isMessageSent,

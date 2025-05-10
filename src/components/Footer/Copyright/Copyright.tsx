@@ -1,7 +1,11 @@
 import classes from "./Copyright.module.scss";
 import classNames from "classnames";
 
-const Copyright = ({ outClass }) => {
+interface CopyrightProps {
+	outClass: string;
+}
+
+const Copyright = ({ outClass }: CopyrightProps) => {
 	const copyrightClasses = classNames(outClass, classes.copyright);
 	return (
 		<div className={copyrightClasses}>

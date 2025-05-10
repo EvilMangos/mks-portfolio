@@ -9,7 +9,12 @@ import useOutsideClick from "../../helpers/useOutsideClick";
 import ContactMe from "./ContactMe/ContactMe";
 import useScrollDirectionChange from "../../helpers/useScrollDirectionChange";
 
-const Header = ({ isSubMenuOpen, setIsSubMenuOpen }) => {
+interface HeaderProps {
+	isSubMenuOpen: boolean;
+	setIsSubMenuOpen: (isSubMenuOpen: boolean) => void;
+}
+
+const Header = ({ isSubMenuOpen, setIsSubMenuOpen }: HeaderProps) => {
 	const ref = useRef(null);
 
 	const containerClasses = classNames(classes.container, {

@@ -5,6 +5,19 @@ import seeMore from "../../../../assets/icons/see_more_icon.png";
 import seeLess from "../../../../assets/icons/active/see_less_icon.png";
 import classNames from "classnames";
 
+interface ExperienceItemProps {
+	id: number;
+	name: string;
+	logo: string;
+	role: string;
+	startDate: string;
+	finishDate: string;
+	stack: string[];
+	isActive: boolean;
+	description: string;
+	setActiveIndex: (index: number | null) => void;
+}
+
 const ExperienceItem = ({
 	id,
 	name,
@@ -16,7 +29,7 @@ const ExperienceItem = ({
 	isActive,
 	description,
 	setActiveIndex,
-}) => {
+}: ExperienceItemProps) => {
 	const onClick = () => {
 		if (!isActive) {
 			setActiveIndex(id);

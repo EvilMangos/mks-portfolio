@@ -12,7 +12,11 @@ import { useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import Description from "./Description/Description";
 
-const Slider = ({ outClass }) => {
+interface SliderProps {
+	outClass: string;
+}
+
+const Slider = ({ outClass }: SliderProps) => {
 	const [activeIndex, setActiveIndex] = useState(
 		experienceObject.dataannotation.id
 	);

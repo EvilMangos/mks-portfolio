@@ -1,7 +1,11 @@
 import classes from "./Text.module.scss";
 import classNames from "classnames";
 
-const Text = ({ outClass }) => {
+interface TextProps {
+	outClass: string;
+}
+
+const Text = ({ outClass }: TextProps) => {
 	const textClasses = classNames(outClass, classes.text);
 	return (
 		<p className={textClasses}>

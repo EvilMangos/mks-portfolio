@@ -3,7 +3,12 @@ import classNames from "classnames";
 import { sliderWhoIAmArray } from "../../../../datasets/sliderWhoIAm";
 import React from "react";
 
-const Image = ({ lastElementHovered, outClass }) => {
+interface ImageProps {
+	lastElementHovered: number;
+	outClass: string;
+}
+
+const Image = ({ lastElementHovered, outClass }: ImageProps) => {
 	const image = sliderWhoIAmArray.find(
 		(element) => element.id === lastElementHovered
 	).image;

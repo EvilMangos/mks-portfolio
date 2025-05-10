@@ -1,7 +1,11 @@
 import classes from "./Title.module.scss";
 import classNames from "classnames";
 
-const Title = ({ outClass }) => {
+interface TitleProps {
+	outClass: string;
+}
+
+const Title = ({ outClass }: TitleProps) => {
 	const titleClasses = classNames(outClass, classes.container);
 	return (
 		<div className={titleClasses}>

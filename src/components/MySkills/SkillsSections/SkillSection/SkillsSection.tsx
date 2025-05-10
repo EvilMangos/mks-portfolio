@@ -2,7 +2,23 @@ import SkillsSubList from "./SkillsSubList/SkillsSubList";
 import classes from "./SkillsSection.module.scss";
 import classNames from "classnames";
 
-const SkillsSection = ({ id, name, subList, isOpen, open, close }) => {
+interface SkillsSectionProps {
+	id: number;
+	name: string;
+	subList: string[];
+	isOpen: boolean;
+	open: (id: number) => void;
+	close: (id: number) => void;
+}
+
+const SkillsSection = ({
+	id,
+	name,
+	subList,
+	isOpen,
+	open,
+	close,
+}: SkillsSectionProps) => {
 	const onClick = () => {
 		if (isOpen) {
 			close(id);

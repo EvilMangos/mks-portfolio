@@ -3,6 +3,15 @@ import { NavLink } from "react-router-dom";
 import { useCallback } from "react";
 import classNames from "classnames";
 
+interface SlideLineProps {
+	id: number;
+	label: string;
+	value: string;
+	image?: string;
+	link?: string;
+	setLastElementHovered: (id: number) => void;
+}
+
 const SlideLine = ({
 	id,
 	label,
@@ -10,7 +19,7 @@ const SlideLine = ({
 	image,
 	link,
 	setLastElementHovered,
-}) => {
+}: SlideLineProps) => {
 	const onMouseOver = useCallback(() => {
 		if (image) {
 			setLastElementHovered(id);

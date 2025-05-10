@@ -1,7 +1,15 @@
 import classes from "./Slide.module.scss";
 import classNames from "classnames";
 
-const Slide = ({ title, icon, selectedIcon, alt, isActive }) => {
+interface SlideProps {
+	title: string;
+	icon: string;
+	selectedIcon: string;
+	alt: string;
+	isActive: boolean;
+}
+
+const Slide = ({ title, icon, selectedIcon, alt, isActive }: SlideProps) => {
 	const cardClasses = classNames(classes.card, {
 		[classes.activeSlide]: isActive,
 	});

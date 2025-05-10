@@ -1,7 +1,11 @@
 import React from "react";
 import classes from "./CurrentPage.module.scss";
 
-const CurrentPage = ({ text }) => {
+interface CurrentPageProps {
+	text: string;
+}
+
+const CurrentPage = ({ text }: CurrentPageProps) => {
 	return <div className={classes.currentPage}>{text}</div>;
 };
 

@@ -5,7 +5,11 @@ import Text from "./Text/Text";
 import classes from "./List.module.scss";
 import classNames from "classnames";
 
-const List = ({ outClass }) => {
+interface ListProps {
+	outClass: string;
+}
+
+const List = ({ outClass }: ListProps) => {
 	const [activeElement, setActiveElement] = useState(servicesArray[0].id);
 	const servicesRendered = servicesArray.map((service) => (
 		<ListItem

@@ -5,7 +5,11 @@ import Button from "../../common/Button/Button";
 import classes from "./Greeting.module.scss";
 import scrollToElement from "../../../helpers/scrollToElement";
 
-const Greeting = ({ formRef }) => {
+interface GreetingProps {
+	formRef: React.RefObject<HTMLElement>;
+}
+
+const Greeting = ({ formRef }: GreetingProps) => {
 	const handleButtonClick = () => {
 		scrollToElement(formRef?.current);
 	};

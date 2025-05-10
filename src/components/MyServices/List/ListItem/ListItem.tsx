@@ -1,6 +1,16 @@
 import classes from "./ListItem.module.scss";
 import classNames from "classnames";
 
+interface ListItemProps {
+	id: number;
+	title: string;
+	icon: string;
+	selectedIcon: string;
+	alt: string;
+	isActive: boolean;
+	setActiveElement: (id: number) => void;
+}
+
 const ListItem = ({
 	id,
 	title,
@@ -9,7 +19,7 @@ const ListItem = ({
 	alt,
 	isActive,
 	setActiveElement,
-}) => {
+}: ListItemProps) => {
 	const onHover = () => {
 		setActiveElement(id);
 	};

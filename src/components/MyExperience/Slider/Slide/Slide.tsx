@@ -2,6 +2,16 @@ import classes from "./Slide.module.scss";
 import classNames from "classnames";
 import calendar from "../../../../assets/icons/active/calendar_active.png";
 
+interface SlideProps {
+	name: string;
+	logo: string;
+	role: string;
+	startDate: string;
+	finishDate: string;
+	stack: string[];
+	isActive: boolean;
+}
+
 const Slide = ({
 	name,
 	logo,
@@ -10,7 +20,7 @@ const Slide = ({
 	finishDate,
 	stack,
 	isActive,
-}) => {
+}: SlideProps) => {
 	const cardClasses = classNames(classes.card, {
 		[classes.activeSlide]: isActive,
 	});

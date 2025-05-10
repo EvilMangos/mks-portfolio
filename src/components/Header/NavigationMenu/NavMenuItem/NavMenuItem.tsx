@@ -1,6 +1,15 @@
 import { NavLink } from "react-router-dom";
 import classes from "./NavMenuItem.module.scss";
 
+interface NavMenuItemProps {
+	text: string;
+	link: string;
+	onMouseEnter: () => void;
+	onMouseLeave: () => void;
+	outClass: string;
+	onClick: () => void;
+}
+
 const NavMenuItem = ({
 	text,
 	link,
@@ -8,7 +17,7 @@ const NavMenuItem = ({
 	onMouseLeave,
 	outClass,
 	onClick,
-}) => {
+}: NavMenuItemProps) => {
 	return (
 		<NavLink
 			className={`${outClass} ${classes.link} ${classes.prioritier}`}

@@ -1,7 +1,12 @@
 import classes from "./SkillItem.module.scss";
 import classNames from "classnames";
 
-const SkillsItem = ({ name, outClass }) => {
+interface SkillsItemProps {
+	name: string;
+	outClass?: string;
+}
+
+const SkillsItem = ({ name, outClass }: SkillsItemProps) => {
 	const containerClasses = classNames(classes.container, outClass);
 	return <div className={containerClasses}>{name}</div>;
 };

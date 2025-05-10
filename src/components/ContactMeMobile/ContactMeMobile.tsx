@@ -7,7 +7,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { pagesObject } from "../../datasets/pages";
 import scrollToElement from "../../helpers/scrollToElement";
 
-const ContactMeMobile = ({ outClass }) => {
+interface ContactMeMobileProps {
+	outClass: string;
+}
+
+const ContactMeMobile = ({ outClass }: ContactMeMobileProps) => {
 	const ref = useRef(null);
 	const navigate = useNavigate();
 	const location = useLocation();

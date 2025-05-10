@@ -8,7 +8,11 @@ import { Navigation } from "swiper/modules";
 import Description from "./Description/Description";
 import { servicesArray } from "../../../datasets/services";
 
-const Slider = ({ outClass }) => {
+interface SliderProps {
+	outClass: string;
+}
+
+const Slider = ({ outClass }: SliderProps) => {
 	const [activeIndex, setActiveIndex] = useState(servicesArray[0].id);
 
 	const handleSlideChange = (swiper) => {

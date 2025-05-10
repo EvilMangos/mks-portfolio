@@ -1,6 +1,10 @@
 import classes from "./Text.module.scss";
 
-const Text = ({ text }) => {
+interface TextProps {
+	text: string;
+}
+
+const Text = ({ text }: TextProps) => {
 	return (
 		<div key={text} className={classes.container}>
 			{text}

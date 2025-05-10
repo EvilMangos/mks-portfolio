@@ -1,6 +1,5 @@
 import { RefObject, useEffect } from "react";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
 function useOutsideClick(ref: RefObject<any>, func: Function) {
 	useEffect(() => {
 		function handleClickOutside(event) {

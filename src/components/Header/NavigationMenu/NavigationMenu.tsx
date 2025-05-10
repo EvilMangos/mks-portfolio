@@ -7,7 +7,17 @@ import classes from "./NavigationMenu.module.scss";
 import CurrentPage from "./CurrentPage/CurrentPage";
 import { pagesArray } from "../../../datasets/pages";
 
-const NavigationMenu = ({ outClass, isSubMenuOpen, setIsSubMenuOpen }) => {
+interface NavigationMenuProps {
+	outClass: string;
+	isSubMenuOpen: boolean;
+	setIsSubMenuOpen: (isSubMenuOpen: boolean) => void;
+}
+
+const NavigationMenu = ({
+	outClass,
+	isSubMenuOpen,
+	setIsSubMenuOpen,
+}: NavigationMenuProps) => {
 	const location = useLocation();
 	const currentPageText =
 		pagesArray.find((page) => page.path === location.pathname)?.name || null;

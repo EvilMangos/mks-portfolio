@@ -1,7 +1,14 @@
 import classes from "./SocialLink.module.scss";
 import { useState } from "react";
 
-const SocialLink = ({ link, image, image_hover, alt }) => {
+interface SocialLinkProps {
+	link: string;
+	image: string;
+	image_hover: string;
+	alt: string;
+}
+
+const SocialLink = ({ link, image, image_hover, alt }: SocialLinkProps) => {
 	const [isHovered, setHovered] = useState(false);
 	const onMouseOver = () => {
 		setTimeout(() => setHovered(true), 100);

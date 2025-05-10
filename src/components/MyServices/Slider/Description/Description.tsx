@@ -2,7 +2,12 @@ import classes from "./Description.module.scss";
 import classNames from "classnames";
 import { useEffect, useRef } from "react";
 
-const Description = ({ text, outClass }) => {
+interface DescriptionProps {
+	text: string;
+	outClass: string;
+}
+
+const Description = ({ text, outClass }: DescriptionProps) => {
 	const textRef = useRef(null);
 	const containerClasses = classNames(classes.container, outClass);
 

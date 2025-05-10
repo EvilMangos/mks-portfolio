@@ -24,4 +24,6 @@ const Arrow = forwardRef<
 	return <img className={arrowClasses} src={image} alt="arrow" ref={ref} />;
 });
 
+Arrow.displayName = "Arrow";
+
 export default Arrow;

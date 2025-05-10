@@ -2,15 +2,15 @@
 @use "/src/mixins";
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  .content {
-    margin-top: 36px;
+	.content {
+		margin-top: 36px;
 
-    @include mixins.responsive(constants.$screen-medium) {
-      margin-top: 78px;
-    }
-  }
+		@include mixins.responsive(constants.$screen-medium) {
+			margin-top: 78px;
+		}
+	}
 }

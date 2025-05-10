@@ -2,48 +2,48 @@
 @use "/src/mixins";
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  @include mixins.responsive(constants.$screen-medium) {
-    display: grid;
-    grid-template-areas:
-      "title image"
-      "text image"
-      "button image";
-    grid-column-gap: 64px;
-    grid-row-gap: 32px;
-  }
+	@include mixins.responsive(constants.$screen-big) {
+		display: grid;
+		grid-template-areas:
+			"title image"
+			"text image"
+			"button image";
+		grid-column-gap: 64px;
+		grid-row-gap: 32px;
+	}
 
-  .image {
-    grid-area: image;
-  }
+	.image {
+		grid-area: image;
+	}
 
-  .title {
-    margin-top: 36px;
-    grid-area: title;
+	.title {
+		margin-top: 36px;
+		grid-area: title;
 
-    @include mixins.responsive(constants.$screen-medium) {
-      margin-top: 0;
-    }
-  }
+		@include mixins.responsive(constants.$screen-big) {
+			margin-top: 0;
+		}
+	}
 
-  .text {
-    margin-top: 16px;
-    grid-area: text;
+	.text {
+		margin-top: 16px;
+		grid-area: text;
 
-    @include mixins.responsive(constants.$screen-medium) {
-      margin-top: 0;
-    }
-  }
+		@include mixins.responsive(constants.$screen-big) {
+			margin-top: 0;
+		}
+	}
 
-  .button {
-    margin-top: 16px;
-    grid-area: button;
+	.button {
+		margin-top: 16px;
+		grid-area: button;
 
-    @include mixins.responsive(constants.$screen-medium) {
-      margin-top: 0;
-    }
-  }
+		@include mixins.responsive(constants.$screen-big) {
+			margin-top: 0;
+		}
+	}
 }

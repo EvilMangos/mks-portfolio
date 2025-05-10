@@ -3,86 +3,91 @@
 @use "Slide.animations";
 
 .card {
-  transform: scale(0.8);
-  background-color: constants.$color-dark-blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	transform: scale(0.8);
+	background-color: constants.$color-dark-blue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-  padding: 18px 10px;
-  border-radius: 16px;
-  height: 415px;
+	padding: 18px 10px;
+	border-radius: 16px;
+	height: 415px;
 
-  animation: slideUnselectedChange 0.1s;
+	animation: slideUnselectedChange 0.1s;
 
-  &.activeSlide {
-    animation: slideSelectedChange 0.2s;
+	&.activeSlide {
+		animation: slideSelectedChange 0.2s;
 
-    transform: scale(1);
-    background-color: constants.$color-light-green;
+		transform: scale(1);
+		background-color: constants.$color-light-green;
 
-    .role,
-    .stack {
-      color: constants.$color-dark-blue;
-    }
-  }
+		.role,
+		.stack {
+			color: constants.$color-dark-blue;
+		}
+	}
 
-  .image {
-    width: 142px;
-    height: 142px;
+	.image {
+		width: 142px;
+		height: 142px;
 
-    border-radius: 10px;
-    background-color: constants.$color-light-blue;
-  }
+		border-radius: 10px;
+		background-color: constants.$color-light-blue;
+	}
 
-  .title {
-    color: black;
+	.title {
+		color: black;
 
-    margin-top: 16px;
-  }
+		margin-top: 16px;
 
-  .role {
-    color: white;
-    font-family: "Cascadia Code";
-    font-size: 20px;
-    font-weight: 600;
+		@include mixins.forMiddleScreen {
+			font: 600 26px "Gilroy";
+			line-height: 34px;
+		}
+	}
 
-    margin-top: 4px;
-  }
+	.role {
+		color: white;
+		font-family: "Cascadia Code";
+		font-size: 20px;
+		font-weight: 600;
 
-  .dates {
-    display: flex;
-    align-content: center;
+		margin-top: 4px;
+	}
 
-    margin-top: 10px;
+	.dates {
+		display: flex;
+		align-content: center;
 
-    .calendar {
-      width: 18px;
-      height: 21px;
-      margin-right: 6px;
-    }
+		margin-top: 10px;
 
-    .datesLine {
-      display: flex;
-      align-items: center;
-      color: black;
+		.calendar {
+			width: 18px;
+			height: 21px;
+			margin-right: 6px;
+		}
 
-      & > span {
-        color: black;
-      }
-    }
-  }
+		.datesLine {
+			display: flex;
+			align-items: center;
+			color: black;
 
-  .stack {
-    color: white;
-    text-align: center;
-    font-family: "Cascadia Code";
-    font-weight: 600;
+			& > span {
+				color: black;
+			}
+		}
+	}
 
-    .stackLabel {
-      color: black;
-      font-weight: 600;
-    }
-  }
+	.stack {
+		color: white;
+		text-align: center;
+		font-family: "Cascadia Code";
+		font-weight: 600;
+
+		.stackLabel {
+			color: black;
+			font-weight: 600;
+		}
+	}
 }

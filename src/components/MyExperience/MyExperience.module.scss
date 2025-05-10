@@ -2,14 +2,11 @@
 @use "/src/mixins";
 
 .container {
-  .title {
-  }
+	.slider {
+		margin-top: 36px;
 
-  .slider {
-    margin-top: 36px;
-
-    @include mixins.responsive(constants.$screen-medium) {
-      margin-top: 78px;
-    }
-  }
+		@include mixins.responsive(constants.$screen-medium) {
+			margin-top: 78px;
+		}
+	}
 }

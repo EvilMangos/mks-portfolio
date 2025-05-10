@@ -2,50 +2,49 @@
 @use "/src/mixins";
 
 .mapContainer {
-  position: relative;
-  width: 100%;
-  height: 310px;
-  margin-top: 46px;
-  overflow: hidden;
-  border-radius: 16px;
+	position: relative;
+	width: 100%;
+	height: 310px;
+	margin-top: 46px;
+	overflow: hidden;
+	border-radius: 16px;
 
-  @include mixins.responsive(constants.$screen-medium) {
-    width: 734px;
-    height: 317px;
-  }
+	@include mixins.responsive(constants.$screen-big) {
+		width: 734px;
+		height: 317px;
+	}
 
-  .cover {
-    position: absolute;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.cover {
+		position: absolute;
+		background-color: transparent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    width: 100%;
-    height: 100%;
+		width: 100%;
+		height: 100%;
 
-    cursor: pointer;
-    z-index: 2;
+		cursor: pointer;
+		z-index: 2;
 
-    transition-duration: 0.5s;
+		transition-duration: 0.5s;
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.08);
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.08);
+		}
 
-    }
+		.tapIcon {
+		}
+	}
 
-    .tapIcon {
-    }
-  }
+	.map {
+		width: 100%;
+		height: 100%;
+		border-radius: 16px;
 
-  .map {
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-
-    &.blurred {
-      filter: blur(8px) brightness(60%);
-      pointer-events: none;
-    }
-  }
+		&.blurred {
+			filter: blur(8px) brightness(60%);
+			pointer-events: none;
+		}
+	}
 }

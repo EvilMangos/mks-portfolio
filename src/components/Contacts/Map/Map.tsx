@@ -1,8 +1,8 @@
 import classes from "./Map.module.scss";
 import {
+	CircleF,
 	GoogleMap,
 	Libraries,
-	CircleF,
 	useJsApiLoader,
 } from "@react-google-maps/api";
 import classNames from "classnames";

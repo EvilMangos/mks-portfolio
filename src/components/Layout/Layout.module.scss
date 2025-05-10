@@ -2,69 +2,68 @@
 @use "/src/mixins";
 @use "./Layout.animations";
 
-$background-color-top: #2A3136;
-$background-color-bottom: #181D20;
+$background-color-top: #2a3136;
+$background-color-bottom: #181d20;
 
 .layout {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-top: 26px;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  @include mixins.responsive(constants.$screen-medium) {
-    padding: 58px 0;
-  }
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 26px;
+	display: flex;
+	justify-content: center;
+	min-height: 100dvh;
+	@include mixins.responsive(constants.$screen-medium) {
+		padding: 58px 0;
+	}
 
-  .container {
-    max-width: 338px;
-    width: 100%;
+	.container {
+		max-width: 338px;
+		width: 100%;
 
-    
-    @include mixins.responsive(constants.$screen-medium) {
-      max-width: 980px;
-      padding-left: 49px;
-      padding-right: 49px;
-    }
+		@include mixins.responsive(constants.$screen-medium) {
+			max-width: 980px;
+			padding-left: 49px;
+			padding-right: 49px;
+		}
 
-    @include mixins.responsive(constants.$screen-big) {
-      padding-left: 0;
-      padding-right: 0;
-    }
+		@include mixins.responsive(constants.$screen-big) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 
-    .content {
-      opacity: 0;
+		.content {
+			opacity: 0;
 
-      &.visible {
-        opacity: 1;
-        animation: fadeOut 0.5s;
-      }
-    }
-  }
+			&.visible {
+				opacity: 1;
+				animation: fadeOut 0.5s;
+			}
+		}
+	}
 
-  &.blur {
-    & > *:not(:first-child) {
-      pointer-events: none;
-    }
+	&.blur {
+		& > *:not(:first-child) {
+			pointer-events: none;
+		}
 
-    &::before {
-      content: "";
-      position: fixed;
-      backdrop-filter: blur(15px);
-      width: 100%;
-      height: 100%;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 2;
-    }
-  }
+		&::before {
+			content: "";
+			position: fixed;
+			backdrop-filter: blur(15px);
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+		}
+	}
 }
 
 .hideOverflow {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .whoIAmBG,
@@ -73,66 +72,104 @@ $background-color-bottom: #181D20;
 .mySkills,
 .myServices,
 .error {
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
 
-  background-image: url("../../assets/images/backgrounds/mobile_bg.png"), linear-gradient(to bottom, $background-color-top, $background-color-bottom);
+	background-image:
+		url("../../assets/images/backgrounds/mobile_bg.png"),
+		linear-gradient(to bottom, $background-color-top, $background-color-bottom);
 }
 
 .whoIAmBG {
-  @include mixins.responsive(constants.$screen-medium) {
-    background-size: 100% 100%;
-    background-image: url("../../assets/images/backgrounds/who_i_am_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
+	@include mixins.responsive(constants.$screen-medium) {
+		background-size: 100% 100%;
+		background-image:
+			url("../../assets/images/backgrounds/who_i_am_bg.png"),
+			linear-gradient(
+				to bottom,
+				$background-color-top 0%,
+				$background-color-bottom 32%
+			);
+	}
 
-  @include mixins.responsive(2281px) {
-    background-size: 100% auto;
-  }
+	@include mixins.responsive(2281px) {
+		background-size: 100% auto;
+	}
 }
 
 .contacts {
-  @include mixins.responsive(constants.$screen-medium) {
-    background-size: 100% 100%;
-    background-image: url("../../assets/images/backgrounds/contacts_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
+	@include mixins.responsive(constants.$screen-medium) {
+		background-size: 100% 100%;
+		background-image:
+			url("../../assets/images/backgrounds/contacts_bg.png"),
+			linear-gradient(
+				to bottom,
+				$background-color-top 0%,
+				$background-color-bottom 32%
+			);
+	}
 
-  @include mixins.responsive(2281px) {
-    background-size: 100% auto;
-  }
+	@include mixins.responsive(2281px) {
+		background-size: 100% auto;
+	}
 }
 
 .myExperience {
-  @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
+	@include mixins.responsive(constants.$screen-medium) {
+		background-image:
+			url("../../assets/images/backgrounds/my_experience_bg.png"),
+			linear-gradient(
+				to bottom,
+				$background-color-top 0%,
+				$background-color-bottom 32%
+			);
+	}
 }
 
 .mySkills {
-  @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/my_skills_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
+	@include mixins.responsive(constants.$screen-medium) {
+		background-image:
+			url("../../assets/images/backgrounds/my_skills_bg.png"),
+			linear-gradient(
+				to bottom,
+				$background-color-top 0%,
+				$background-color-bottom 32%
+			);
+	}
 }
 
 .myServices {
-  @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/my_services_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
+	@include mixins.responsive(constants.$screen-medium) {
+		background-image:
+			url("../../assets/images/backgrounds/my_services_bg.png"),
+			linear-gradient(
+				to bottom,
+				$background-color-top 0%,
+				$background-color-bottom 32%
+			);
+	}
 }
 
 .error {
-  @include mixins.responsive(constants.$screen-medium) {
-    background-image: url("../../assets/images/backgrounds/my_experience_bg.png"), linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 32%);
-  }
+	@include mixins.responsive(constants.$screen-medium) {
+		background-image:
+			url("../../assets/images/backgrounds/my_experience_bg.png"),
+			linear-gradient(
+				to bottom,
+				$background-color-top 0%,
+				$background-color-bottom 32%
+			);
+	}
 }
 
 .contactMeMobile {
-  display: flex;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  
-  @include mixins.responsive(constants.$screen-medium) {
-    display: none;
-  }
+	display: flex;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+
+	@include mixins.responsive(constants.$screen-medium) {
+		display: none;
+	}
 }

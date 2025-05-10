@@ -2,24 +2,24 @@
 @use "/src/mixins";
 
 .container {
-  @include mixins.responsive(constants.$screen-medium) {
-    display: none;
-  }
+	@include mixins.responsive(constants.$screen-big) {
+		display: none;
+	}
 
-  .sliderContainer {
-    height: 455px;
+	.sliderContainer {
+		height: 455px;
 
-    .slider {
-      position: absolute;
-      width: 100vw;
-      left: 0;
+		.slider {
+			position: absolute;
+			width: 100dvw;
+			left: 0;
 
-      $padding: calc((100vw - 298px) / 2);
-      padding: 0 $padding 40px;
-    }
-  }
+			$padding: calc((100dvw - 298px) / 2);
+			padding: 0 $padding 40px;
+		}
+	}
 
-  .description {
-    margin-top: 36px;
-  }
+	.description {
+		margin-top: 36px;
+	}
 }

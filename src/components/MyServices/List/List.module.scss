@@ -2,16 +2,16 @@
 @use "/src/mixins";
 
 .container {
-  display: none;
-  width: 858px;
+	display: none;
+	width: 858px;
 
-  @include mixins.responsive(constants.$screen-medium) {
-    display: flex;
-    flex-direction: column;
-  }
+	@include mixins.responsive(constants.$screen-big) {
+		display: flex;
+		flex-direction: column;
+	}
 
-  .line {
-    display: flex;
-    justify-content: space-between;
-  }
+	.line {
+		display: flex;
+		justify-content: space-between;
+	}
 }

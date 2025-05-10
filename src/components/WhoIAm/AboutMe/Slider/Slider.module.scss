@@ -2,18 +2,18 @@
 @use "/src/mixins";
 
 .container {
-  display: flex;
-  align-items: center;
-  @include mixins.responsive(constants.$screen-medium) {
-    width: 444px;
-  }
+	display: flex;
+	align-items: center;
+	@include mixins.responsive(constants.$screen-medium) {
+		width: 444px;
+	}
 
-  .slider {
-    width: 276px;
-    height: 184px;
+	.slider {
+		width: 276px;
+		height: 184px;
 
-    @include mixins.responsive(constants.$screen-medium) {
-      width: 310px;
-    }
-  }
+		@include mixins.responsive(constants.$screen-medium) {
+			width: 310px;
+		}
+	}
 }

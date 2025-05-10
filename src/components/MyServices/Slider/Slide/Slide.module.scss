@@ -3,44 +3,44 @@
 @use "Slide.animations";
 
 .card {
-  transform: scale(0.8);
-  background-color: constants.$color-dark-blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	transform: scale(0.8);
+	background-color: constants.$color-dark-blue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-  padding: 20px;
-  border-radius: 16px;
-  height: 205px;
-  width: 192px;
+	padding: 20px;
+	border-radius: 16px;
+	height: 205px;
+	width: 192px;
 
-  animation: slideUnselectedChange 0.1s;
-  opacity: 0.3;
+	animation: slideUnselectedChange 0.1s;
+	opacity: 0.3;
 
-  &.activeSlide {
-    animation: slideSelectedChange 0.2s;
+	&.activeSlide {
+		animation: slideSelectedChange 0.2s;
 
-    transform: scale(1);
-    background-color: constants.$color-light-green;
-    opacity: 1;
+		transform: scale(1);
+		background-color: constants.$color-light-green;
+		opacity: 1;
 
-    .title {
-      color: black;
-    }
-  }
+		.title {
+			color: black;
+		}
+	}
 
-  .image {
-    border-radius: 10px;
-  }
+	.image {
+		border-radius: 10px;
+	}
 
-  .title {
-    color: white;
+	.title {
+		color: white;
 
-    font-family: "Cascadia Code";
-    font-weight: 600;
+		font-family: "Cascadia Code";
+		font-weight: 600;
 
-    margin-top: 19px;
-    text-align: center;
-  }
+		margin-top: 19px;
+		text-align: center;
+	}
 }

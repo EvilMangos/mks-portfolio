@@ -2,38 +2,38 @@
 @use "/src/mixins";
 
 .container {
-  max-width: 100vw;
+	max-width: 100dvw;
 
-  @include mixins.responsive(constants.$screen-medium) {
-    display: none;
-  }
+	@include mixins.responsive(constants.$screen-big) {
+		display: none;
+	}
 
-  .sliderContainer {
-    height: 241px;
+	.sliderContainer {
+		height: 241px;
 
-    .slider {
-      position: absolute;
-      width: 100vw;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+		.slider {
+			position: absolute;
+			width: 100dvw;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
-      $padding: calc((100vw - 198px) / 2);
-      padding: 0 $padding;
+			$padding: calc((100dvw - 198px) / 2);
+			padding: 0 $padding;
 
-      .swiperSlide {
-        display: flex;
-        justify-content: center;
-      }
+			.swiperSlide {
+				display: flex;
+				justify-content: center;
+			}
 
-      .numbers {
-        margin-top: 10px;
-      }
-    }
-  }
+			.numbers {
+				margin-top: 10px;
+			}
+		}
+	}
 
-  .description {
-    margin-top: 36px;
-  }
+	.description {
+		margin-top: 36px;
+	}
 }

@@ -30,12 +30,14 @@ const NavigationMenu = ({
 		divRef.current?.classList.remove(classes.menuLinkHover);
 	};
 
-	const currentPageClasses = classNames(outClass, classes.currentPage, {
+	const currentPageClasses = classNames(classes.currentPage, {
 		[classes.hide]: isSubMenuOpen,
 	});
 	const subMenuClasses = classNames(classes.subMenu, {
 		[classes.hide]: !isSubMenuOpen,
 	});
+
+	const menuClasses = classNames(classes.menu, outClass);
 
 	const onLinkClick = useCallback(() => {
 		setIsSubMenuOpen(false);
@@ -61,7 +63,7 @@ const NavigationMenu = ({
 		});
 
 	return (
-		<div className={classes.menu} ref={divRef}>
+		<div className={menuClasses} ref={divRef}>
 			<div
 				className={currentPageClasses}
 				onClick={() => {

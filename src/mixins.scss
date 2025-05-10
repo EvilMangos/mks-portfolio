@@ -1,19 +1,19 @@
 @use "/src/constants.scss";
 
 @mixin responsive($query) {
-  @media ( min-width: $query ) {
-    @content;
-  }
+	@media (min-width: $query) {
+		@content;
+	}
 }
 
 @mixin ifLess($query) {
-  @media ( max-width: $query ) {
-    @content;
-  }
+	@media (max-width: $query) {
+		@content;
+	}
 }
 
-@mixin forMiddleScreen() {
-  @media (min-width: constants.$screen-medium ) and (max-width: constants.$screen-big) {
-    @content;
-  }
+@mixin forMiddleScreen {
+	@media (min-width: constants.$screen-medium) and (max-width: constants.$screen-big) {
+		@content;
+	}
 }

@@ -2,22 +2,22 @@
 @use "./Description.animations";
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  .title {
-    text-align: center;
-  }
+	.title {
+		text-align: center;
+	}
 
-  .text {
-    height: 302px;
-    overflow-y: auto;
-    margin-top: 12px;
-    width: 314px;
-    text-align: justify;
+	.text {
+		height: 302px;
+		overflow-y: auto;
+		margin-top: 12px;
+		width: 314px;
+		text-align: justify;
 
-    padding-right: 10px;
-    animation: fadeIn 1s ease-in-out;
-  }
+		padding-right: 10px;
+		animation: fadeIn 1s ease-in-out;
+	}
 }

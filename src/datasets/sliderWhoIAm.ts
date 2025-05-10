@@ -1,5 +1,4 @@
 import myPhoto from "../assets/images/my_photo.jpg";
-import age from "../assets/images/youth.webp";
 import diploma from "../assets/images/diploma.jpg";
 
 const sliderWhoIAmObject = {
@@ -11,16 +10,8 @@ const sliderWhoIAmObject = {
 		image: myPhoto,
 		slide: 1,
 	},
-	age: {
-		id: 1,
-		text: "Age",
-		value: "23 y.o.",
-		link: null,
-		image: age,
-		slide: 1,
-	},
 	residence: {
-		id: 2,
+		id: 1,
 		text: "Residence",
 		value: "Brooklyn, NY, US",
 		link: "/contacts",
@@ -28,7 +19,7 @@ const sliderWhoIAmObject = {
 		slide: 1,
 	},
 	education: {
-		id: 3,
+		id: 2,
 		text: "Education",
 		value: "Computer Engineering",
 		link: null,
@@ -36,23 +27,23 @@ const sliderWhoIAmObject = {
 		slide: 1,
 	},
 	phone: {
-		id: 4,
+		id: 3,
 		text: "Phone",
 		value: "347 477 3525",
 		link: "/contacts",
 		image: null,
-		slide: 2,
+		slide: 1,
 	},
 	email: {
-		id: 5,
+		id: 4,
 		text: "Email",
-		value: "maksymkhamets.career",
+		value: "maksymkhamets.career@gmail.com",
 		link: "/contacts",
 		image: null,
 		slide: 2,
 	},
 	experience: {
-		id: 6,
+		id: 5,
 		text: "Experience",
 		value: "4 years",
 		link: "/experience",

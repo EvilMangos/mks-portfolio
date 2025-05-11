@@ -71,6 +71,7 @@ $background-color-bottom: #181d20;
 .myExperience,
 .mySkills,
 .myServices,
+.myProjects,
 .error {
 	background-size: cover;
 	background-position: center top;
@@ -115,7 +116,8 @@ $background-color-bottom: #181d20;
 	}
 }
 
-.myExperience {
+.myExperience,
+.myProjects {
 	@include mixins.responsive(constants.$screen-medium) {
 		background-image:
 			url("../../assets/images/backgrounds/my_experience_bg.png"),

@@ -6,6 +6,7 @@ import Contacts from "./components/Contacts/Contacts";
 import MyExperience from "./components/MyExperience/MyExperience";
 import MySkills from "./components/MySkills/MySkills";
 import MyServices from "./components/MyServices/MyServices";
+import MyProjects from "./components/MyProjects/MyProjects";
 import NotFound from "./components/errors/NotFound/NotFound";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 				/>
 				<Route path={pagesObject.myServices.path} element={<MyServices />} />
 				<Route path={pagesObject.mySkills.path} element={<MySkills />} />
+				<Route path={pagesObject.myProjects.path} element={<MyProjects />} />
 
 				<Route path="*" element={<NotFound />} />
 			</Route>

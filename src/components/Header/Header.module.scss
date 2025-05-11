@@ -90,7 +90,7 @@ $header-gradient-color-end-open: rgba(0, 17, 36, 1);
 
 		.menu {
 			@include mixins.responsive(constants.$screen-medium) {
-				padding-left: 50px;
+				padding-left: 40px;
 			}
 		}
 	}

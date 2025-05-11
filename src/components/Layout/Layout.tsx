@@ -50,6 +50,7 @@ const Layout = () => {
 		[classes.myExperience]: location.pathname === pagesObject.myExperience.path,
 		[classes.mySkills]: location.pathname === pagesObject.mySkills.path,
 		[classes.myServices]: location.pathname === pagesObject.myServices.path,
+		[classes.myProjects]: location.pathname === pagesObject.myProjects.path,
 		[classes.error]: !pagesArray.find(
 			(page) => page.path === location.pathname
 		),

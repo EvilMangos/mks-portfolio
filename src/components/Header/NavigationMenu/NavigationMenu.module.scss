@@ -3,56 +3,56 @@
 @use "NavigationMenu.animations";
 
 .menu {
-  display: flex;
-  @include mixins.responsive(constants.$screen-medium) {
-    max-width: 687px;
-    width: 100%;
-  }
+	display: flex;
+	@include mixins.responsive(constants.$screen-medium) {
+		max-width: 720px;
+		width: 100%;
+	}
 
-  .currentPage {
-    cursor: pointer;
-    @include mixins.responsive(constants.$screen-medium) {
-      display: none;
-    }
-  }
+	.currentPage {
+		cursor: pointer;
+		@include mixins.responsive(constants.$screen-medium) {
+			display: none;
+		}
+	}
 
-  .subMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 8px auto;
-    width: 100%;
-    @include mixins.responsive(constants.$screen-medium) {
-      margin: 0 auto;
-      flex-direction: row;
-    }
-  }
+	.subMenu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		margin: 8px auto;
+		width: 100%;
+		@include mixins.responsive(constants.$screen-medium) {
+			margin: 0 auto;
+			flex-direction: row;
+		}
+	}
 
-  .hide {
-    @include mixins.ifLess(constants.$screen-medium) {
-      display: none;
-    }
-  }
+	.hide {
+		@include mixins.ifLess(constants.$screen-medium) {
+			display: none;
+		}
+	}
 
-  .selected {
-    color: constants.$color-light-green;
+	.selected {
+		color: constants.$color-light-green;
 
-    @include mixins.responsive(constants.$screen-medium) {
-      &:before {
-        position: absolute;
-        content: url("../../../assets/icons/active/selected_menu_item.svg");
-        bottom: 0;
-        left: calc(50% - 19px);
-        top: 148%;
-      }
-    }
-  }
+		@include mixins.responsive(constants.$screen-medium) {
+			&:before {
+				position: absolute;
+				content: url("../../../assets/icons/active/selected_menu_item.svg");
+				bottom: 0;
+				left: calc(50% - 19px);
+				top: 148%;
+			}
+		}
+	}
 }
 
 .menuLinkHover {
-  .menuItem {
-    animation: navMenuHoverOther 0.5s;
-    opacity: 0.4;
-  }
+	.menuItem {
+		animation: navMenuHoverOther 0.5s;
+		opacity: 0.4;
+	}
 }

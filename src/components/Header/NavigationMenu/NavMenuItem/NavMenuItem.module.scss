@@ -1,20 +1,25 @@
 @use "NavigationMenuItem.animations";
+@use "/src/mixins.scss";
 
 .link.prioritier {
-  position: relative;
-  text-decoration: none;
-  color: white;
-  height: 16px;
-  font-weight: 500;
+	position: relative;
+	text-decoration: none;
+	color: white;
+	height: 16px;
+	font-weight: 500;
 
-  animation: navMenuMouseOut 0.5s;
+	animation: navMenuMouseOut 0.5s;
 
-  &:hover {
-    animation-duration: 0s;
-    opacity: 1;
-  }
+	&:hover {
+		animation-duration: 0s;
+		opacity: 1;
+	}
 
-  &:active {
-    opacity: 0.7;
-  }
+	&:active {
+		opacity: 0.7;
+	}
+
+	@include mixins.forMiddleScreen {
+		font-size: 16px;
+	}
 }

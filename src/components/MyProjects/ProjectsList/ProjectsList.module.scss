@@ -1,0 +1,25 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.container {
+	width: 100%;
+	margin-top: 78px;
+
+	@include mixins.responsive(constants.$screen-big) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 22px;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

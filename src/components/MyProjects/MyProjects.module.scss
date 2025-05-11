@@ -1,0 +1,16 @@
+@use "/src/constants";
+@use "/src/mixins";
+
+.slider {
+	@include mixins.responsive(constants.$screen-big) {
+		display: none;
+	}
+}
+
+.projectsList {
+	display: none;
+
+	@include mixins.responsive(constants.$screen-big) {
+		display: flex;
+	}
+}

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import classes from "./ProjectsList.module.scss";
 import classNames from "classnames";
 import ProjectItem from "./ProjectItem/ProjectItem";
@@ -19,7 +18,6 @@ const placeholderProject = {
 const ProjectsList = ({ outClass }: ProjectsListProps) => {
 	const containerClasses = classNames(classes.container, outClass);
 
-	// Create an array of 4 items, using placeholder for any missing projects
 	const displayProjects = Array(4)
 		.fill(null)
 		.map((_, index) => projectsArray[index] || placeholderProject);

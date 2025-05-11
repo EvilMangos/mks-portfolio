@@ -1,37 +1,46 @@
+import { FC, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import classes from "./Slider.module.scss";
-import classNames from "classnames";
-import { useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import classes from "./Slider.module.scss";
+import Slide from "./Slide/Slide";
+import { projectsArray } from "../../../datasets/projects";
+import classNames from "classnames";
 interface SliderProps {
-	outClass: string;
+	outClass?: string;
 }
 
-const Slider = ({ outClass }: SliderProps) => {
+const Slider: FC<SliderProps> = ({ outClass }: SliderProps) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
-	const handleSlideChange = (swiper) => {
-		setActiveIndex(swiper.activeIndex);
-	};
-
 	const containerClasses = classNames(classes.container, outClass);
+
 	return (
 		<div className={containerClasses}>
-			<div className={classes.sliderContainer}>
-				<Swiper
-					slidesPerView={1}
-					className={classes.slider}
-					onSlideChange={handleSlideChange}
-					centeredSlides={true}
-					modules={[Pagination, Navigation]}
-					pagination={{ clickable: true }}
-				>
-					<div className={classes.sliderContent}>
-						{/* Slides will be added here */}
-					</div>
-				</Swiper>
+			<Swiper
+				modules={[Navigation, Pagination]}
+				spaceBetween={30}
+				slidesPerView={1}
+				navigation
+				pagination={{ clickable: true }}
+				onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+			>
+				{projectsArray.map((project, index) => (
+					<SwiperSlide key={project.name}>
+						<Slide
+							name={project.name}
+							description={project.description}
+							image={project.image}
+							link={project.link}
+							isActive={index === activeIndex}
+						/>
+					</SwiperSlide>
+				))}
+			</Swiper>
+			<div className={classes.counter}>
+				{activeIndex + 1} / {projectsArray.length}
 			</div>
 		</div>
 	);

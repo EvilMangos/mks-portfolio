@@ -27,8 +27,7 @@ Beyond evaluation, I've become adept at integrating AI into daily development ta
 Working with a wide variety of unfamiliar code has also sharpened my ability to quickly understand complex logic and architectures. This allows me to navigate new codebases fast, identify issues, and make improvements with confidence.
 <br/>
 <br/>
-My exposure to a broad range of coding scenarios and AI behaviors has equipped me with the judgment to choose the right tools and approaches for different tasks. I stay up to date with AI trends, capabilities, and limitations, and I bring that insight to every project I work on..
-If you're looking for someone with hands-on experience in evaluating AI performance and a proven track record at DataAnnotation.tech, my background makes me a strong candidate for your needs. My work has consistently demonstrated my technical expertise, attention to detail, and ability to deliver insightful, high-quality evaluations.`,
+My exposure to a broad range of coding scenarios and AI behaviors has equipped me with the judgment to choose the right tools and approaches for different tasks. I stay up to date with AI trends, capabilities, and limitations, and I bring that insight to every project I work on.`,
 	},
 	dictary: {
 		id: 1,

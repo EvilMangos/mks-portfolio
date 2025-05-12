@@ -24,7 +24,12 @@ const skillsSectionsObject = {
 	devops: {
 		id: 2,
 		name: "Cloud & Infrastructure",
-		skills: [skillsObject.AWS, skillsObject.Heroku, skillsObject.CICD],
+		skills: [
+			skillsObject.Docker,
+			skillsObject.AWS,
+			skillsObject.Heroku,
+			skillsObject.CICD,
+		],
 	},
 	database: {
 		id: 3,

@@ -28,6 +28,7 @@ const skillsObject = {
 	Mocha: "Mocha",
 	SuperTest: "Supertest",
 	SQL: "SQL",
+	Docker: "Docker",
 };
 
 const skillsArray = Object.values(skillsObject);

@@ -7,7 +7,7 @@ const experienceObject = {
 	dataannotation: {
 		id: 0,
 		name: "DataAnnotation.tech",
-		position: "AI Trainer",
+		position: "Software Engineer",
 		logo: dataannotation,
 		startDate: "May 2024",
 		finishDate: null,

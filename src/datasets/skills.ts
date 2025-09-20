@@ -29,6 +29,9 @@ const skillsObject = {
 	SuperTest: "Supertest",
 	SQL: "SQL",
 	Docker: "Docker",
+	Django: "Django",
+	SQLAlchemy: "SQLAlchemy",
+	Pytest: "Pytest",
 };
 
 const skillsArray = Object.values(skillsObject);

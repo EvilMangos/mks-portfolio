@@ -6,8 +6,10 @@ const skillsSectionsObject = {
 		name: "Backend technologies",
 		skills: [
 			skillsObject.Node,
+			skillsObject.Python,
 			skillsObject.Nest,
 			skillsObject.Express,
+			skillsObject.Django,
 			skillsObject.Koa,
 		],
 	},
@@ -27,6 +29,7 @@ const skillsSectionsObject = {
 		skills: [
 			skillsObject.Docker,
 			skillsObject.AWS,
+			skillsObject.RabbitMQ,
 			skillsObject.Heroku,
 			skillsObject.CICD,
 		],
@@ -40,6 +43,7 @@ const skillsSectionsObject = {
 			skillsObject.MongoDb,
 			skillsObject.Redis,
 			skillsObject.Sequelize,
+			skillsObject.SQLAlchemy,
 			skillsObject.Prisma,
 			skillsObject.Mongoose,
 		],
@@ -47,7 +51,12 @@ const skillsSectionsObject = {
 	testing: {
 		id: 4,
 		name: "Testing",
-		skills: [skillsObject.Jest, skillsObject.Mocha, skillsObject.SuperTest],
+		skills: [
+			skillsObject.Jest,
+			skillsObject.Mocha,
+			skillsObject.SuperTest,
+			skillsObject.Pytest,
+		],
 	},
 };
 

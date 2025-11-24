@@ -44,6 +44,18 @@
     @include itemBody(7);
   }
 
+  &.items_8 {
+    @include itemBody(8);
+  }
+
+  &.items_9 {
+    @include itemBody(9);
+  }
+
+  &.items_10 {
+    @include itemBody(10);
+  }
+
   .title {
     display: flex;
     justify-content: center;

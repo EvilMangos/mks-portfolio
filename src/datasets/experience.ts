@@ -35,7 +35,7 @@ My exposure to a broad range of coding scenarios and AI behaviors has equipped m
 		position: "Full-Stack Developer",
 		logo: dictary,
 		startDate: "Jun 2023",
-		finishDate: null,
+		finishDate: "Nov 2025",
 		stack: [
 			skillsObject.TypeScript,
 			skillsObject.MongoDb,

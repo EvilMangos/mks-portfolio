@@ -19,5 +19,52 @@
 
 		padding-right: 10px;
 		animation: fadeIn 1s ease-in-out;
+
+		&.transparencyStart {
+			mask-image: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 1) calc(100% - 30px),
+				rgba(0, 0, 0, 0.2) 100%
+			);
+			-webkit-mask-image: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 1) calc(100% - 30px),
+				rgba(0, 0, 0, 0.2) 100%
+			);
+		}
+
+		&.transparencyMiddle {
+			mask-image: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 0.2) 0%,
+				rgba(0, 0, 0, 1) 30px,
+				rgba(0, 0, 0, 1) calc(100% - 30px),
+				rgba(0, 0, 0, 0.2) 100%
+			);
+			-webkit-mask-image: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 0.2) 0%,
+				rgba(0, 0, 0, 1) 30px,
+				rgba(0, 0, 0, 1) calc(100% - 30px),
+				rgba(0, 0, 0, 0.2) 100%
+			);
+		}
+
+		&.transparencyEnd {
+			mask-image: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 0.2) 0%,
+				rgba(0, 0, 0, 1) 30px,
+				rgba(0, 0, 0, 1) 100%
+			);
+			-webkit-mask-image: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 0.2) 0%,
+				rgba(0, 0, 0, 1) 30px,
+				rgba(0, 0, 0, 1) 100%
+			);
+		}
 	}
 }

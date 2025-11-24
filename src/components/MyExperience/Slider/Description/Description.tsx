@@ -17,6 +17,7 @@ const Description = ({ text, outClass }: DescriptionProps) => {
 	const [currentTextPositionView, setCurrentTextPositionView] = useState(
 		TestPositionViewsEnum.start
 	);
+	const [isScrollable, setIsScrollable] = useState(false);
 	const textRef = useRef(null);
 	const containerClasses = classNames(classes.container, outClass);
 
@@ -38,16 +39,20 @@ const Description = ({ text, outClass }: DescriptionProps) => {
 		if (textRef && textRef.current) {
 			textRef.current.innerHTML = text;
 			setCurrentTextPositionView(TestPositionViewsEnum.start);
+			
+			// Check if content is scrollable
+			const element = textRef.current;
+			setIsScrollable(element.scrollHeight > element.clientHeight);
 		}
 	}, [text]);
 
 	const textClasses = classNames(classes.text, {
 		[classes.transparencyStart]:
-			currentTextPositionView === TestPositionViewsEnum.start,
+			isScrollable && currentTextPositionView === TestPositionViewsEnum.start,
 		[classes.transparencyMiddle]:
-			currentTextPositionView === TestPositionViewsEnum.middle,
+			isScrollable && currentTextPositionView === TestPositionViewsEnum.middle,
 		[classes.transparencyEnd]:
-			currentTextPositionView === TestPositionViewsEnum.end,
+			isScrollable && currentTextPositionView === TestPositionViewsEnum.end,
 	});
 
 	return (

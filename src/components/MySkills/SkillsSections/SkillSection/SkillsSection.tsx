@@ -26,18 +26,23 @@ const SkillsSection = ({
 			open(id);
 		}
 	};
-	const containerClasses = classNames(
-		classes.container,
-		classes[`items_${subList.length}`],
-		{
-			[classes.containerOpen]: isOpen,
-		}
-	);
+	const expandedHeight = `${52 + subList.length * 70}px`;
+
+	const containerClasses = classNames(classes.container, {
+		[classes.containerOpen]: isOpen,
+	});
 	const titleClasses = classNames(classes.title, {
 		[classes.open]: isOpen,
 	});
 	return (
-		<div className={containerClasses}>
+		<div
+			className={containerClasses}
+			style={
+				{
+					"--expanded-height": expandedHeight,
+				} as React.CSSProperties
+			}
+		>
 			<div className={titleClasses} onClick={onClick}>
 				{name}
 			</div>

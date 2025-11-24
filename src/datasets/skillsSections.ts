@@ -26,7 +26,7 @@ const skillsSectionsObject = {
 		],
 	},
 	aiEngineering: {
-		id: 5,
+		id: 2,
 		name: "AI Engineering",
 		skills: [
 			skillsObject.LangChain,
@@ -39,7 +39,7 @@ const skillsSectionsObject = {
 		],
 	},
 	devops: {
-		id: 2,
+		id: 3,
 		name: "Cloud & Infrastructure",
 		skills: [
 			skillsObject.Docker,
@@ -52,7 +52,7 @@ const skillsSectionsObject = {
 		],
 	},
 	database: {
-		id: 3,
+		id: 4,
 		name: "Database",
 		skills: [
 			skillsObject.SQL,
@@ -67,7 +67,7 @@ const skillsSectionsObject = {
 		],
 	},
 	testing: {
-		id: 4,
+		id: 5,
 		name: "Testing",
 		skills: [
 			skillsObject.Jest,
@@ -78,7 +78,7 @@ const skillsSectionsObject = {
 	},
 
 	aiCodeAssistants: {
-		id: 5,
+		id: 6,
 		name: "AI Code Assistants",
 		skills: [
 			skillsObject.GoogleAntigravity,

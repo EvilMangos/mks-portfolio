@@ -1,59 +1,15 @@
 @use "/src/constants";
 @use "./SkillsSection.animations";
 
-@mixin itemBody($number) {
-  $size: 52px + $number * 70px;
-  @include SkillsSection.animationItemShrink($size, $number);
-
-  &.containerOpen {
-    height: $size;
-    @include SkillsSection.animationItemExpand($size, $number);
-  }
-}
-
 .container {
   overflow: hidden;
   height: 52px;
   margin-bottom: 18px;
+  animation: itemShrink 1s;
 
-  &.items_1 {
-    @include itemBody(1);
-  }
-
-  &.items_2 {
-    @include itemBody(2);
-  }
-
-  &.items_3 {
-    @include itemBody(3);
-  }
-
-  &.items_4 {
-    @include itemBody(4);
-  }
-
-  &.items_5 {
-    @include itemBody(5);
-  }
-
-  &.items_6 {
-    @include itemBody(6);
-  }
-
-  &.items_7 {
-    @include itemBody(7);
-  }
-
-  &.items_8 {
-    @include itemBody(8);
-  }
-
-  &.items_9 {
-    @include itemBody(9);
-  }
-
-  &.items_10 {
-    @include itemBody(10);
+  &.containerOpen {
+    height: var(--expanded-height);
+    animation: itemExpand 1s;
   }
 
   .title {

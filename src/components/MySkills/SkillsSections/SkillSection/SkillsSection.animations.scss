@@ -1,25 +1,17 @@
-@mixin animationItemExpand($expended, $id) {
-  animation: itemExpand-#{$id} 1s;
-
-  @keyframes itemExpand-#{$id}{
-    0% {
-      height: 52px;
-    }
-    100% {
-      height: $expended;
-    }
+@keyframes itemExpand {
+  0% {
+    height: 52px;
+  }
+  100% {
+    height: var(--expanded-height);
   }
 }
 
-@mixin animationItemShrink($expended, $id) {
-  animation: itemShrink-#{$id} 1s;
-
-  @keyframes itemShrink-#{$id} {
-    0% {
-      height: $expended;
-    }
-    100% {
-      height: 52px;
-    }
+@keyframes itemShrink {
+  0% {
+    height: var(--expanded-height);
+  }
+  100% {
+    height: 52px;
   }
 }

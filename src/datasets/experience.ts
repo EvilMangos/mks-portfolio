@@ -23,17 +23,22 @@ const experienceObject = {
 			skillsObject.ElasticSearch,
 			skillsObject.Postgresql,
 		],
-		description: `Over the past year, I've worked intensively with AI-generated code and responses through my role at DataAnnotation.tech. This experience has given me a deep, hands-on understanding of modern AI tools and how to apply them effectively in real-world development workflows.
+		description: `As an AI Engineer at DataAnnotation.tech, I've specialized in designing and optimizing AI-powered systems that transform complex workflows into autonomous, intelligent solutions. My work spans the full AI engineering lifecycle—from prompt engineering and model evaluation to multi-agent system design and performance optimization.
+<br/>
+<br/>
+<strong>Key Technical Achievements:</strong>
+<br/>
+<br/>
+<ul>
+  <li><b>Multi-Agent System Design:</b> Architected and deployed multi-agent systems that automate complex internal workflows through LLM coordination and tool integration, reducing manual workload by over 70% and significantly accelerating review processes.</li>
+  <li><b>Advanced Prompt Engineering:</b> Engineered and iteratively optimized prompts using diverse prompt-engineering and agentic patterns, achieving 95%+ model accuracy on complex instructions through systematic refinement and testing.</li>
+  <li><b>Evaluation & Quality Assurance:</b> Designed and executed comprehensive evaluation scenarios to ensure reliable AI system performance, establishing rigorous testing frameworks that validate output quality and system behavior.</li>
+  <li><b>Flywheel Data Architecture:</b> Enhanced system architecture to collect and leverage flywheel data, introducing a rewarding mechanism for high-quality model outputs that improved feedback loops and boosted overall model accuracy.</li>
+  <li><b>AI-Assisted Development:</b> Leveraged AI-assisted coding tools to dramatically accelerate development timelines, delivering projects that traditionally would take months in a matter of weeks while maintaining production-grade quality.</li>
+</ul>
+<br/>
 
-I've developed strong prompt engineering skills and an instinct for identifying weaknesses in AI outputs, including subtle logic errors, guideline deviations, or misuse of libraries. As a result, I know how to get high-quality results from AI tools and where human oversight is critical.
-<br/>
-<br/>
-Beyond evaluation, I've become adept at integrating AI into daily development tasks. Whether it's automating repetitive work, speeding up analysis, or improving decision-making, I know how and where to apply AI to boost productivity. I often spot integration opportunities others overlook-adding meaningful automation or insight where it actually matters.
-<br/>
-Working with a wide variety of unfamiliar code has also sharpened my ability to quickly understand complex logic and architectures. This allows me to navigate new codebases fast, identify issues, and make improvements with confidence.
-<br/>
-<br/>
-My exposure to a broad range of coding scenarios and AI behaviors has equipped me with the judgment to choose the right tools and approaches for different tasks. I stay up to date with AI trends, capabilities, and limitations, and I bring that insight to every project I work on.`,
+This role has deepened my expertise in practical AI engineering—combining LLM orchestration, evaluation frameworks, and system design to build intelligent automation that delivers measurable business impact.`,
 	},
 	dictary: {
 		id: 1,

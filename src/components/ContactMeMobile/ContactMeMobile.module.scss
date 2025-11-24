@@ -15,6 +15,7 @@
     transition-duration: 1s;
 
     cursor: pointer;
+    z-index: 100;
 
     &.hide {
         transform: translateY(120px);

@@ -1,23 +1,7 @@
 @use "/src/constants";
-@use "ExperienceItem.animations";
 
-@mixin itemBody($collapsed, $expanded) {
-	height: $collapsed;
-	@include ExperienceItem.animationItemShrink(
-		$collapsed,
-		$expanded,
-		$collapsed + $expanded
-	);
 
-	&.active {
-		height: $expanded;
-		@include ExperienceItem.animationItemExpand(
-			$collapsed,
-			$expanded,
-			$collapsed + $expanded
-		);
-	}
-}
+
 
 .container {
 	display: grid;
@@ -48,17 +32,7 @@
 		}
 	}
 
-	&.item_0 {
-		@include itemBody(281px, 875px);
-	}
 
-	&.item_1 {
-		@include itemBody(307px, 1057px);
-	}
-
-	&.item_2 {
-		@include itemBody(307px, 1109px);
-	}
 
 	&.active {
 		background-color: constants.$color-light-green;
@@ -154,18 +128,31 @@
 		}
 	}
 
-	.description {
+	.descriptionWrapper {
 		grid-area: description;
-		margin-top: 4px;
+		display: grid;
+		grid-template-rows: 0fr;
+		transition: grid-template-rows 0.5s ease-out;
+		overflow: hidden;
 
-		.descriptionTitle {
-			color: black;
+
+		&.open {
+			grid-template-rows: 1fr;
 		}
 
-		.descriptionText {
-			color: black;
-			text-align: justify;
-			margin-top: 16px;
+		.description {
+			overflow: hidden;
+			margin-top: 4px;
+
+			.descriptionTitle {
+				color: black;
+			}
+
+			.descriptionText {
+				color: black;
+				text-align: justify;
+				margin-top: 16px;
+			}
 		}
 	}
 }

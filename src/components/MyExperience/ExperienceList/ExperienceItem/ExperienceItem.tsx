@@ -40,7 +40,7 @@ const ExperienceItem = ({
 
 	const containerClasses = classNames(
 		classes.container,
-		classes[`item_${id}`],
+		classes.container,
 		{
 			[classes.active]: isActive,
 		}
@@ -75,7 +75,11 @@ const ExperienceItem = ({
 				<span className={classes.stackLabel}>Stack: </span>
 				{stack.join(", ")}.
 			</div>
-			{isActive && (
+			<div
+				className={classNames(classes.descriptionWrapper, {
+					[classes.open]: isActive,
+				})}
+			>
 				<div className={classes.description}>
 					<h3 className={classes.descriptionTitle}>Description</h3>
 					<p
@@ -83,7 +87,7 @@ const ExperienceItem = ({
 						dangerouslySetInnerHTML={{ __html: description }}
 					></p>
 				</div>
-			)}
+			</div>
 		</div>
 	);
 };

@@ -9,7 +9,7 @@ const skillsSectionsObject = {
 			skillsObject.Python,
 			skillsObject.Nest,
 			skillsObject.Express,
-			skillsObject.Django,
+			skillsObject.FastAPI,
 			skillsObject.Koa,
 		],
 	},
@@ -19,8 +19,23 @@ const skillsSectionsObject = {
 		skills: [
 			skillsObject.React,
 			skillsObject.Redux,
+			skillsObject.Next,
+			skillsObject.Vite,
 			skillsObject.HTMLCSS,
 			skillsObject.SASS,
+		],
+	},
+	aiEngineering: {
+		id: 5,
+		name: "AI Engineering",
+		skills: [
+			skillsObject.LangChain,
+			skillsObject.LangGraph,
+			skillsObject.LangSmith,
+			skillsObject.Ollama,
+			skillsObject.RAG,
+			skillsObject.ContextEngineering,
+			skillsObject.FineTuning,
 		],
 	},
 	devops: {
@@ -29,7 +44,9 @@ const skillsSectionsObject = {
 		skills: [
 			skillsObject.Docker,
 			skillsObject.AWS,
+			skillsObject.GCP,
 			skillsObject.RabbitMQ,
+			skillsObject.PubSub,
 			skillsObject.Heroku,
 			skillsObject.CICD,
 		],
@@ -42,6 +59,7 @@ const skillsSectionsObject = {
 			skillsObject.Postgresql,
 			skillsObject.MongoDb,
 			skillsObject.Redis,
+			skillsObject.ElasticSearch,
 			skillsObject.Sequelize,
 			skillsObject.SQLAlchemy,
 			skillsObject.Prisma,
@@ -53,9 +71,19 @@ const skillsSectionsObject = {
 		name: "Testing",
 		skills: [
 			skillsObject.Jest,
-			skillsObject.Mocha,
 			skillsObject.SuperTest,
 			skillsObject.Pytest,
+			skillsObject.ReactTestingLibrary,
+		],
+	},
+
+	aiCodeAssistants: {
+		id: 5,
+		name: "AI Code Assistants",
+		skills: [
+			skillsObject.GoogleAntigravity,
+			skillsObject.CursorIDE,
+			skillsObject.ClaudeCode,
 		],
 	},
 };

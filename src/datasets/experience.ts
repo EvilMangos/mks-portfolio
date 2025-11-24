@@ -7,15 +7,21 @@ const experienceObject = {
 	dataannotation: {
 		id: 0,
 		name: "DataAnnotation.tech",
-		position: "Software Engineer",
+		position: "AI Engineer",
 		logo: dataannotation,
 		startDate: "May 2024",
 		finishDate: null,
 		stack: [
-			skillsObject.TypeScript,
-			skillsObject.JavaScript,
-			skillsObject.Node,
 			skillsObject.Python,
+			skillsObject.LangChain,
+			skillsObject.LangGraph,
+			skillsObject.LangSmith,
+			skillsObject.Ollama,
+			skillsObject.RAG,
+			skillsObject.ContextEngineering,
+			skillsObject.FineTuning,
+			skillsObject.ElasticSearch,
+			skillsObject.Postgresql,
 		],
 		description: `Over the past year, I've worked intensively with AI-generated code and responses through my role at DataAnnotation.tech. This experience has given me a deep, hands-on understanding of modern AI tools and how to apply them effectively in real-world development workflows.
 
@@ -72,7 +78,7 @@ Dictary reflects my ability to deliver real-world SaaS products with technical p
 	zazmic: {
 		id: 2,
 		name: "Zazmic Inc.",
-		position: "Node.js Developer",
+		position: "Backend Developer",
 		logo: zazmic,
 		startDate: "Jun 2021",
 		finishDate: "Jun 2023",

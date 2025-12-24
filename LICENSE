@@ -1,27 +1,21 @@
-Custom License with Attribution Requirement
+The MIT License (MIT)
 
 Copyright (c) 2025 Maksym Khamets
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to use,
-copy, and distribute the Software for any purpose, including commercial use,
-subject to the following conditions:
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. Attribution:
-   You must give appropriate credit to the original author, including this license file
-   and a clear reference to the original source (e.g., repository link or author name) in
-   any distribution or derivative work.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-2. Modifications:
-   You may modify the Software as needed for configuration or deployment purposes.
-   More substantial modifications are allowed, but attribution to the original author must still be maintained.
-
-3. No Warranty:
-   The Software is provided "as is", without warranty of any kind, express or implied,
-   including but not limited to the warranties of merchantability, fitness for a particular purpose,
-   or noninfringement.
-
-4. License Termination:
-   Failure to comply with the above conditions will result in automatic termination of this license.
-
-For questions, contact: jchamets@gmail.com
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

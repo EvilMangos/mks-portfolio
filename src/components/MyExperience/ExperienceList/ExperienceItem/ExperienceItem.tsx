@@ -38,13 +38,9 @@ const ExperienceItem = ({
 		}
 	};
 
-	const containerClasses = classNames(
-		classes.container,
-		classes.container,
-		{
-			[classes.active]: isActive,
-		}
-	);
+	const containerClasses = classNames(classes.container, classes.container, {
+		[classes.active]: isActive,
+	});
 
 	return (
 		<div className={containerClasses} onClick={onClick}>

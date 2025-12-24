@@ -39,7 +39,7 @@ const Description = ({ text, outClass }: DescriptionProps) => {
 		if (textRef && textRef.current) {
 			textRef.current.innerHTML = text;
 			setCurrentTextPositionView(TestPositionViewsEnum.start);
-			
+
 			// Check if content is scrollable
 			const element = textRef.current;
 			setIsScrollable(element.scrollHeight > element.clientHeight);

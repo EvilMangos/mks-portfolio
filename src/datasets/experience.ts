@@ -10,9 +10,11 @@ const experienceObject = {
 		position: "AI Engineer",
 		logo: dataannotation,
 		startDate: "May 2024",
-		finishDate: null,
+		finishDate: "March 2024",
 		stack: [
 			skillsObject.Python,
+			skillsObject.TypeScript,
+			skillsObject.FastAPI,
 			skillsObject.LangChain,
 			skillsObject.LangGraph,
 			skillsObject.LangSmith,
